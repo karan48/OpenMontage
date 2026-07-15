@@ -32,10 +32,11 @@ class FluxImage(BaseTool):
     determinism = Determinism.SEEDED
     runtime = ToolRuntime.API
 
-    dependencies = []  # checked dynamically via env var
+    dependencies = ["fal-client"]  # checked dynamically via env var; fal-client only needed for local lora_path uploads
     install_instructions = (
         "Set FAL_KEY to your fal.ai API key.\n"
-        "  Get one at https://fal.ai/dashboard/keys"
+        "  Get one at https://fal.ai/dashboard/keys\n"
+        "  For custom LoRA uploads from a local file, also: pip install fal-client"
     )
     agent_skills = ["flux-best-practices", "bfl-api"]
 
@@ -44,11 +45,13 @@ class FluxImage(BaseTool):
         "negative_prompt": True,
         "seed": True,
         "custom_size": True,
+        "lora": True,
     }
     best_for = [
         "photorealistic images",
         "general-purpose image generation",
         "high quality at low cost (~$0.03/image)",
+        "consistent custom character via a trained FLUX LoRA (lora_path/lora_url)",
     ]
     not_good_for = ["text rendering in images", "offline generation"]
 
@@ -64,10 +67,24 @@ class FluxImage(BaseTool):
                 "type": "string",
                 "enum": ["flux-pro/v1.1", "flux/dev", "flux-pro"],
                 "default": "flux-pro/v1.1",
+                "description": "Ignored when a LoRA is supplied — LoRA requests always route to the fal-ai/flux-lora endpoint (FLUX.1 dev based).",
             },
             "seed": {"type": "integer"},
             "num_inference_steps": {"type": "integer"},
             "guidance_scale": {"type": "number"},
+            "lora_path": {
+                "type": "string",
+                "description": "Local path to a FLUX .safetensors LoRA file. Uploaded to fal.ai storage automatically (requires fal-client installed). Use lora_url instead if it's already hosted.",
+            },
+            "lora_url": {
+                "type": "string",
+                "description": "URL to an already-hosted FLUX LoRA .safetensors file. Takes priority over lora_path if both are set.",
+            },
+            "lora_scale": {
+                "type": "number",
+                "default": 1.0,
+                "description": "Only used with lora_path/lora_url. Weight of the LoRA's influence on the output.",
+            },
             "output_path": {"type": "string"},
         },
     }
@@ -76,7 +93,7 @@ class FluxImage(BaseTool):
         cpu_cores=1, ram_mb=512, vram_mb=0, disk_mb=100, network_required=True
     )
     retry_policy = RetryPolicy(max_retries=2, retryable_errors=["rate_limit", "timeout"])
-    idempotency_key_fields = ["prompt", "width", "height", "seed", "model"]
+    idempotency_key_fields = ["prompt", "width", "height", "seed", "model", "lora_path", "lora_url", "lora_scale"]
     side_effects = ["writes image file to output_path", "calls fal.ai API"]
     user_visible_verification = ["Inspect generated image for relevance and quality"]
 
@@ -89,6 +106,8 @@ class FluxImage(BaseTool):
         return ToolStatus.UNAVAILABLE
 
     def estimate_cost(self, inputs: dict[str, Any]) -> float:
+        if inputs.get("lora_path") or inputs.get("lora_url"):
+            return 0.035  # fal-ai/flux-lora, dev-tier pricing
         model = inputs.get("model", "flux-pro/v1.1")
         if "pro" in model:
             return 0.05
@@ -109,11 +128,49 @@ class FluxImage(BaseTool):
         prompt = inputs["prompt"]
         width = inputs.get("width", 1024)
         height = inputs.get("height", 1024)
+        lora_path = inputs.get("lora_path")
+        lora_url = inputs.get("lora_url")
+        lora_scale = inputs.get("lora_scale", 1.0)
+
+        if lora_path and not lora_url:
+            try:
+                import fal_client
+                from fal_client.client import MultipartUpload
+
+                os.environ.setdefault("FAL_KEY", api_key)
+                client = fal_client.sync_client
+                if os.path.getsize(lora_path) > 100 * 1024 * 1024:
+                    # fal-client's default concurrent multipart upload (10 parallel
+                    # connections) reliably drops mid-transfer on some networks
+                    # ("Server disconnected without sending a response"). A single
+                    # connection with smaller chunks is slower but survives.
+                    lora_url = MultipartUpload.save_file(
+                        file_path=lora_path,
+                        client=client._get_cdn_client(),
+                        token_manager=client._token_manager,
+                        content_type="application/octet-stream",
+                        chunk_size=5 * 1024 * 1024,
+                        max_concurrency=1,
+                    )
+                else:
+                    lora_url = fal_client.upload_file(lora_path)
+            except ImportError:
+                return ToolResult(
+                    success=False,
+                    error="lora_path given but fal-client isn't installed. "
+                    "pip install fal-client (or pass an already-hosted lora_url instead).",
+                )
+            except Exception as e:
+                return ToolResult(success=False, error=f"Failed to upload LoRA to fal.ai: {e}")
+
+        endpoint = "fal-ai/flux-lora" if lora_url else f"fal-ai/{model}"
 
         payload: dict[str, Any] = {
             "prompt": prompt,
             "image_size": {"width": width, "height": height},
         }
+        if lora_url:
+            payload["loras"] = [{"path": lora_url, "scale": lora_scale}]
         if inputs.get("seed") is not None:
             payload["seed"] = inputs["seed"]
         if inputs.get("num_inference_steps"):
@@ -125,7 +182,7 @@ class FluxImage(BaseTool):
 
         try:
             response = requests.post(
-                f"https://fal.run/fal-ai/{model}",
+                f"https://fal.run/{endpoint}",
                 headers={
                     "Authorization": f"Key {api_key}",
                     "Content-Type": "application/json",
@@ -151,14 +208,16 @@ class FluxImage(BaseTool):
             success=True,
             data={
                 "provider": "flux",
-                "model": model,
+                "model": endpoint,
                 "prompt": prompt,
                 "output": str(output_path),
                 "seed": data.get("seed"),
+                "lora_url": lora_url,
+                "lora_scale": lora_scale if lora_url else None,
             },
             artifacts=[str(output_path)],
             cost_usd=self.estimate_cost(inputs),
             duration_seconds=round(time.time() - start, 2),
             seed=data.get("seed"),
-            model=f"fal-ai/{model}",
+            model=f"fal-ai/{endpoint}" if not endpoint.startswith("fal-ai/") else endpoint,
         )
