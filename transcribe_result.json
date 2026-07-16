@@ -1,0 +1,1738 @@
+{
+  "success": true,
+  "data": {
+    "segments": [
+      {
+        "id": 1,
+        "start": 0.0,
+        "end": 6.82,
+        "text": "दिल्ली के कुटुब कुम्प्लेक्स में एक लोहा का खंभा है, जो 1600 साल से बारिष जेल रहा है.",
+        "words": [
+          {
+            "word": " दिल्ली",
+            "start": 0.0,
+            "end": 0.52,
+            "probability": 0.752
+          },
+          {
+            "word": " के",
+            "start": 0.52,
+            "end": 0.7,
+            "probability": 0.916
+          },
+          {
+            "word": " कुटुब",
+            "start": 0.7,
+            "end": 1.06,
+            "probability": 0.7
+          },
+          {
+            "word": " कुम्प्लेक्स",
+            "start": 1.06,
+            "end": 1.56,
+            "probability": 0.625
+          },
+          {
+            "word": " में",
+            "start": 1.56,
+            "end": 1.86,
+            "probability": 0.885
+          },
+          {
+            "word": " एक",
+            "start": 1.86,
+            "end": 2.1,
+            "probability": 0.924
+          },
+          {
+            "word": " लोहा",
+            "start": 2.1,
+            "end": 2.44,
+            "probability": 0.905
+          },
+          {
+            "word": " का",
+            "start": 2.44,
+            "end": 2.62,
+            "probability": 0.733
+          },
+          {
+            "word": " खंभा",
+            "start": 2.62,
+            "end": 3.02,
+            "probability": 0.706
+          },
+          {
+            "word": " है,",
+            "start": 3.02,
+            "end": 3.22,
+            "probability": 0.896
+          },
+          {
+            "word": " जो",
+            "start": 3.64,
+            "end": 3.8,
+            "probability": 0.866
+          },
+          {
+            "word": " 1600",
+            "start": 3.8,
+            "end": 5.08,
+            "probability": 0.446
+          },
+          {
+            "word": " साल",
+            "start": 5.08,
+            "end": 5.5,
+            "probability": 0.67
+          },
+          {
+            "word": " से",
+            "start": 5.5,
+            "end": 5.7,
+            "probability": 0.944
+          },
+          {
+            "word": " बारिष",
+            "start": 5.7,
+            "end": 6.04,
+            "probability": 0.816
+          },
+          {
+            "word": " जेल",
+            "start": 6.04,
+            "end": 6.34,
+            "probability": 0.908
+          },
+          {
+            "word": " रहा",
+            "start": 6.34,
+            "end": 6.6,
+            "probability": 0.957
+          },
+          {
+            "word": " है.",
+            "start": 6.6,
+            "end": 6.82,
+            "probability": 0.965
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "start": 8.18,
+        "end": 9.88,
+        "text": "जैंका निशान तक नहीं.",
+        "words": [
+          {
+            "word": " जैंका",
+            "start": 8.18,
+            "end": 8.72,
+            "probability": 0.717
+          },
+          {
+            "word": " निशान",
+            "start": 8.72,
+            "end": 9.16,
+            "probability": 0.867
+          },
+          {
+            "word": " तक",
+            "start": 9.16,
+            "end": 9.38,
+            "probability": 0.877
+          },
+          {
+            "word": " नहीं.",
+            "start": 9.38,
+            "end": 9.88,
+            "probability": 0.923
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "start": 10.82,
+        "end": 15.08,
+        "text": "चोथी सदी में राजा चंद्रगुक्त द्वितिया ने ISC बनवाया था.",
+        "words": [
+          {
+            "word": " चोथी",
+            "start": 10.82,
+            "end": 11.22,
+            "probability": 0.579
+          },
+          {
+            "word": " सदी",
+            "start": 11.22,
+            "end": 11.58,
+            "probability": 0.891
+          },
+          {
+            "word": " में",
+            "start": 11.58,
+            "end": 11.94,
+            "probability": 0.974
+          },
+          {
+            "word": " राजा",
+            "start": 11.94,
+            "end": 12.38,
+            "probability": 0.865
+          },
+          {
+            "word": " चंद्रगुक्त",
+            "start": 12.38,
+            "end": 13.08,
+            "probability": 0.746
+          },
+          {
+            "word": " द्वितिया",
+            "start": 13.08,
+            "end": 13.54,
+            "probability": 0.76
+          },
+          {
+            "word": " ने",
+            "start": 13.54,
+            "end": 13.76,
+            "probability": 0.708
+          },
+          {
+            "word": " ISC",
+            "start": 13.76,
+            "end": 14.34,
+            "probability": 0.582
+          },
+          {
+            "word": " बनवाया",
+            "start": 14.34,
+            "end": 14.86,
+            "probability": 0.793
+          },
+          {
+            "word": " था.",
+            "start": 14.86,
+            "end": 15.08,
+            "probability": 0.727
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "start": 16.1,
+        "end": 17.62,
+        "text": "तब से ये यही खडा है.",
+        "words": [
+          {
+            "word": " तब",
+            "start": 16.1,
+            "end": 16.36,
+            "probability": 0.901
+          },
+          {
+            "word": " से",
+            "start": 16.36,
+            "end": 16.58,
+            "probability": 0.937
+          },
+          {
+            "word": " ये",
+            "start": 16.58,
+            "end": 16.8,
+            "probability": 0.758
+          },
+          {
+            "word": " यही",
+            "start": 16.8,
+            "end": 17.08,
+            "probability": 0.736
+          },
+          {
+            "word": " खडा",
+            "start": 17.08,
+            "end": 17.4,
+            "probability": 0.698
+          },
+          {
+            "word": " है.",
+            "start": 17.4,
+            "end": 17.62,
+            "probability": 0.921
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "start": 18.78,
+        "end": 21.94,
+        "text": "लोग कहते है ये आलियं टेकनोलोगी है.",
+        "words": [
+          {
+            "word": " लोग",
+            "start": 18.78,
+            "end": 19.52,
+            "probability": 0.731
+          },
+          {
+            "word": " कहते",
+            "start": 19.52,
+            "end": 19.98,
+            "probability": 0.799
+          },
+          {
+            "word": " है",
+            "start": 19.98,
+            "end": 20.16,
+            "probability": 0.973
+          },
+          {
+            "word": " ये",
+            "start": 20.16,
+            "end": 20.44,
+            "probability": 0.778
+          },
+          {
+            "word": " आलियं",
+            "start": 20.44,
+            "end": 20.92,
+            "probability": 0.473
+          },
+          {
+            "word": " टेकनोलोगी",
+            "start": 20.92,
+            "end": 21.72,
+            "probability": 0.664
+          },
+          {
+            "word": " है.",
+            "start": 21.72,
+            "end": 21.94,
+            "probability": 0.984
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "start": 23.2,
+        "end": 30.0,
+        "text": "कहानी है की राजा अनंपाल ने जमीन में गाडी एक कील उखार दी, और वही से नाम पडा दिल्ली.",
+        "words": [
+          {
+            "word": " कहानी",
+            "start": 23.2,
+            "end": 23.94,
+            "probability": 0.833
+          },
+          {
+            "word": " है",
+            "start": 23.94,
+            "end": 24.12,
+            "probability": 0.979
+          },
+          {
+            "word": " की",
+            "start": 24.12,
+            "end": 24.34,
+            "probability": 0.758
+          },
+          {
+            "word": " राजा",
+            "start": 24.34,
+            "end": 24.72,
+            "probability": 0.908
+          },
+          {
+            "word": " अनंपाल",
+            "start": 24.72,
+            "end": 25.38,
+            "probability": 0.853
+          },
+          {
+            "word": " ने",
+            "start": 25.38,
+            "end": 25.62,
+            "probability": 0.81
+          },
+          {
+            "word": " जमीन",
+            "start": 25.62,
+            "end": 26.06,
+            "probability": 0.834
+          },
+          {
+            "word": " में",
+            "start": 26.06,
+            "end": 26.24,
+            "probability": 0.909
+          },
+          {
+            "word": " गाडी",
+            "start": 26.24,
+            "end": 26.6,
+            "probability": 0.792
+          },
+          {
+            "word": " एक",
+            "start": 26.6,
+            "end": 26.96,
+            "probability": 0.936
+          },
+          {
+            "word": " कील",
+            "start": 26.96,
+            "end": 27.26,
+            "probability": 0.824
+          },
+          {
+            "word": " उखार",
+            "start": 27.26,
+            "end": 27.72,
+            "probability": 0.828
+          },
+          {
+            "word": " दी,",
+            "start": 27.72,
+            "end": 27.94,
+            "probability": 0.869
+          },
+          {
+            "word": " और",
+            "start": 28.4,
+            "end": 28.56,
+            "probability": 0.949
+          },
+          {
+            "word": " वही",
+            "start": 28.56,
+            "end": 28.84,
+            "probability": 0.927
+          },
+          {
+            "word": " से",
+            "start": 28.84,
+            "end": 29.04,
+            "probability": 0.832
+          },
+          {
+            "word": " नाम",
+            "start": 29.04,
+            "end": 29.3,
+            "probability": 0.917
+          },
+          {
+            "word": " पडा",
+            "start": 29.3,
+            "end": 29.6,
+            "probability": 0.881
+          },
+          {
+            "word": " दिल्ली.",
+            "start": 29.6,
+            "end": 30.0,
+            "probability": 0.752
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "start": 30.98,
+        "end": 34.44,
+        "text": "लेकिन अस्ली जवाब मिला 2003 में.",
+        "words": [
+          {
+            "word": " लेकिन",
+            "start": 30.98,
+            "end": 31.72,
+            "probability": 0.865
+          },
+          {
+            "word": " अस्ली",
+            "start": 31.72,
+            "end": 32.08,
+            "probability": 0.781
+          },
+          {
+            "word": " जवाब",
+            "start": 32.08,
+            "end": 32.5,
+            "probability": 0.899
+          },
+          {
+            "word": " मिला",
+            "start": 32.5,
+            "end": 32.86,
+            "probability": 0.922
+          },
+          {
+            "word": " 2003",
+            "start": 32.86,
+            "end": 33.88,
+            "probability": 0.782
+          },
+          {
+            "word": " में.",
+            "start": 33.88,
+            "end": 34.44,
+            "probability": 0.923
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "start": 35.28,
+        "end": 42.88,
+        "text": "आयाटी कानपूर के वैज्यानेको ने पाया, इस लोहे में है, एक प्रतिषत फोस्फोरस, जो आज के लोहे में नहीं होता.",
+        "words": [
+          {
+            "word": " आयाटी",
+            "start": 35.28,
+            "end": 35.92,
+            "probability": 0.449
+          },
+          {
+            "word": " कानपूर",
+            "start": 35.92,
+            "end": 36.38,
+            "probability": 0.756
+          },
+          {
+            "word": " के",
+            "start": 36.38,
+            "end": 36.58,
+            "probability": 0.904
+          },
+          {
+            "word": " वैज्यानेको",
+            "start": 36.58,
+            "end": 37.28,
+            "probability": 0.754
+          },
+          {
+            "word": " ने",
+            "start": 37.28,
+            "end": 37.5,
+            "probability": 0.727
+          },
+          {
+            "word": " पाया,",
+            "start": 37.5,
+            "end": 37.9,
+            "probability": 0.93
+          },
+          {
+            "word": " इस",
+            "start": 38.14,
+            "end": 38.28,
+            "probability": 0.833
+          },
+          {
+            "word": " लोहे",
+            "start": 38.28,
+            "end": 38.68,
+            "probability": 0.888
+          },
+          {
+            "word": " में",
+            "start": 38.68,
+            "end": 38.9,
+            "probability": 0.759
+          },
+          {
+            "word": " है,",
+            "start": 38.9,
+            "end": 39.08,
+            "probability": 0.919
+          },
+          {
+            "word": " एक",
+            "start": 39.32,
+            "end": 39.52,
+            "probability": 0.932
+          },
+          {
+            "word": " प्रतिषत",
+            "start": 39.52,
+            "end": 40.04,
+            "probability": 0.85
+          },
+          {
+            "word": " फोस्फोरस,",
+            "start": 40.04,
+            "end": 40.76,
+            "probability": 0.695
+          },
+          {
+            "word": " जो",
+            "start": 41.02,
+            "end": 41.24,
+            "probability": 0.903
+          },
+          {
+            "word": " आज",
+            "start": 41.24,
+            "end": 41.56,
+            "probability": 0.941
+          },
+          {
+            "word": " के",
+            "start": 41.56,
+            "end": 41.74,
+            "probability": 0.678
+          },
+          {
+            "word": " लोहे",
+            "start": 41.74,
+            "end": 42.1,
+            "probability": 0.97
+          },
+          {
+            "word": " में",
+            "start": 42.1,
+            "end": 42.24,
+            "probability": 0.965
+          },
+          {
+            "word": " नहीं",
+            "start": 42.24,
+            "end": 42.54,
+            "probability": 0.896
+          },
+          {
+            "word": " होता.",
+            "start": 42.54,
+            "end": 42.88,
+            "probability": 0.893
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "start": 44.04,
+        "end": 48.52,
+        "text": "इस फोस्फोरस ने एक सुरक्षा परत बनाई, जिसका नाम है मिसवाई.",
+        "words": [
+          {
+            "word": " इस",
+            "start": 44.04,
+            "end": 44.26,
+            "probability": 0.969
+          },
+          {
+            "word": " फोस्फोरस",
+            "start": 44.26,
+            "end": 44.92,
+            "probability": 0.902
+          },
+          {
+            "word": " ने",
+            "start": 44.92,
+            "end": 45.2,
+            "probability": 0.886
+          },
+          {
+            "word": " एक",
+            "start": 45.2,
+            "end": 45.5,
+            "probability": 0.96
+          },
+          {
+            "word": " सुरक्षा",
+            "start": 45.5,
+            "end": 46.0,
+            "probability": 0.843
+          },
+          {
+            "word": " परत",
+            "start": 46.0,
+            "end": 46.28,
+            "probability": 0.752
+          },
+          {
+            "word": " बनाई,",
+            "start": 46.28,
+            "end": 46.72,
+            "probability": 0.828
+          },
+          {
+            "word": " जिसका",
+            "start": 47.02,
+            "end": 47.46,
+            "probability": 0.851
+          },
+          {
+            "word": " नाम",
+            "start": 47.46,
+            "end": 47.76,
+            "probability": 0.903
+          },
+          {
+            "word": " है",
+            "start": 47.76,
+            "end": 47.96,
+            "probability": 0.957
+          },
+          {
+            "word": " मिसवाई.",
+            "start": 47.96,
+            "end": 48.52,
+            "probability": 0.789
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "start": 49.28,
+        "end": 51.36,
+        "text": "यही है इसका अस्ली रास.",
+        "words": [
+          {
+            "word": " यही",
+            "start": 49.28,
+            "end": 49.92,
+            "probability": 0.923
+          },
+          {
+            "word": " है",
+            "start": 49.92,
+            "end": 50.18,
+            "probability": 0.965
+          },
+          {
+            "word": " इसका",
+            "start": 50.18,
+            "end": 50.6,
+            "probability": 0.857
+          },
+          {
+            "word": " अस्ली",
+            "start": 50.6,
+            "end": 51.04,
+            "probability": 0.809
+          },
+          {
+            "word": " रास.",
+            "start": 51.04,
+            "end": 51.36,
+            "probability": 0.894
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "start": 52.2,
+        "end": 56.04,
+        "text": "ब्रितिष वैज्यानेको ने 1912 में जाथ सुरू की ती.",
+        "words": [
+          {
+            "word": " ब्रितिष",
+            "start": 52.2,
+            "end": 52.88,
+            "probability": 0.604
+          },
+          {
+            "word": " वैज्यानेको",
+            "start": 52.88,
+            "end": 53.56,
+            "probability": 0.666
+          },
+          {
+            "word": " ने",
+            "start": 53.56,
+            "end": 53.76,
+            "probability": 0.706
+          },
+          {
+            "word": " 1912",
+            "start": 53.76,
+            "end": 54.72,
+            "probability": 0.862
+          },
+          {
+            "word": " में",
+            "start": 54.72,
+            "end": 54.96,
+            "probability": 0.9
+          },
+          {
+            "word": " जाथ",
+            "start": 54.96,
+            "end": 55.24,
+            "probability": 0.743
+          },
+          {
+            "word": " सुरू",
+            "start": 55.24,
+            "end": 55.56,
+            "probability": 0.664
+          },
+          {
+            "word": " की",
+            "start": 55.56,
+            "end": 55.74,
+            "probability": 0.638
+          },
+          {
+            "word": " ती.",
+            "start": 55.74,
+            "end": 56.04,
+            "probability": 0.673
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "start": 57.16,
+        "end": 59.4,
+        "text": "जवाब मिलने में लगे 91 साल.",
+        "words": [
+          {
+            "word": " जवाब",
+            "start": 57.16,
+            "end": 57.5,
+            "probability": 0.868
+          },
+          {
+            "word": " मिलने",
+            "start": 57.5,
+            "end": 57.9,
+            "probability": 0.932
+          },
+          {
+            "word": " में",
+            "start": 57.9,
+            "end": 58.12,
+            "probability": 0.96
+          },
+          {
+            "word": " लगे",
+            "start": 58.12,
+            "end": 58.36,
+            "probability": 0.942
+          },
+          {
+            "word": " 91",
+            "start": 58.36,
+            "end": 58.96,
+            "probability": 0.659
+          },
+          {
+            "word": " साल.",
+            "start": 58.96,
+            "end": 59.4,
+            "probability": 0.7
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "start": 60.48,
+        "end": 65.56,
+        "text": "तो अगली बार कोई कहे ये आनेक्स्पलेंड मिस्ट्री है, उसे ये बिडियो दिखा देना.",
+        "words": [
+          {
+            "word": " तो",
+            "start": 60.48,
+            "end": 60.64,
+            "probability": 0.952
+          },
+          {
+            "word": " अगली",
+            "start": 60.64,
+            "end": 61.08,
+            "probability": 0.79
+          },
+          {
+            "word": " बार",
+            "start": 61.08,
+            "end": 61.34,
+            "probability": 0.921
+          },
+          {
+            "word": " कोई",
+            "start": 61.34,
+            "end": 61.62,
+            "probability": 0.753
+          },
+          {
+            "word": " कहे",
+            "start": 61.62,
+            "end": 61.96,
+            "probability": 0.917
+          },
+          {
+            "word": " ये",
+            "start": 61.96,
+            "end": 62.24,
+            "probability": 0.89
+          },
+          {
+            "word": " आनेक्स्पलेंड",
+            "start": 62.24,
+            "end": 62.98,
+            "probability": 0.582
+          },
+          {
+            "word": " मिस्ट्री",
+            "start": 62.98,
+            "end": 63.46,
+            "probability": 0.718
+          },
+          {
+            "word": " है,",
+            "start": 63.46,
+            "end": 63.66,
+            "probability": 0.956
+          },
+          {
+            "word": " उसे",
+            "start": 64.02,
+            "end": 64.28,
+            "probability": 0.94
+          },
+          {
+            "word": " ये",
+            "start": 64.28,
+            "end": 64.54,
+            "probability": 0.969
+          },
+          {
+            "word": " बिडियो",
+            "start": 64.54,
+            "end": 64.92,
+            "probability": 0.626
+          },
+          {
+            "word": " दिखा",
+            "start": 64.92,
+            "end": 65.22,
+            "probability": 0.802
+          },
+          {
+            "word": " देना.",
+            "start": 65.22,
+            "end": 65.56,
+            "probability": 0.931
+          }
+        ]
+      }
+    ],
+    "word_timestamps": [
+      {
+        "word": " दिल्ली",
+        "start": 0.0,
+        "end": 0.52,
+        "probability": 0.752
+      },
+      {
+        "word": " के",
+        "start": 0.52,
+        "end": 0.7,
+        "probability": 0.916
+      },
+      {
+        "word": " कुटुब",
+        "start": 0.7,
+        "end": 1.06,
+        "probability": 0.7
+      },
+      {
+        "word": " कुम्प्लेक्स",
+        "start": 1.06,
+        "end": 1.56,
+        "probability": 0.625
+      },
+      {
+        "word": " में",
+        "start": 1.56,
+        "end": 1.86,
+        "probability": 0.885
+      },
+      {
+        "word": " एक",
+        "start": 1.86,
+        "end": 2.1,
+        "probability": 0.924
+      },
+      {
+        "word": " लोहा",
+        "start": 2.1,
+        "end": 2.44,
+        "probability": 0.905
+      },
+      {
+        "word": " का",
+        "start": 2.44,
+        "end": 2.62,
+        "probability": 0.733
+      },
+      {
+        "word": " खंभा",
+        "start": 2.62,
+        "end": 3.02,
+        "probability": 0.706
+      },
+      {
+        "word": " है,",
+        "start": 3.02,
+        "end": 3.22,
+        "probability": 0.896
+      },
+      {
+        "word": " जो",
+        "start": 3.64,
+        "end": 3.8,
+        "probability": 0.866
+      },
+      {
+        "word": " 1600",
+        "start": 3.8,
+        "end": 5.08,
+        "probability": 0.446
+      },
+      {
+        "word": " साल",
+        "start": 5.08,
+        "end": 5.5,
+        "probability": 0.67
+      },
+      {
+        "word": " से",
+        "start": 5.5,
+        "end": 5.7,
+        "probability": 0.944
+      },
+      {
+        "word": " बारिष",
+        "start": 5.7,
+        "end": 6.04,
+        "probability": 0.816
+      },
+      {
+        "word": " जेल",
+        "start": 6.04,
+        "end": 6.34,
+        "probability": 0.908
+      },
+      {
+        "word": " रहा",
+        "start": 6.34,
+        "end": 6.6,
+        "probability": 0.957
+      },
+      {
+        "word": " है.",
+        "start": 6.6,
+        "end": 6.82,
+        "probability": 0.965
+      },
+      {
+        "word": " जैंका",
+        "start": 8.18,
+        "end": 8.72,
+        "probability": 0.717
+      },
+      {
+        "word": " निशान",
+        "start": 8.72,
+        "end": 9.16,
+        "probability": 0.867
+      },
+      {
+        "word": " तक",
+        "start": 9.16,
+        "end": 9.38,
+        "probability": 0.877
+      },
+      {
+        "word": " नहीं.",
+        "start": 9.38,
+        "end": 9.88,
+        "probability": 0.923
+      },
+      {
+        "word": " चोथी",
+        "start": 10.82,
+        "end": 11.22,
+        "probability": 0.579
+      },
+      {
+        "word": " सदी",
+        "start": 11.22,
+        "end": 11.58,
+        "probability": 0.891
+      },
+      {
+        "word": " में",
+        "start": 11.58,
+        "end": 11.94,
+        "probability": 0.974
+      },
+      {
+        "word": " राजा",
+        "start": 11.94,
+        "end": 12.38,
+        "probability": 0.865
+      },
+      {
+        "word": " चंद्रगुक्त",
+        "start": 12.38,
+        "end": 13.08,
+        "probability": 0.746
+      },
+      {
+        "word": " द्वितिया",
+        "start": 13.08,
+        "end": 13.54,
+        "probability": 0.76
+      },
+      {
+        "word": " ने",
+        "start": 13.54,
+        "end": 13.76,
+        "probability": 0.708
+      },
+      {
+        "word": " ISC",
+        "start": 13.76,
+        "end": 14.34,
+        "probability": 0.582
+      },
+      {
+        "word": " बनवाया",
+        "start": 14.34,
+        "end": 14.86,
+        "probability": 0.793
+      },
+      {
+        "word": " था.",
+        "start": 14.86,
+        "end": 15.08,
+        "probability": 0.727
+      },
+      {
+        "word": " तब",
+        "start": 16.1,
+        "end": 16.36,
+        "probability": 0.901
+      },
+      {
+        "word": " से",
+        "start": 16.36,
+        "end": 16.58,
+        "probability": 0.937
+      },
+      {
+        "word": " ये",
+        "start": 16.58,
+        "end": 16.8,
+        "probability": 0.758
+      },
+      {
+        "word": " यही",
+        "start": 16.8,
+        "end": 17.08,
+        "probability": 0.736
+      },
+      {
+        "word": " खडा",
+        "start": 17.08,
+        "end": 17.4,
+        "probability": 0.698
+      },
+      {
+        "word": " है.",
+        "start": 17.4,
+        "end": 17.62,
+        "probability": 0.921
+      },
+      {
+        "word": " लोग",
+        "start": 18.78,
+        "end": 19.52,
+        "probability": 0.731
+      },
+      {
+        "word": " कहते",
+        "start": 19.52,
+        "end": 19.98,
+        "probability": 0.799
+      },
+      {
+        "word": " है",
+        "start": 19.98,
+        "end": 20.16,
+        "probability": 0.973
+      },
+      {
+        "word": " ये",
+        "start": 20.16,
+        "end": 20.44,
+        "probability": 0.778
+      },
+      {
+        "word": " आलियं",
+        "start": 20.44,
+        "end": 20.92,
+        "probability": 0.473
+      },
+      {
+        "word": " टेकनोलोगी",
+        "start": 20.92,
+        "end": 21.72,
+        "probability": 0.664
+      },
+      {
+        "word": " है.",
+        "start": 21.72,
+        "end": 21.94,
+        "probability": 0.984
+      },
+      {
+        "word": " कहानी",
+        "start": 23.2,
+        "end": 23.94,
+        "probability": 0.833
+      },
+      {
+        "word": " है",
+        "start": 23.94,
+        "end": 24.12,
+        "probability": 0.979
+      },
+      {
+        "word": " की",
+        "start": 24.12,
+        "end": 24.34,
+        "probability": 0.758
+      },
+      {
+        "word": " राजा",
+        "start": 24.34,
+        "end": 24.72,
+        "probability": 0.908
+      },
+      {
+        "word": " अनंपाल",
+        "start": 24.72,
+        "end": 25.38,
+        "probability": 0.853
+      },
+      {
+        "word": " ने",
+        "start": 25.38,
+        "end": 25.62,
+        "probability": 0.81
+      },
+      {
+        "word": " जमीन",
+        "start": 25.62,
+        "end": 26.06,
+        "probability": 0.834
+      },
+      {
+        "word": " में",
+        "start": 26.06,
+        "end": 26.24,
+        "probability": 0.909
+      },
+      {
+        "word": " गाडी",
+        "start": 26.24,
+        "end": 26.6,
+        "probability": 0.792
+      },
+      {
+        "word": " एक",
+        "start": 26.6,
+        "end": 26.96,
+        "probability": 0.936
+      },
+      {
+        "word": " कील",
+        "start": 26.96,
+        "end": 27.26,
+        "probability": 0.824
+      },
+      {
+        "word": " उखार",
+        "start": 27.26,
+        "end": 27.72,
+        "probability": 0.828
+      },
+      {
+        "word": " दी,",
+        "start": 27.72,
+        "end": 27.94,
+        "probability": 0.869
+      },
+      {
+        "word": " और",
+        "start": 28.4,
+        "end": 28.56,
+        "probability": 0.949
+      },
+      {
+        "word": " वही",
+        "start": 28.56,
+        "end": 28.84,
+        "probability": 0.927
+      },
+      {
+        "word": " से",
+        "start": 28.84,
+        "end": 29.04,
+        "probability": 0.832
+      },
+      {
+        "word": " नाम",
+        "start": 29.04,
+        "end": 29.3,
+        "probability": 0.917
+      },
+      {
+        "word": " पडा",
+        "start": 29.3,
+        "end": 29.6,
+        "probability": 0.881
+      },
+      {
+        "word": " दिल्ली.",
+        "start": 29.6,
+        "end": 30.0,
+        "probability": 0.752
+      },
+      {
+        "word": " लेकिन",
+        "start": 30.98,
+        "end": 31.72,
+        "probability": 0.865
+      },
+      {
+        "word": " अस्ली",
+        "start": 31.72,
+        "end": 32.08,
+        "probability": 0.781
+      },
+      {
+        "word": " जवाब",
+        "start": 32.08,
+        "end": 32.5,
+        "probability": 0.899
+      },
+      {
+        "word": " मिला",
+        "start": 32.5,
+        "end": 32.86,
+        "probability": 0.922
+      },
+      {
+        "word": " 2003",
+        "start": 32.86,
+        "end": 33.88,
+        "probability": 0.782
+      },
+      {
+        "word": " में.",
+        "start": 33.88,
+        "end": 34.44,
+        "probability": 0.923
+      },
+      {
+        "word": " आयाटी",
+        "start": 35.28,
+        "end": 35.92,
+        "probability": 0.449
+      },
+      {
+        "word": " कानपूर",
+        "start": 35.92,
+        "end": 36.38,
+        "probability": 0.756
+      },
+      {
+        "word": " के",
+        "start": 36.38,
+        "end": 36.58,
+        "probability": 0.904
+      },
+      {
+        "word": " वैज्यानेको",
+        "start": 36.58,
+        "end": 37.28,
+        "probability": 0.754
+      },
+      {
+        "word": " ने",
+        "start": 37.28,
+        "end": 37.5,
+        "probability": 0.727
+      },
+      {
+        "word": " पाया,",
+        "start": 37.5,
+        "end": 37.9,
+        "probability": 0.93
+      },
+      {
+        "word": " इस",
+        "start": 38.14,
+        "end": 38.28,
+        "probability": 0.833
+      },
+      {
+        "word": " लोहे",
+        "start": 38.28,
+        "end": 38.68,
+        "probability": 0.888
+      },
+      {
+        "word": " में",
+        "start": 38.68,
+        "end": 38.9,
+        "probability": 0.759
+      },
+      {
+        "word": " है,",
+        "start": 38.9,
+        "end": 39.08,
+        "probability": 0.919
+      },
+      {
+        "word": " एक",
+        "start": 39.32,
+        "end": 39.52,
+        "probability": 0.932
+      },
+      {
+        "word": " प्रतिषत",
+        "start": 39.52,
+        "end": 40.04,
+        "probability": 0.85
+      },
+      {
+        "word": " फोस्फोरस,",
+        "start": 40.04,
+        "end": 40.76,
+        "probability": 0.695
+      },
+      {
+        "word": " जो",
+        "start": 41.02,
+        "end": 41.24,
+        "probability": 0.903
+      },
+      {
+        "word": " आज",
+        "start": 41.24,
+        "end": 41.56,
+        "probability": 0.941
+      },
+      {
+        "word": " के",
+        "start": 41.56,
+        "end": 41.74,
+        "probability": 0.678
+      },
+      {
+        "word": " लोहे",
+        "start": 41.74,
+        "end": 42.1,
+        "probability": 0.97
+      },
+      {
+        "word": " में",
+        "start": 42.1,
+        "end": 42.24,
+        "probability": 0.965
+      },
+      {
+        "word": " नहीं",
+        "start": 42.24,
+        "end": 42.54,
+        "probability": 0.896
+      },
+      {
+        "word": " होता.",
+        "start": 42.54,
+        "end": 42.88,
+        "probability": 0.893
+      },
+      {
+        "word": " इस",
+        "start": 44.04,
+        "end": 44.26,
+        "probability": 0.969
+      },
+      {
+        "word": " फोस्फोरस",
+        "start": 44.26,
+        "end": 44.92,
+        "probability": 0.902
+      },
+      {
+        "word": " ने",
+        "start": 44.92,
+        "end": 45.2,
+        "probability": 0.886
+      },
+      {
+        "word": " एक",
+        "start": 45.2,
+        "end": 45.5,
+        "probability": 0.96
+      },
+      {
+        "word": " सुरक्षा",
+        "start": 45.5,
+        "end": 46.0,
+        "probability": 0.843
+      },
+      {
+        "word": " परत",
+        "start": 46.0,
+        "end": 46.28,
+        "probability": 0.752
+      },
+      {
+        "word": " बनाई,",
+        "start": 46.28,
+        "end": 46.72,
+        "probability": 0.828
+      },
+      {
+        "word": " जिसका",
+        "start": 47.02,
+        "end": 47.46,
+        "probability": 0.851
+      },
+      {
+        "word": " नाम",
+        "start": 47.46,
+        "end": 47.76,
+        "probability": 0.903
+      },
+      {
+        "word": " है",
+        "start": 47.76,
+        "end": 47.96,
+        "probability": 0.957
+      },
+      {
+        "word": " मिसवाई.",
+        "start": 47.96,
+        "end": 48.52,
+        "probability": 0.789
+      },
+      {
+        "word": " यही",
+        "start": 49.28,
+        "end": 49.92,
+        "probability": 0.923
+      },
+      {
+        "word": " है",
+        "start": 49.92,
+        "end": 50.18,
+        "probability": 0.965
+      },
+      {
+        "word": " इसका",
+        "start": 50.18,
+        "end": 50.6,
+        "probability": 0.857
+      },
+      {
+        "word": " अस्ली",
+        "start": 50.6,
+        "end": 51.04,
+        "probability": 0.809
+      },
+      {
+        "word": " रास.",
+        "start": 51.04,
+        "end": 51.36,
+        "probability": 0.894
+      },
+      {
+        "word": " ब्रितिष",
+        "start": 52.2,
+        "end": 52.88,
+        "probability": 0.604
+      },
+      {
+        "word": " वैज्यानेको",
+        "start": 52.88,
+        "end": 53.56,
+        "probability": 0.666
+      },
+      {
+        "word": " ने",
+        "start": 53.56,
+        "end": 53.76,
+        "probability": 0.706
+      },
+      {
+        "word": " 1912",
+        "start": 53.76,
+        "end": 54.72,
+        "probability": 0.862
+      },
+      {
+        "word": " में",
+        "start": 54.72,
+        "end": 54.96,
+        "probability": 0.9
+      },
+      {
+        "word": " जाथ",
+        "start": 54.96,
+        "end": 55.24,
+        "probability": 0.743
+      },
+      {
+        "word": " सुरू",
+        "start": 55.24,
+        "end": 55.56,
+        "probability": 0.664
+      },
+      {
+        "word": " की",
+        "start": 55.56,
+        "end": 55.74,
+        "probability": 0.638
+      },
+      {
+        "word": " ती.",
+        "start": 55.74,
+        "end": 56.04,
+        "probability": 0.673
+      },
+      {
+        "word": " जवाब",
+        "start": 57.16,
+        "end": 57.5,
+        "probability": 0.868
+      },
+      {
+        "word": " मिलने",
+        "start": 57.5,
+        "end": 57.9,
+        "probability": 0.932
+      },
+      {
+        "word": " में",
+        "start": 57.9,
+        "end": 58.12,
+        "probability": 0.96
+      },
+      {
+        "word": " लगे",
+        "start": 58.12,
+        "end": 58.36,
+        "probability": 0.942
+      },
+      {
+        "word": " 91",
+        "start": 58.36,
+        "end": 58.96,
+        "probability": 0.659
+      },
+      {
+        "word": " साल.",
+        "start": 58.96,
+        "end": 59.4,
+        "probability": 0.7
+      },
+      {
+        "word": " तो",
+        "start": 60.48,
+        "end": 60.64,
+        "probability": 0.952
+      },
+      {
+        "word": " अगली",
+        "start": 60.64,
+        "end": 61.08,
+        "probability": 0.79
+      },
+      {
+        "word": " बार",
+        "start": 61.08,
+        "end": 61.34,
+        "probability": 0.921
+      },
+      {
+        "word": " कोई",
+        "start": 61.34,
+        "end": 61.62,
+        "probability": 0.753
+      },
+      {
+        "word": " कहे",
+        "start": 61.62,
+        "end": 61.96,
+        "probability": 0.917
+      },
+      {
+        "word": " ये",
+        "start": 61.96,
+        "end": 62.24,
+        "probability": 0.89
+      },
+      {
+        "word": " आनेक्स्पलेंड",
+        "start": 62.24,
+        "end": 62.98,
+        "probability": 0.582
+      },
+      {
+        "word": " मिस्ट्री",
+        "start": 62.98,
+        "end": 63.46,
+        "probability": 0.718
+      },
+      {
+        "word": " है,",
+        "start": 63.46,
+        "end": 63.66,
+        "probability": 0.956
+      },
+      {
+        "word": " उसे",
+        "start": 64.02,
+        "end": 64.28,
+        "probability": 0.94
+      },
+      {
+        "word": " ये",
+        "start": 64.28,
+        "end": 64.54,
+        "probability": 0.969
+      },
+      {
+        "word": " बिडियो",
+        "start": 64.54,
+        "end": 64.92,
+        "probability": 0.626
+      },
+      {
+        "word": " दिखा",
+        "start": 64.92,
+        "end": 65.22,
+        "probability": 0.802
+      },
+      {
+        "word": " देना.",
+        "start": 65.22,
+        "end": 65.56,
+        "probability": 0.931
+      }
+    ],
+    "language": "hi",
+    "duration_seconds": 66.482,
+    "model_size": "small",
+    "device": "cuda"
+  },
+  "error": null
+}

@@ -10,6 +10,7 @@ This stage builds the beat map, selected lines, title-card copy, and reveal stru
 |-------|----------|---------|
 | Schema | `schemas/artifacts/script.schema.json` | Artifact validation |
 | Prior artifact | `state.artifacts["proposal"]["proposal_packet"]` | Emotional arc and source truth |
+| Creative skill | `skills/creative/storytelling.md` | Universal script-writing checklist, hook types, reveal/reward structure |
 | Tools | `transcriber`, `scene_detect` | Optional dialogue mining and source review |
 
 ## Process

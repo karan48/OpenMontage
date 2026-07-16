@@ -4,6 +4,59 @@
 > methodology (Philipp Dettmer), 3Blue1Brown (Grant Sanderson), Richard Mayer "Multimedia Learning"
 > (Cambridge UP, 2001/2020)
 
+## Universal Script-Writing Checklist (Apply Before Every Script)
+
+This checklist applies to every pipeline that writes narration or on-screen copy, not only the
+explainer arc below. Run it before drafting and again at self-review (Step 6 / Quality Gate in the
+relevant script-director skill).
+
+1. **Know the audience.** Before writing, answer: who is this for, what problem or curiosity do
+   they have, why would they click, why would they stay. Write for one person, not everyone.
+2. **One main promise.** Every script answers ONE clear question. Five questions in one video means
+   viewers lose the thread. State the promise in a single sentence before writing prose.
+3. **Strong hook (first 5-15s).** Surprise, curiosity, mystery, a challenged belief, or stakes.
+   Never "Hello everyone, welcome back..." See Hook Types below for concrete patterns.
+4. **Make the promise explicit.** Tell the viewer why staying to the end is worth it ("By the end
+   of this video, you'll understand why experts still disagree").
+5. **Follow a story structure.** Hook -> Context -> Rising mystery/conflict -> Evidence and
+   discoveries -> Twist -> Resolution -> Final takeaway. Even procedural or data-led scripts benefit
+   from this shape; see the Explainer Arc Template below for the timed version.
+6. **Build curiosity every 20-40 seconds.** Reintroduce a question with connective phrases ("But
+   that's only part of the story...", "Then something changed.", "However, new evidence tells a
+   different story."). Pairs with the Pattern Interrupt row in Pacing Rules below.
+7. **Change visuals frequently.** Alternate AI-generated images, maps, animations, timelines,
+   documents, close-ups, wide shots, and text highlights. Static scenes lose viewers.
+8. **Write like you speak.** Conversational language beats academic phrasing — "When archaeologists
+   started digging, they found something unexpected," not "Archaeological excavations indicate..."
+9. **One idea per sentence.** Break compound sentences into short, sequential statements. Spoken
+   narration cannot carry stacked clauses.
+10. **Show, don't just tell.** Describe the concrete, visualizable moment, not the abstract summary
+    — "Imagine thousands of handwritten manuscripts disappearing into flames," not "The library
+    burned." This is the same discipline as the Anti-Subjective Rule below: describe the visual
+    cause, not the feeling.
+11. **Add emotion.** Wonder, suspense, shock, inspiration, empathy, triumph. Viewers remember
+    emotions more than facts.
+12. **Build toward a reveal.** Plant clues, let the viewer form a hypothesis, then reveal. Don't
+    front-load the answer. See Guided Discovery below.
+13. **Reward the viewer.** Deliver on the opening promise with a real answer grounded in the
+    evidence presented — don't leave the question dangling.
+14. **End strong.** Close with a thought-provoking question, a key insight, a connection to the
+    present, or a memorable takeaway. Never just "Thanks for watching."
+15. **Keep the pace moving.** Every sentence should introduce an idea, raise a question, answer a
+    question, raise the stakes, or reveal new information. If a sentence does none of these, cut it.
+16. **Verify facts.** Especially for history, science, medicine, and current events: check reliable
+    sources, separate evidence from interpretation, and distinguish established fact from
+    traditional account and speculation. Every claim should be traceable to the `research_brief` —
+    see each pipeline's "Mid-Production Fact Verification" step.
+17. **Design for audio.** Read the script aloud. If a sentence is hard to say, it's hard to hear.
+18. **Design for visuals.** For every paragraph, ask "what will viewers be looking at during this
+    sentence?" and let the answer drive the enhancement cue.
+19. **Make every section better than the last.** Escalate: interesting -> more interesting ->
+    surprising -> biggest reveal -> strong conclusion. Treat it as climbing a staircase, not a
+    plateau.
+20. **Finish with value.** The viewer should leave with a new fact, a new perspective, a memorable
+    story, or a reason to share the video.
+
 ## The Explainer Arc Template
 
 For a **3-minute explainer video** (scale proportionally for other lengths):

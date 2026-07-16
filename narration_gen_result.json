@@ -1,0 +1,86 @@
+{
+  "s1": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 116,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s1.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s1.mp3"
+  },
+  "s2": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 92,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s2.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s2.mp3"
+  },
+  "s3": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 135,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s3.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s3.mp3"
+  },
+  "s4": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 142,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s4.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s4.mp3"
+  },
+  "s5": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 93,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s5.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s5.mp3"
+  },
+  "s6": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 85,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s6.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s6.mp3"
+  },
+  "s7": {
+    "success": true,
+    "data": {
+      "provider": "edge_tts",
+      "voice": "hi-IN-MadhurNeural",
+      "text_length": 76,
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s7.mp3",
+      "format": "mp3"
+    },
+    "error": null,
+    "path": "projects\\iron-pillar-rust-mystery\\assets\\audio\\s7.mp3"
+  }
+}

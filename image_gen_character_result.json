@@ -1,0 +1,67 @@
+{
+  "scene-2": {
+    "success": true,
+    "data": {
+      "provider": "flux",
+      "model": "fal-ai/flux-pro/v1.1",
+      "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in an explaining pose with one hand raised pointing upward toward ornate Gupta-era Indian palace columns behind him, daytime, clear sky, ancient Indian royal court architecture in the background.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-2.png",
+      "seed": 1164497561,
+      "lora_url": null,
+      "lora_scale": null
+    },
+    "error": null,
+    "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in an explaining pose with one hand raised pointing upward toward ornate Gupta-era Indian palace columns behind him, daytime, clear sky, ancient Indian royal court architecture in the background."
+  },
+  "scene-3": {
+    "success": true,
+    "data": {
+      "provider": "flux",
+      "model": "fal-ai/flux-pro/v1.1",
+      "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a storytelling pose with both hands gesturing as if narrating a mysterious legend, twilight sky, an ornate temple archway with a faint coiled serpent motif carved into the stone behind him.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-3.png",
+      "seed": 3386593094,
+      "lora_url": null,
+      "lora_scale": null
+    },
+    "error": null,
+    "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a storytelling pose with both hands gesturing as if narrating a mysterious legend, twilight sky, an ornate temple archway with a faint coiled serpent motif carved into the stone behind him."
+  },
+  "scene-5": {
+    "success": true,
+    "data": {
+      "provider": "flux",
+      "model": "fal-ai/flux-pro/v1.1",
+      "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a confident explaining pose with one hand presenting an abstract glowing amber shield-like diagram floating beside him, dark navy background with subtle geometric patterns.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-5.png",
+      "seed": 1859136752,
+      "lora_url": null,
+      "lora_scale": null
+    },
+    "error": null,
+    "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a confident explaining pose with one hand presenting an abstract glowing amber shield-like diagram floating beside him, dark navy background with subtle geometric patterns."
+  },
+  "scene-7": {
+    "success": true,
+    "data": {
+      "provider": "flux",
+      "model": "fal-ai/flux-pro/v1.1",
+      "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a warm friendly waving pose, dusk sky behind him with the illustrated Iron Pillar monument and simplified Qutub complex ruins, warm glowing orange and pink clouds.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-7.png",
+      "seed": 3449511268,
+      "lora_url": null,
+      "lora_scale": null
+    },
+    "error": null,
+    "prompt": "Full-body illustration of A friendly young Indian history guide character with short black hair and a trimmed beard, warm brown skin, wearing a terracotta-orange kurta with a deep purple scarf, bold clean black outlines, flat cel-shaded vector illustration style with no gradients, warm terracotta and amber color palette with purple accents, digital vector illustration style similar to modern explainer-video animation, no text, no watermark, standing in a warm friendly waving pose, dusk sky behind him with the illustrated Iron Pillar monument and simplified Qutub complex ruins, warm glowing orange and pink clouds."
+  },
+  "scene-1": {
+    "success": true,
+    "data": {
+      "provider": "flux",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-1.png",
+      "note": "reused character_test.png"
+    },
+    "prompt": "see character_test generation"
+  }
+}

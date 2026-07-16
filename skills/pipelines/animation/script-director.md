@@ -11,6 +11,7 @@ This stage turns the approved proposal into animation-ready beats. The script mu
 | Schema | `schemas/artifacts/script.schema.json` | Artifact validation |
 | Prior artifact | `proposal_packet` from Proposal Director | Selected concept, animation mode, target duration, reuse strategy |
 | Optional artifact | `research_brief` from Research Director | Data points, audience insights, accuracy constraints |
+| Creative skill | `skills/creative/storytelling.md` | Universal script-writing checklist, hook types, but-therefore method, pacing rules |
 | Meta skill | `skills/meta/voice-performance-director.md` | Structured TTS delivery cues for natural, expressive narration |
 | Tools | `transcriber` | Optional source transcript support |
 

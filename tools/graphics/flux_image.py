@@ -199,6 +199,30 @@ class FluxImage(BaseTool):
 
             output_path = Path(inputs.get("output_path", "generated_image.png"))
             output_path.parent.mkdir(parents=True, exist_ok=True)
+
+            # fal.ai's flux-pro endpoints return JPEG bytes regardless of the
+            # requested output filename's extension. Writing those bytes under
+            # a mismatched extension (e.g. .png) produces a file that image
+            # decoders (browsers, Remotion/Chromium) refuse to load, since the
+            # magic bytes don't match the extension's expected format. Sniff
+            # the real format from the content-type header (falling back to
+            # magic-byte detection) and correct the extension before writing.
+            actual_ext = None
+            content_type = image_response.headers.get("content-type", "")
+            if "jpeg" in content_type or "jpg" in content_type:
+                actual_ext = ".jpg"
+            elif "png" in content_type:
+                actual_ext = ".png"
+            elif "webp" in content_type:
+                actual_ext = ".webp"
+            elif image_response.content[:2] == b"\xff\xd8":
+                actual_ext = ".jpg"
+            elif image_response.content[:8] == b"\x89PNG\r\n\x1a\n":
+                actual_ext = ".png"
+
+            if actual_ext and output_path.suffix.lower() != actual_ext:
+                output_path = output_path.with_suffix(actual_ext)
+
             output_path.write_bytes(image_response.content)
 
         except Exception as e:

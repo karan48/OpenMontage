@@ -14,6 +14,7 @@ The script is the backbone of the video. Every visual, every scene, every audio 
 | Prior artifact | `proposal_packet` | Selected concept with title, hook, key_points, core_message, tone, narrative_structure, duration |
 | Prior artifact | `research_brief` (optional but high-value) | Data points, audience insights, expert quotes — ground the script in real facts |
 | Playbook | Active style playbook from `proposal_packet.selected_concept.suggested_playbook` | Voice style, pacing rules |
+| Creative skill | `skills/creative/storytelling.md` | Universal script-writing checklist, hook types, but-therefore method, pacing rules, Mayer's principles |
 | Meta skill | `skills/meta/voice-performance-director.md` | Structured TTS delivery cues for natural, expressive narration |
 | Layer 3 | TTS provider skills (check `agent_skills` on the selected TTS tool) | TTS capabilities for speaker directions |
 
@@ -52,7 +53,10 @@ The Research Director has already done the heavy lifting — you have a `researc
 
 ### Step 3: Plan the Narrative Arc
 
-Before writing prose, plan the structure. Every explainer script follows a dramatic arc:
+Before writing prose, run the Universal Script-Writing Checklist in
+`skills/creative/storytelling.md` (audience, one main promise, hook, curiosity cadence, visual
+variety, emotion, reveal, reward, strong ending). Then plan the structure. Every explainer script
+follows a dramatic arc:
 
 ```
 HOOK (0-5s)     → Grab attention. Question, bold claim, or surprising fact.

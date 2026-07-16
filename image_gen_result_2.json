@@ -1,0 +1,35 @@
+{
+  "scene-4": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, macro close-up of ancient iron pillar metal surface texture, warm glowing terracotta tones, bold black outlines, no gradients, no text",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-4.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, macro close-up of ancient iron pillar metal surface texture, warm glowing terracotta tones, bold black outlines, no gradients, no text"
+  },
+  "scene-5": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, cross-section diagram of a metal surface with a glowing protective shield layer, warm terracotta and amber tones, bold outlines, no text",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-5.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, cross-section diagram of a metal surface with a glowing protective shield layer, warm terracotta and amber tones, bold outlines, no text"
+  },
+  "scene-6": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, vintage science laboratory with old brass apparatus and microscope, warm terracotta tones, bold black outlines, no gradients, no text",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-6.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, vintage science laboratory with old brass apparatus and microscope, warm terracotta tones, bold black outlines, no gradients, no text"
+  }
+}

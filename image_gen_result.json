@@ -1,0 +1,46 @@
+{
+  "scene-1": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. The ancient Iron Pillar of Delhi standing tall and gleaming in the Qutub complex at dusk, simplified ruin arches around it, warm orange dusk sky.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-1.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. The ancient Iron Pillar of Delhi standing tall and gleaming in the Qutub complex at dusk, simplified ruin arches around it, warm orange dusk sky."
+  },
+  "scene-2": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. Gupta-era Indian palace and temple architecture, ornate stone columns, daytime, clear sky, ancient Indian royal court setting.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-2.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. Gupta-era Indian palace and temple architecture, ornate stone columns, daytime, clear sky, ancient Indian royal court setting."
+  },
+  "scene-3": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark, slightly darker and more mysterious color grading. A mythic coiled serpent beneath a stone temple, a small king figure silhouette nearby, moonlit night scene.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-3.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark, slightly darker and more mysterious color grading. A mythic coiled serpent beneath a stone temple, a small king figure silhouette nearby, moonlit night scene."
+  },
+  "scene-7": {
+    "success": true,
+    "data": {
+      "provider": "local_diffusion",
+      "model": "stabilityai/sd-turbo",
+      "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. The ancient Iron Pillar of Delhi at dusk from a slightly different angle than a companion shot, warm glowing sky, simplified Qutub complex ruins in the background.",
+      "output": "projects\\iron-pillar-rust-mystery\\assets\\images\\scene-7.png"
+    },
+    "error": null,
+    "prompt": "flat vector illustration, bold saturated colors, warm sandstone/terracotta palette, clean bold black outlines, geometric shapes, no gradients, high contrast, flat 2D motion-graphics explainer video illustration style, no text, no watermark. The ancient Iron Pillar of Delhi at dusk from a slightly different angle than a companion shot, warm glowing sky, simplified Qutub complex ruins in the background."
+  }
+}
