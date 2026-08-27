@@ -22,6 +22,7 @@ Quick routing for common animation-pipeline needs:
 | Particle overlay / background motion | Remotion `ParticleOverlay` component (already exists) |
 | Mathematical animation (graphs, equations) | Manim — read `.agents/skills/manim-composer`, `.agents/skills/manimce-best-practices` |
 | Ghibli / anime-style still-driven scene | Remotion `AnimeScene` component + FLUX image gen |
+| Geopolitical/rivalry/countdown explainer (Infographics-Show style) | `infographics-show-explainer` playbook + `stat_card`/`kpi_grid`/`comparison`/`anime_scene` (templated Remotion) + `pexels_image`/`pixabay_image` for documentary photos + `recraft_image` (`icon` style via prompt text) for faction icons — see `skills/creative/data-visualization.md` for citation-chip and red/blue faction conventions |
 
 **Remotion determinism rule:** every GSAP use inside a Remotion component must drive timeline progress from `useCurrentFrame()` — never `requestAnimationFrame`. Pattern examples in `.agents/skills/gsap-react/SKILL.md`.
 

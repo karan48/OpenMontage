@@ -84,6 +84,42 @@ share their primary visual subject?" Yes ⇒ CRITICAL ⇒ re-plan.
 The corollary: the per-scene plan is a *first-class artifact*, not implied. Write it down
 (in `art-direction.md` or a sibling `scenes.md`) before authoring `Composition.tsx`.
 
+### 1.6 Pace by visual beat, not by sentence — the shot-count doctrine
+
+The single most common pacing failure in narrated documentary-style atelier pieces: one
+illustration held under 10+ seconds of narration because "the sentence isn't done yet." A
+sentence ending is not a cutting cue. **Count visual beats, not sentences.** For every line of
+narration, ask:
+
+- **Did the location change?** → New image.
+- **Did the time change?** → New image.
+- **Did the narrator introduce a new object or person?** → New image.
+- **Did the emotion change** (reveal, surprise, suspense)? → Usually a new shot or a dramatic
+  camera move, even on the same image.
+- **Is the narrator still talking about the same thing?** → Keep the same image, but *animate
+  or reframe it* — don't just let it sit.
+
+Target **one shot every 4–7 seconds**, cinematic camera movement (push/pull/pan/tilt, per
+`IllustratedScene`'s `CameraMotion`) carrying every cut. A "shot" is not the same thing as a
+"painting" — the same artwork can be re-cut into several shots via a fresh camera framing,
+zoom level, focus point, overlay, text card, or lighting treatment layered on top each time,
+per the `IllustratedScene`/`TextCardScene` mechanics in this doctrine's ss4. A single
+high-quality illustration presented with 2-3 different framings across a scene reads as
+distinct shots, not a static hold — as long as each framing is a genuinely different
+Sequence (fresh camera-motion start, not a mid-clip parameter change).
+
+Rule of thumb for planning a scene: **8–9 core paintings can carry 12–15 shots** once each
+is re-cut through pans, zooms, parallax bands, text overlays, and transitions. Budget the
+image-generation count around that ratio rather than one image per shot — it's cheaper and
+it's *more* cinematic, not less, because repetition-with-reframing reads as directorial
+intent while a new image every cut reads as a slideshow.
+
+Exception: a title card, name reveal, or other genuinely climactic beat can justify a longer
+single hold (per `art-direction.md`'s pacing profile) — but even then, prefer splitting a
+long hold into 2 shots (e.g. a wide bloom-in framing, then a push-in reframe) over one static
+13+ second hold. The reviewer should flag any single Sequence exceeding ~8s outside an
+explicitly-declared hero/climax beat as a pacing finding.
+
 ### 2. Decide the motion language — principles, not presets
 Reach for **principle** skills, never finished animations:
 - **`framer-motion`** and **`lottie-bodymovin`** — Disney's 12 principles (anticipation, staging,

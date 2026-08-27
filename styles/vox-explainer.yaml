@@ -1,0 +1,111 @@
+identity:
+  name: "Vox Explainer"
+  category: motion-graphics
+  mood: curious, narrative-driven, warmly authoritative
+  pace: moderate
+  best_for: "Story-driven YouTube explainers and myth-busting documentaries (Vox 'Explained'/'Glad You Asked' style) — a narrative arc with a mystery to solve, not a news bulletin"
+
+visual_language:
+  color_palette:
+    primary: ["#EE1D3C", "#111111"]
+    accent: ["#FFC845", "#2B6CB0"]
+    background: "#F7F7F5"
+    text: "#111111"
+    muted: "#6B7280"
+  composition: full-bleed maps and archival photos with bold text overlays, asymmetric editorial grid, large numerals for stats, hook-driven cold-open frame before the title card
+  texture: documentary photo grain over real-world footage/stills, flat vector maps and charts, no texture on typography layers
+
+typography:
+  headings:
+    font: "Neue Haas Grotesk Display (or Barlow Condensed)"
+    weight: 800
+    tracking: "-0.01em"
+  body:
+    font: "Source Serif Pro"
+    weight: 400
+    line_height: 1.6
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Neue Haas Grotesk Display (or Barlow Condensed)"
+    weight: 800
+    size_multiplier: 3.5
+  scale_system: "major_third"
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 400
+    caption: 400
+
+motion:
+  transitions: [cut, whip-pan, cross-zoom, map-zoom, pattern-interrupt-flash]
+  animation_style: "documentary kinetic-type paced for engagement, not broadcast; keyword highlight boxes pop in on the beat; chart line-draw reveals; Ken Burns pans on archival photos with a slightly quicker drift than a news package; a new visual beat every 3-5s to keep curiosity moving"
+  pacing_rules:
+    min_scene_hold_seconds: 1.5
+    max_scene_hold_seconds: 7
+    text_card_hold_seconds: 2.5
+    stat_card_hold_seconds: 3.0
+    transition_duration_seconds: 0.3
+  entrance: "highlight box pops in under the emphasized keyword; underline draws left-to-right on the beat of the narration"
+  exit: "quick cut or cross-zoom into the next map/chart/curiosity beat"
+
+audio:
+  voice_style: "warm, curious, conversational narrator guiding a story — not reading a bulletin. Leans into the hook, speeds up through rising stakes, slows for the reveal."
+  music_mood: "understated tension-building underscore, minimal piano/synth pulse, swells under curiosity beats and drops out briefly before the reveal"
+  music_volume: 0.10
+  sfx_style: "subtle whooshes on map zooms, soft ticks on chart line-draws, understated stingers on curiosity beats and reveals"
+  ducking_threshold_db: -4
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slower, lower energy, deliberate pauses for the reveal/payoff moment"
+  transition_voice_shift: "brief pause on 'but'/'therefore' connectors, then resume at slightly higher energy into the next beat"
+
+asset_generation:
+  image_prompt_prefix: "documentary photojournalism style, muted realistic tones, editorial photo composition, "
+  image_negative_prompt: "cartoonish, anime, 3d render, neon, oversaturated, fantasy, illustration"
+  diagram_style: "flat vector maps with a single red/yellow data-highlight overlay, clean line charts with bold single-color emphasis"
+  consistency_anchors:
+    - "Vox red (#EE1D3C) as the singular accent for emphasis, highlights, and key data — never mixed with other accents in the same scene"
+    - "White/off-white background with near-black text for card layers"
+    - "Bold condensed grotesk headlines paired with a serif body font"
+    - "Documentary/editorial photo treatment for real-world subjects, not illustration"
+
+overlays:
+  stat_card:
+    bg: "#111111"
+    border: "#EE1D3C"
+    radius: 4
+    shadow: "0 4px 16px rgba(0,0,0,0.25)"
+  key_term:
+    bg: "#C4122E"
+    text: "#FFFFFF"
+    radius: 2
+  code_block:
+    bg: "#111111"
+    text: "#F5F5F5"
+    highlight: "#EE1D3C"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Only one accent color (Vox red) active per scene for emphasis — never mix accent colors in the same frame"
+  - "Every map or chart animates on reveal (line-draw, zoom-in) rather than appearing static"
+  - "Keyword highlight boxes are used sparingly — max 1-2 per section, reserved for the single most important term"
+  - "Archival or stock photography must read as editorial/documentary, not stock-cheesy"
+  - "Hold data reveals at least 3s so viewers can read the number before the cut"
+  - "Cold open/hook must land in the first 5-15s — no 'welcome back' preamble before the mystery is posed"
+  - "A new curiosity beat or pattern interrupt at least every 20-40s (see skills/creative/storytelling.md checklist)"
+  - "Each section must escalate on the last — no flat, same-energy plateaus back to back"
+  - "New visual element on screen every 3-5s — never hold a static frame through a full sentence"
+
+chart_palette:
+  - "#EE1D3C"
+  - "#111111"
+  - "#6B7280"
+  - "#2B6CB0"
+  - "#FFC845"
+  - "#0EA5A4"
+
+color_rules:
+  harmony_type: "complementary"
+  contrast_validation: true
+  colorblind_safe: true

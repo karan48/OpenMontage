@@ -1,0 +1,84 @@
+asset_generation:
+  consistency_anchors:
+  - Handwritten-feel display type (Caveat or equivalent) reserved exclusively for
+    the recurring phrase � never used for any other text
+  - Documentary photo treatment for all real-world imagery � never illustration, never
+    3D
+  diagram_style: minimal line diagrams only where needed for data beats;
+    otherwise avoid diagrams in favor of photography and typography
+  image_negative_prompt: cartoonish, anime, 3d render, oversaturated colors, stock-photo,
+    corporate gradients, visible readable text, neon, fantasy
+  image_prompt_prefix: 'documentary photography,
+    settings, natural light, 35-50mm lens equivalent, candid
+    unposed framing, no visible text or logos, '
+audio:
+  ducking_threshold_db: -5
+  hero_moment_voice_shift: slow, deliberate, longer pauses on the two core_message
+    thesis lines
+  music_mood: understated, warm, piano/soft synth, slightly melancholic-to-hopeful,
+    builds gently under the duality-to-resolution turn
+  music_volume: 0.12
+  sfx_style: minimal � soft page-turn/pen-stroke sound only on the handwritten-phrase
+    reveals
+  transition_voice_shift: brief pause before every turn, then resume at slightly higher
+    energy
+  voice_style: warm, conversational, like a close friend talking you down from a spiral
+    at 2am � not a lecture, not a guru
+  voice_variation_allowed: true
+chart_palette:
+- '#E8944A'
+- '#1A1512'
+- '#C97A3D'
+- '#F2C879'
+- '#6B5B4F'
+- '#A8998A'
+color_rules:
+  colorblind_safe: true
+  contrast_validation: true
+  harmony_type: analogous
+identity:
+  best_for: Personal-essay YouTube narration riding a trending Hindi phrase/caption-culture
+    moment � intimate, honest, documentary-photo-led long-form video with a recurring
+    handwritten-phrase motif
+  category: cinematic
+  mood: warm, intimate, honest
+  name: Warm Personal Essay
+  pace: deliberate
+motion:
+  animation_style: restrained spring-physics text entrances, slow photo drift (no
+    aggressive Ken Burns), one hard cut reserved for tonal turns (the lekin pivot)
+  pacing_rules:
+    max_scene_hold_seconds: 8
+    min_scene_hold_seconds: 3
+    stat_card_hold_seconds: 3
+    text_card_hold_seconds: 3
+    transition_duration_seconds: 0.3
+  transitions:
+  - soft-dissolve
+  - slow-cross-fade
+  - hard-cut-on-turn
+  - whip-pan
+  - hard-cut
+  - zoom-punch
+  - territory-fill
+  - glitch-flash
+quality_rules:
+- Minimum contrast ratio 4.5:1 for all text
+- Handwritten-feel type never used for anything except the recurring phrase
+- Every narration paragraph gets its own dedicated visual � never hold one visual
+  across two paragraphs
+- Hold data reveals at least 5s so viewers can read the number before the cut
+- A curiosity beat or pattern interrupt at least every 60-90s across the full runtime,
+  not just the opening
+typography:
+  body:
+    font: Source Serif Pro
+    weight: 400
+  headings:
+    font: Caveat (handwritten-feel display) for the recurring phrase; Fraunces for
+      section titles
+    weight: 700
+visual_language:
+  composition: full-bleed maps and archival/documentary photos with bold numbered stat overlays, dark full-frame backdrop pushing photo/graphic content forward, asymmetric editorial grid, oversized ranked-list numerals, hook-driven cold open before the title card
+  texture: documentary photo grain, no illustration, no 3D render, no
+    flat vector icons except in stat/data beats

@@ -178,7 +178,7 @@ export const LineChart: React.FC<LineChartProps> = ({
                   fontSize={18}
                   fontWeight={400}
                 >
-                  {formatNumber(line.value)}
+                  {formatXAxis(line.value)}
                 </text>
               </g>
             ))}
@@ -384,4 +384,11 @@ function formatNumber(n: number): string {
   if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
   if (Number.isInteger(n)) return String(n);
   return n.toFixed(1);
+}
+
+// X-axis values are almost always categorical (years, indices, labels) rather
+// than magnitudes -- unlike the y-axis, they should never collapse into a
+// "2.0K"-style abbreviation. Round to the nearest whole number and print as-is.
+function formatXAxis(n: number): string {
+  return String(Math.round(n));
 }

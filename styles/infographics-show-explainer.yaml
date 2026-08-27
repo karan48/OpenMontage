@@ -1,0 +1,113 @@
+identity:
+  name: "Infographics Show Explainer"
+  category: motion-graphics
+  mood: dramatic, urgent, punchy, geopolitical-explainer
+  pace: fast
+  best_for: "Countdown/ranked-list explainers, military/political/economic rivalry breakdowns, 'top N' formats, stat-heavy comparison videos"
+
+visual_language:
+  color_palette:
+    primary: ["#E8112D", "#1450E0"]
+    accent: ["#F2B01E", "#FFFFFF"]
+    background: "#0A0A0C"
+    text: "#F5F5F5"
+    muted: "#7A7E86"
+  composition: full-bleed maps and archival/documentary photos with bold numbered stat overlays, dark full-frame backdrop pushing photo/graphic content forward, asymmetric editorial grid, oversized ranked-list numerals, hook-driven cold open before the title card
+  texture: documentary photo grain over real-world footage/stills, flat vector maps/icons with hard-edged silhouette shapes, no texture on typography layers
+
+typography:
+  headings:
+    font: "Archivo Black (or Barlow Condensed Black)"
+    weight: 900
+    tracking: "-0.01em"
+  body:
+    font: "Barlow Condensed"
+    weight: 500
+    line_height: 1.4
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Archivo Black (or Barlow Condensed Black)"
+    weight: 900
+    size_multiplier: 3.8
+  scale_system: "perfect_fourth"
+  weight_matrix:
+    title: 900
+    heading: 800
+    body: 500
+    caption: 500
+
+motion:
+  transitions: [whip-pan, hard-cut, zoom-punch, territory-fill, glitch-flash]
+  animation_style: "dramatic documentary kinetic-type, faster and punchier than a warm curiosity read; territory/map fills animate in with a sweeping color wash; stat cards snap in with a hard punch-scale, not a soft ease; count-up tickers on every key number; a new visual beat every 2-4s to keep urgency high"
+  pacing_rules:
+    min_scene_hold_seconds: 1.2
+    max_scene_hold_seconds: 5
+    text_card_hold_seconds: 2.0
+    stat_card_hold_seconds: 2.5
+    transition_duration_seconds: 0.2
+  entrance: "hard punch-scale (0.85 -> 1.08 -> 1.0) snapping in on the beat, no gentle ease-in"
+  exit: "whip-pan or hard cut into the next stat/reveal — never a slow fade"
+
+audio:
+  voice_style: "dramatic, punchy, urgent documentary narrator, staccato delivery, rhetorical-question hooks, tension-building pauses before reveals — think countdown-show gravitas, not warm storytelling"
+  music_mood: "orchestral/synth tension-building underscore with percussive stingers on every reveal and rank change; low sustained drone under stat-heavy sections"
+  music_volume: 0.14
+  sfx_style: "hard whooshes on whip-pans, mechanical ticks on count-up tickers, deep impact stingers on rank reveals and rivalry comparisons"
+  ducking_threshold_db: -5
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slower, lower, deliberate — a beat of silence before the #1 reveal or the decisive statistic"
+  transition_voice_shift: "clipped pause on rhetorical-question hooks, then punch back in at higher energy for the answer/reveal"
+
+asset_generation:
+  image_prompt_prefix: "documentary photojournalism style, high-contrast realistic tones, editorial news-graphic composition, "
+  image_negative_prompt: "cartoonish, whimsical, pastel, soft gradients, cute, watercolor, fantasy"
+  diagram_style: "flat vector maps with hard-edged red/blue territory fills, bold single-color icon silhouettes, no soft shading"
+  consistency_anchors:
+    - "Red (#E8112D) vs. blue (#1450E0) as the fixed two-color faction/rivalry system — assign each side once per video and never reassign mid-video"
+    - "Near-black background (#0A0A0C) across all graphic scenes for contrast punch"
+    - "Bold condensed/black-weight sans headlines, no serif body copy anywhere"
+    - "Documentary/editorial photo treatment for real-world subjects, never illustrated or whimsical"
+    - "Citation chip present on every stat card and data claim (see skills/creative/data-visualization.md)"
+    - "Countdown/ranked-list scenes use a consistent oversized numeral treatment across the whole video"
+
+overlays:
+  stat_card:
+    bg: "#141417"
+    border: "#E8112D"
+    radius: 2
+    shadow: "0 6px 24px rgba(0,0,0,0.5)"
+  key_term:
+    bg: "#1450E0"
+    text: "#FFFFFF"
+    radius: 2
+  code_block:
+    bg: "#0A0A0C"
+    text: "#F5F5F5"
+    highlight: "#E8112D"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Red and blue are reserved exclusively for the two-sided faction/rivalry system — never used decoratively once a rivalry is established in the video"
+  - "Every stat card or data claim carries a citation chip (source + credibility marker) per skills/creative/data-visualization.md"
+  - "Red/blue side assignment is locked at first use and never flips for the remainder of the video"
+  - "Every map or territory fill animates on reveal (sweep-fill, zoom-in) rather than appearing static"
+  - "Hold data reveals at least 2.5s so viewers can read the number before the cut"
+  - "Cold open/hook must land in the first 5-10s — no preamble before the rivalry or countdown premise is posed"
+  - "A new stat, rank, or reveal beat at least every 15-25s to sustain urgency (faster cadence than a curiosity-paced explainer)"
+  - "Countdown/ranked-list numerals use one consistent treatment (size, font, position) for the entire sequence"
+  - "New visual element on screen every 2-4s — never hold a static frame through a full sentence"
+
+chart_palette:
+  - "#E8112D"
+  - "#1450E0"
+  - "#F2B01E"
+  - "#7A7E86"
+  - "#F5F5F5"
+  - "#0A0A0C"
+
+color_rules:
+  harmony_type: "complementary"
+  contrast_validation: true
+  colorblind_safe: true

@@ -39,6 +39,7 @@
 | **Style transfer / repaint of an existing image** | `grok_image` | Native edit flow, strong promptable transforms | `openai_image` |
 | **Multi-image merge / composite** | `grok_image` | Can combine multiple source images into one scene | `openai_image` |
 | **Logo or brand asset** | `recraft_image` | SVG support, text accuracy | `openai_image` |
+| **Faction/rivalry icon system** (flags, military hardware, currency silhouettes — e.g. `infographics-show-explainer`) | `recraft_image` (`icon` style via prompt text, not the `style` param) | Flat silhouette + SVG output, consistent across a whole video | `pixabay_image` with `image_type: "vector"/"illustration"` |
 | **Image with text/labels** | `openai_image` | Best text rendering (GPT Image 2) | `recraft_image` |
 | **Complex multi-element composition** | `openai_image` | Best instruction following | `flux_image` |
 | **Hero image (key visual)** | `flux_image` | Highest visual quality | `openai_image` |
@@ -49,8 +50,9 @@
 ## Provider-Specific Caveats
 
 ### Recraft V4 via fal.ai
-- **`style` parameter causes 422 errors** (as of 2026-04). The `style` enum values (`digital_illustration`, `realistic_image`, etc.) are rejected by fal.ai's Recraft V4 endpoint. **Workaround:** encode style direction in the prompt text instead (e.g. "digital illustration of a tooth cross-section" rather than `style="digital_illustration"`). The `image_size` and `colors` parameters work fine.
+- **`style` parameter causes 422 errors** (confirmed still live 2026-07, originally observed 2026-04). The `style` enum values (`digital_illustration`, `realistic_image`, `vector_illustration`, `icon`, etc.) are rejected by fal.ai's Recraft V4 endpoint. **Workaround:** omit the `style` param entirely and encode the style direction in the prompt text instead (e.g. "flat icon style, minimalist vector icon illustration: ..." rather than `style="icon"`). This is the sanctioned path — verified to produce clean flat/vector output. The `image_size` and `colors` parameters work fine.
 - **Text rendering is unreliable for exact business names.** Recraft (like all AI image models) may hallucinate wrong text. For any scene where text must be verbatim (CTA screens, business names, phone numbers), use Remotion `text_card` instead of generating an image with text.
+- **Icon generation is supplementary, not load-bearing.** If Recraft is unavailable or the endpoint changes again, fall back to `pixabay_image` with `image_type: "vector"/"illustration"` for flag/faction/hardware icon needs — don't block a production on Recraft specifically.
 
 ## Cost-Quality Tradeoff
 

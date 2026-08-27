@@ -293,6 +293,54 @@ Never rely on color alone to convey meaning:
 | Decorative gridlines | Use light gridlines or none. They should aid reading, not decorate |
 | Dark text on dark background | Use playbook text color on playbook background. Check contrast |
 
+## Citation Chips and Faction-Coded Iconography
+
+Some style playbooks (e.g. `infographics-show-explainer`) require two conventions beyond the
+general chart rules above. Apply these whenever the active playbook's `asset_generation.consistency_anchors`
+calls for them.
+
+### Citation Chip Convention
+
+Every stat card or on-screen data claim carries a small citation chip so the claim reads as
+sourced, not asserted:
+
+```
+Position: fixed bottom-left of the stat/chart frame, consistent across the whole video
+Content: "Source: [name]" + a credibility marker
+Credibility marker maps directly to the research_brief's own rating:
+  primary_source   -> solid marker (e.g. filled dot)
+  secondary_source -> outline marker
+  anecdotal        -> no marker, source name only
+Size: 16-18px at 1080p (matches the existing source-citation minimum in this skill)
+Never block: keep clear of value labels, legends, and the safe-caption zone
+```
+
+Pull the source name and credibility rating straight from the `research_brief.data_points[]`
+entry backing the claim — this is a rendering convention for data already being gathered, not
+a new research requirement. If a claim has no backing `data_point`, either find one or drop the
+claim; an unsourced stat in a citation-chip-driven style undercuts the whole convention.
+
+### Red/Blue Faction-Coded Iconography
+
+When a scene compares two sides (countries, companies, political factions, rival products):
+
+```
+1. Assign one side red, the other blue, the FIRST time the rivalry is introduced.
+2. Never reassign for the rest of the video — a side that was red in scene 3 must stay red
+   in scene 12, even in an unrelated comparison, if the same entity reappears.
+3. Apply the assignment consistently across every register: icon fill, map territory fill,
+   bar/chart color, label underline, stat card border.
+4. Never use red/blue decoratively once a rivalry is established — those two colors are
+   reserved for the faction system for the remainder of the video.
+5. Pair color with a shape/icon difference (not color alone) per the accessibility rules above
+   — e.g. a distinct silhouette per side, not just a color swap on the same icon.
+```
+
+Source faction icons via Recraft's `icon` style (flat silhouette, `svg_output`) with prompt text
+describing the style directly rather than the `style` parameter — see
+`skills/creative/image-provider-usage.md` for the current workaround — or fall back to Pixabay's
+`image_type: "vector"/"illustration"` filter per `skills/creative/stock-sourcing-usage.md`.
+
 ## Integration with Scene Director
 
 When the Scene Director identifies a data visualization need, apply this skill as follows:

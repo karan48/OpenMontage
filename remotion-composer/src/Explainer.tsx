@@ -218,6 +218,8 @@ interface Cut {
   rightLabel?: string;
   leftValue?: string;
   rightValue?: string;
+  leftColor?: string;
+  rightColor?: string;
   // Chart props
   chartData?: any[];
   chartSeries?: any[];
@@ -247,6 +249,13 @@ interface Cut {
   backgroundVideo?: string; // Video clip rendered behind the component (takes priority over backgroundImage)
   backgroundVideoStart?: number; // Seek position in seconds for background video (default 0)
   backgroundOverlay?: number; // Opacity of dark overlay on backgroundImage/backgroundVideo (0-1, default 0.55)
+  // Foreground "popup" badge -- small inset image (e.g. a portrait headshot) layered
+  // on top of the background + card content. Use for portrait-aspect photos that would
+  // crop badly if used as a full-bleed background.
+  badgeImage?: string;
+  badgePosition?: string; // "bottom-right" (default) | "bottom-left" | "top-right" | "top-left"
+  badgeSize?: number; // width in px, default 320
+  badgeCaption?: string; // optional small caption strip under the badge image
   color?: string;
   accentColor?: string;
   fontSize?: number;
@@ -536,11 +545,69 @@ const BackgroundVideoLayer: React.FC<{
   );
 };
 
+const BADGE_POSITIONS: Record<string, React.CSSProperties> = {
+  "bottom-right": { bottom: 64, right: 64 },
+  "bottom-left": { bottom: 64, left: 64 },
+  "top-right": { top: 64, right: 64 },
+  "top-left": { top: 64, left: 64 },
+};
+
+// Small inset "popup" image over the main scene -- for headshots/portrait photos
+// or icons that shouldn't be stretched full-bleed as a background (aspect-ratio
+// mismatches crop badly at object-fit:cover on a 16:9 frame). Pops in with a
+// spring scale/opacity and holds.
+const BadgeImage: React.FC<{
+  src: string;
+  position?: string;
+  size?: number;
+  caption?: string;
+}> = ({ src, position = "bottom-right", size = 320, caption }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const pop = spring({ frame, fps, config: { damping: 14, stiffness: 140 }, durationInFrames: 18 });
+  const scale = 0.85 + pop * 0.15;
+  const opacity = Math.min(1, pop * 1.3);
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <div
+        style={{
+          position: "absolute",
+          ...BADGE_POSITIONS[position],
+          width: size,
+          transform: `scale(${scale})`,
+          opacity,
+          borderRadius: 16,
+          overflow: "hidden",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
+          border: "3px solid rgba(255,255,255,0.9)",
+        }}
+      >
+        <Img src={resolveAsset(src)} style={{ width: "100%", display: "block", objectFit: "cover" }} />
+        {caption && (
+          <div
+            style={{
+              background: "rgba(10,10,12,0.85)",
+              color: "#F5F5F5",
+              fontSize: 22,
+              fontWeight: 700,
+              padding: "8px 14px",
+              textAlign: "center",
+            }}
+          >
+            {caption}
+          </div>
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme }) => {
   // Wrap component with background video or image if specified
   const maybeWrapWithBg = (element: React.ReactElement) => {
+    let wrapped = element;
     if (cut.backgroundVideo) {
-      return (
+      wrapped = (
         <BackgroundVideoLayer
           src={cut.backgroundVideo}
           startFrom={cut.backgroundVideoStart ?? 0}
@@ -549,9 +616,8 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
           {element}
         </BackgroundVideoLayer>
       );
-    }
-    if (cut.backgroundImage) {
-      return (
+    } else if (cut.backgroundImage) {
+      wrapped = (
         <BackgroundImageLayer
           src={cut.backgroundImage}
           overlayOpacity={cut.backgroundOverlay ?? 0.55}
@@ -560,7 +626,20 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
         </BackgroundImageLayer>
       );
     }
-    return element;
+    if (cut.badgeImage) {
+      return (
+        <AbsoluteFill>
+          {wrapped}
+          <BadgeImage
+            src={cut.badgeImage}
+            position={cut.badgePosition}
+            size={cut.badgeSize}
+            caption={cut.badgeCaption}
+          />
+        </AbsoluteFill>
+      );
+    }
+    return wrapped;
   };
 
   // Resolve the scene element based on cut type, then wrap with backgroundImage if set
@@ -596,6 +675,7 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
       <ComparisonCard
         leftLabel={cut.leftLabel} rightLabel={cut.rightLabel}
         leftValue={cut.leftValue} rightValue={cut.rightValue}
+        leftColor={cut.leftColor} rightColor={cut.rightColor}
         title={cut.title} backgroundColor={bgColor} textColor={textColor}
       />
     );
@@ -790,7 +870,6 @@ export const Explainer: React.FC<ExplainerProps> = (props) => {
     <AbsoluteFill style={{ background: theme.backgroundColor, fontFamily: theme.headingFont || fontFamily }}>
       {/* Layer 0: Animated gradient background — driven by theme */}
       <AnimatedBackground theme={theme} />
-
       {/* Layer 1: Visual scenes */}
       {cuts.map((cut) => {
         const from = Math.round(cut.in_seconds * fps);
@@ -802,7 +881,6 @@ export const Explainer: React.FC<ExplainerProps> = (props) => {
           </Sequence>
         );
       })}
-
       {/* Layer 2: Overlays (section titles, stat reveals, hero titles) */}
       {overlays?.map((overlay, i) => {
         const from = Math.round(overlay.in_seconds * fps);
@@ -816,7 +894,6 @@ export const Explainer: React.FC<ExplainerProps> = (props) => {
           </Sequence>
         );
       })}
-
       {/* Layer 3: Captions (word-by-word highlight) */}
       {captions && captions.length > 0 && (
         <CaptionOverlay
@@ -827,12 +904,10 @@ export const Explainer: React.FC<ExplainerProps> = (props) => {
           backgroundColor={theme.captionBackgroundColor}
         />
       )}
-
       {/* Layer 4: Audio — narration */}
       {audio?.narration?.src && (
         <Audio src={resolveAsset(audio.narration.src)} volume={audio.narration.volume ?? 1} />
       )}
-
       {/* Layer 4: Audio — music with offset, fade in/out, and optional loop */}
       {audio?.music?.src && (
         <Audio

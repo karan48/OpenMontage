@@ -128,9 +128,10 @@ class BgRemove(BaseTool):
 
         input_image = Image.open(input_path)
 
+        session = rembg.new_session(model_name)
         result_image = rembg.remove(
             input_image,
-            model_name=model_name,
+            session=session,
             alpha_matting=alpha_matting,
         )
 
