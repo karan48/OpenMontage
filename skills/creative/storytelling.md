@@ -56,6 +56,40 @@ relevant script-director skill).
     plateau.
 20. **Finish with value.** The viewer should leave with a new fact, a new perspective, a memorable
     story, or a reason to share the video.
+21. **Default to the common viewer, not the expert.** See "Plain-Language & Humor Default" below —
+    this is mandatory unless the brief names a specialist audience.
+
+## Plain-Language & Humor Default (Mandatory)
+
+Unless `proposal_packet.selected_concept.target_audience` explicitly names a specialist/technical
+audience (engineers, developers, policy professionals, medical practitioners), **every script
+defaults to the general, non-expert viewer** — a smart person with no background in the topic.
+This is a standing project preference, not a per-video judgment call: apply it automatically.
+
+- **Analogy before jargon.** Never introduce a technical term cold. Explain the idea through a
+  concrete, everyday analogy first — something from ordinary life, not another abstract concept —
+  then attach the technical term afterward as a label, not a starting point.
+- **Culturally local analogies for the target audience.** For an Indian-audience script, reach for
+  daily-life Indian reference points (the postman and a sealed chitthi, exam/school life, sarkari
+  daftar paperwork, a kirana shop, a train journey) before reaching for Western media references —
+  they land faster and feel like the narrator actually knows the viewer.
+- **Humor is a retention tool, not decoration.** Actively look for places to be funny — irony,
+  bureaucratic absurdity, a wry aside, a relatable comparison ("like passing an exam without
+  reading the textbook"). Humor keeps technical or dry material (budgets, protocols, statistics)
+  from turning into a lecture. It is not optional garnish; treat "where can this be funny" as a
+  required question for every section, the same way enhancement cues are required.
+  - **Hard limit:** never mock victims, communities, tragedy, or genuine human cost. Humor targets
+    systems, absurdity, and irony — not people who suffered. See the Anti-Subjective Rule and use
+    the same judgment the india-independence-1947-hindi reference project uses: comic energy
+    through the bureaucratic-absurdity beats, hard pivot to grave/respectful the moment real human
+    cost enters the story.
+- **Write like storytelling, not a definition dump.** Address the viewer directly ("सोचिए...",
+  "अब सवाल ये है..." / "picture this...", "here's the question"). Build every explanation as a
+  small reveal the viewer discovers, not a fact being read to them. Use the Guided Discovery method
+  above even for short technical asides.
+- **Self-check before submitting:** could a viewer with zero background explain the core idea back
+  to a friend afterward, using the analogy you gave them — and would they smile at least once while
+  doing it? If either answer is no, revise.
 
 ## The Explainer Arc Template
 

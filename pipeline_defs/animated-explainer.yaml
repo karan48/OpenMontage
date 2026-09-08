@@ -37,6 +37,7 @@ required_skills:
   - pipelines/explainer/compose-director
   - pipelines/explainer/publish-director
   - meta/reviewer
+  - meta/script-reviewer
   - meta/checkpoint-protocol
   - meta/skill-creator
   - meta/animation-runtime-selector

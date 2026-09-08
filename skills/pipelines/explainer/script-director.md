@@ -55,8 +55,11 @@ The Research Director has already done the heavy lifting — you have a `researc
 
 Before writing prose, run the Universal Script-Writing Checklist in
 `skills/creative/storytelling.md` (audience, one main promise, hook, curiosity cadence, visual
-variety, emotion, reveal, reward, strong ending). Then plan the structure. Every explainer script
-follows a dramatic arc:
+variety, emotion, reveal, reward, strong ending) — **including the "Plain-Language & Humor
+Default" section**, which is mandatory for every explainer script unless the proposal names a
+specialist audience: analogy before jargon, culturally local comparisons for the target audience,
+active humor in the dry/bureaucratic/ironic beats, and a storytelling voice rather than a lecture.
+Then plan the structure. Every explainer script follows a dramatic arc:
 
 ```
 HOOK (0-5s)     → Grab attention. Question, bold claim, or surprising fact.
@@ -193,7 +196,9 @@ Read the active style playbook and verify:
 
 ### Step 6: Self-Evaluate
 
-Score your script (1-5):
+Before scoring, run the full **`skills/meta/script-reviewer.md`** pass — hook timing, plain-language/word-choice, humor & tone discipline, internal consistency (text vs. provider_text drift, callback throughline), pacing/TTS-readiness, and fact traceability. Fix every critical finding it surfaces; this is mandatory, not optional, and happens before the script reaches the user for approval.
+
+Then score your script (1-5):
 
 | Criterion | Question |
 |-----------|----------|
