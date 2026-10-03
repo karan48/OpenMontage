@@ -1,0 +1,68 @@
+# Channel profile template. Copy this folder to channels/<id>/ and fill it in.
+# Schema: schemas/channels/channel_profile.schema.json
+# Usage:  skills/meta/channel-profiles.md
+# Defaults only. Approval gates and governance rules still apply to every video.
+
+id: my-channel                      # kebab-case, must match the folder name
+display_name: "My Channel"          # the channel's real YouTube name
+youtube_handle: null
+status: planned                     # active | paused | planned
+description: "One sentence: what this channel makes."
+audience: "Who watches, and what they already know."
+
+language:
+  narration: en                     # hi | en | hinglish | ...
+  script: "Script-writing convention, e.g. which words go in Devanagari vs Latin."
+  on_screen_text: en
+
+formats:                            # one or both; each production picks one (video_format in project.json)
+  long_form:
+    aspect_ratio: "16:9"            # 16:9 | 9:16 | 1:1 | 4:5
+    media_profile: youtube_landscape  # a name from lib/media_profiles.py
+    target_seconds: [300, 600]
+    structure: "e.g. hook -> setup -> build -> payoff (detail in script-guide.md)"
+    composition_mode: atelier       # atelier | templated (recommendation; still presented)
+    # pipeline: animated-explainer  # optional: overrides production.default_pipeline for this format
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [45, 60]
+    structure: "e.g. hook (0-2 s) -> one idea -> payoff"
+    composition_mode: templated
+    sources: [standalone, cut_down] # standalone Shorts and/or cut-downs from a long video
+
+production:
+  default_pipeline: animated-explainer      # a manifest in pipeline_defs/
+  alternate_pipelines: {}                   # situation: pipeline, e.g. no_footage: animated-explainer
+  style_playbook: clean-professional        # a playbook in styles/
+  render_runtime_recommendation: remotion   # remotion | hyperframes | ffmpeg (both runtimes are still presented)
+
+narration:
+  provider: elevenlabs
+  model: null
+  voice_id: null
+  voice_audition_required: true     # audition 2-3 voices on the first video, then lock the winner here
+  planning_wpm: 150
+  register: "How the narrator talks to the viewer."
+
+script:
+  guide: script-guide.md            # one section per format
+  humor: medium                     # none | low | medium | high
+
+visuals:
+  approach: "What the screen looks like most of the time."
+  sourcing: stock_first
+  image_model: flux/schnell
+  ai_video: approval_gated          # approval_gated | never
+  character_bible: null             # e.g. characters.md
+
+music:
+  mood: "Music direction."
+
+publishing:
+  title_language: en
+  thumbnail: "Thumbnail direction."
+
+policies: []
+
+open_questions: []

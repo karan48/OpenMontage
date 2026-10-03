@@ -1,0 +1,83 @@
+# Channel profile: Rani_ai (Hinglish lifestyle, AI persona — long-form and Shorts/Reels)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# DRAFT — review the open_questions at the bottom.
+
+id: rani-ai
+display_name: "Rani_ai"
+youtube_handle: null
+status: active
+description: "Lifestyle videos starring Rani, an AI persona — routines, confidence, outfits, self-care and day-in-the-life, told in her own first-person voice. Long-form vlogs plus Shorts and Reels."
+audience: "Indian women aged 20-35; aspirational but relatable, with body-positive confidence content."
+
+language:
+  narration: hinglish
+  script: "Hindi words in Devanagari, English words in Latin script (draft — confirm at the voice audition). Rani speaks in first person."
+  on_screen_text: hinglish
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [300, 600]      # draft — confirm
+    structure: "hook -> Rani says what today is about -> 4-6 segments (routine, outfit, tip, little story) -> main takeaway -> outro + soft CTA"
+    composition_mode: templated
+    pacing: "New shot every 3-5 s; match cuts between segments"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [20, 45]
+    structure: "hook (0-2 s) -> 2-4 routine/moment beats -> one takeaway tip -> soft CTA"
+    composition_mode: templated
+    sources: [standalone, cut_down]
+    cross_post: instagram_reels     # same cut posted as an Instagram Reel
+    pacing: "New shot every 1.2-3 s"
+
+production:
+  default_pipeline: cinematic
+  style_playbook: lifestyle-reel
+  render_runtime_recommendation: remotion
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: null                    # Rani's own female voice, locked once chosen and recorded in characters.md
+  voice_audition_required: true
+  output_format: mp3_44100_128
+  planning_wpm: 155                 # draft — measure at audition
+  register: "First-person Rani — warm, confident, casual Hinglish; smiling delivery, never salesy"
+  delivery_markup: eleven_v3_audio_tags
+  sample_riskiest_section_first: true
+
+script:
+  guide: script-guide.md
+  humor: medium
+
+visuals:
+  approach: "Rani in warm, natural-light lifestyle scenes (home, café, street, mirror), generated with her LoRA and the canonical appearance block pasted verbatim. Gentle push-ins and match cuts; motion clips only with approval."
+  sourcing: generated
+  image_model: "flux_image with the Amita LoRA (lora_path) — routes to fal-ai/flux-lora, about $0.035 per image"
+  ai_video: approval_gated
+  ai_video_provider: "kling_official_video per the standing Amita rule — but that account had no balance on 2026-09-26; the fal MiniMax H3 Max Turbo i2v route is the approved fallback. Confirm at each proposal."
+  character_bible: characters.md
+
+music:
+  mood: "Chill pop or lo-fi, warm and bright, 90-110 BPM"
+  source_order: [music_library, elevenlabs_music]
+
+publishing:
+  title_language: hinglish
+  thumbnail: "Rani mid-moment, warm light, a 2-4 word caption"
+  disclosure: "Rani is AI-generated: tick YouTube's altered/synthetic-content disclosure and Instagram's AI label on every upload"
+
+policies:
+  - "Rani's face, build, hair and outfit stay identical across every shot — paste the canonical block from characters.md verbatim into every prompt."
+  - "Casual, modest clothing only — no intimate or revealing wardrobe, even for bedroom or sleepwear beats."
+  - "Use 'Amita' (the LoRA trigger word) in generation prompts and 'Rani' in all on-screen and narration copy."
+  - "Every upload is labelled as AI-generated content."
+
+open_questions:
+  - "YouTube handle."
+  - "Rani's voice: supply 2-3 candidate female ElevenLabs voice IDs, or design one with ElevenLabs voice design. It becomes her permanent voice."
+  - "Motion clips: is the official Kling account funded now, or use the fal MiniMax route when a beat needs real motion?"
+  - "Long-form: are 5-10 min vlogs right? A long video needs ~60-120 consistent Rani images (~$2-4 at $0.035 each, before any motion clips). Are Shorts standalone or cut-downs?"
+  - "Hinglish script convention: Devanagari for Hindi plus Latin for English, or all-Roman Hinglish?"

@@ -1,0 +1,106 @@
+identity:
+  name: "Toon Story"
+  category: motion-graphics
+  mood: playful, warm, expressive, comic
+  pace: fast
+  best_for: "2D cartoon stories with a recurring rigged cast, long-form episodes (16:9) and Shorts (9:16) — setup, conflict, twist and payoff"
+
+visual_language:
+  color_palette:
+    primary: ["#FF6B35", "#3A86FF"]
+    accent: ["#FFD23F", "#7B2CBF"]
+    background: "#FFF8EC"
+    text: "#1F1B16"
+    muted: "#6B6259"
+  composition: stage framing with characters full-body and readable silhouettes; 16:9 = two-shot staging left/right with the ground line at 75% height; 9:16 = characters in the middle third, ground line at 70%, captions and speech bubbles in the upper third, nothing important in the bottom 20% (Shorts UI)
+  texture: flat vector fills, thick rounded outlines, one soft cel-shadow tone, no gradients on characters
+
+typography:
+  headings:
+    font: "Baloo 2"
+    weight: 800
+  body:
+    font: "Baloo 2"
+    weight: 500
+    line_height: 1.4
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Baloo 2"
+    weight: 800
+    size_multiplier: 3.0
+  scale_system: "major_third"
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 500
+    caption: 500
+
+motion:
+  transitions: [cut, iris-wipe, squash-pop, whip-pan]
+  animation_style: "cartoon acting on the Disney 12 principles — anticipation before every big action, squash and stretch on landings, overshoot on settles, held reaction poses on punchlines; mouth shapes synced to dialogue"
+  pacing_rules:
+    min_scene_hold_seconds: 1.0
+    max_scene_hold_seconds: 4.0
+    text_card_hold_seconds: 1.5
+    stat_card_hold_seconds: 2.0
+    transition_duration_seconds: 0.25
+  entrance: "pop in with squash-and-stretch (0.8 -> 1.08 -> 1.0)"
+  exit: "quick squash-out or iris wipe"
+
+audio:
+  voice_style: "animated storyteller — expressive and playful, slightly mischievous narrator; each character voice clearly distinct from the others"
+  music_mood: "playful light underscore — pizzicato, ukulele, marimba, bouncy rhythm; stings on punchlines"
+  music_volume: 0.12
+  sfx_style: "cartoon foley — boings, pops, whooshes, slide whistle on falls, record scratch on twists"
+  ducking_threshold_db: -4
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slow down, a beat of silence, then the punchline"
+  transition_voice_shift: "a quick musical sting, then straight into the next beat"
+
+asset_generation:
+  image_prompt_prefix: "flat 2D cartoon illustration, thick rounded outlines, bright saturated colours, simple shapes, Indian everyday setting, "
+  image_negative_prompt: "photorealistic, 3d render, anime, gritty, dark, text, watermark, extra limbs"
+  diagram_style: "hand-lettered labels with bouncy arrows"
+  consistency_anchors:
+    - "Every character matches its locked design sheet — same silhouette, colours and outfit in every episode"
+    - "Thick rounded dark outlines (#1F1B16) on every shape"
+    - "Flat fills with one soft cel-shadow tone; no gradients on characters"
+    - "Warm cream (#FFF8EC) or simple flat-colour backgrounds so characters pop"
+
+overlays:
+  stat_card:
+    bg: "#FFFFFF"
+    border: "#FF6B35"
+    text: "#1F1B16"
+    radius: 16
+    shadow: "0 4px 0 #1F1B16"
+  key_term:
+    bg: "#FFD23F"
+    text: "#1F1B16"
+    radius: 12
+  code_block:
+    bg: "#1F1B16"
+    text: "#FFF8EC"
+    highlight: "#FFD23F"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Open on a character already in a funny or strange situation — within 2 seconds in a Short, a cold-open gag in the first 20 seconds of an episode"
+  - "Every story beat is acted with poses and actions, not only narrated"
+  - "At most three characters in a scene: one lead plus up to two supporting"
+  - "The twist lands in the final third; the payoff and moral are shown, not preached"
+  - "Captions are big and short — at most 6 words on screen at once"
+  - "Characters never drift from their design sheet between scenes or episodes"
+
+chart_palette:
+  - "#FF6B35"
+  - "#3A86FF"
+  - "#FFD23F"
+  - "#7B2CBF"
+
+color_rules:
+  harmony_type: "triadic"
+  contrast_validation: true
+  colorblind_safe: true

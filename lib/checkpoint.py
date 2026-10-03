@@ -182,12 +182,16 @@ def init_project(
     pipeline_type: str,
     pipeline_dir: Optional[Path] = None,
     style_playbook: Optional[str] = None,
+    channel: Optional[str] = None,
+    video_format: Optional[str] = None,
 ) -> Path:
     """Initialize a project workspace with the canonical layout + marker file.
 
     Creates projects/<project_id>/ with the standard subdirectories and writes
     project.json — the marker the Backlot board uses to render a project's
-    identity and stage rail before the first checkpoint exists.
+    identity and stage rail before the first checkpoint exists. ``channel``
+    names the channels/<id>/ profile whose defaults this production follows;
+    ``video_format`` picks which of its formats (``long_form`` or ``shorts``).
 
     Idempotent: re-running preserves the original created_at and merges fields.
     Returns the project directory.
@@ -220,6 +224,10 @@ def init_project(
     marker["pipeline_type"] = pipeline_type
     if style_playbook is not None:
         marker["style_playbook"] = style_playbook
+    if channel is not None:
+        marker["channel"] = channel
+    if video_format is not None:
+        marker["video_format"] = video_format
 
     with open(marker_path, "w") as f:
         json.dump(marker, f, indent=2)

@@ -1,0 +1,85 @@
+# Channel profile: Product review (Hinglish — long-form reviews and Shorts)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# DRAFT — review the open_questions at the bottom.
+
+id: product-review
+display_name: "Product Review (Hinglish)"   # replace with the real YouTube channel name
+youtube_handle: null
+status: active
+description: "Product reviews — is it worth the money? Hands-on footage or product shots, spec cards, pros and cons, and a clear verdict. In-depth long-form reviews and comparisons, plus quick-verdict Shorts."
+audience: "Indian buyers comparing products before purchase; price-conscious and allergic to hype."
+
+language:
+  narration: hinglish
+  script: "Hindi words in Devanagari, English words (product names, specs, tech terms) in Latin script (draft — confirm at the voice audition). Prices in ₹."
+  on_screen_text: hinglish
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [480, 720]      # draft — confirm
+    structure: "verdict-tease hook -> price + who it's for -> chaptered tests (design, display, performance, camera, battery... per category) -> vs alternatives -> pros/cons recap -> who should (not) buy -> verdict + score"
+    composition_mode: templated     # repeatable chapter cards, spec cards and comparison tables
+    pacing: "New visual every 3-5 s; hold comparison tables long enough to read"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [40, 60]
+    structure: "verdict-tease hook -> price + who it's for -> 2-3 pros -> 1-2 cons -> who should (not) buy -> verdict + score"
+    composition_mode: templated
+    sources: [standalone, cut_down]
+    pacing: "New visual every 1-2.5 s"
+
+production:
+  default_pipeline: hybrid           # you filmed the product: footage plus spec/pros-cons/verdict overlays
+  alternate_pipelines:
+    no_footage: animated-explainer   # official product images, stock and generated scenes with narration
+    app_review: screen-demo          # apps and websites: screen recordings
+  style_playbook: tech-review
+  render_runtime_recommendation: remotion
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: null
+  voice_audition_required: true
+  output_format: mp3_44100_128
+  planning_wpm: 165                 # draft — review Shorts run quick; measure at audition
+  register: "Energetic but honest friend who actually used it — fast, clear, confident; slows down for the verdict"
+  delivery_markup: eleven_v3_audio_tags
+  sample_riskiest_section_first: true
+
+script:
+  guide: script-guide.md
+  humor: low
+
+visuals:
+  approach: "Your own footage when available; otherwise official product images. Spec cards, count-up numbers, pros (cyan, ✓) and cons (orange, ✗), comparison tables, full-screen verdict card."
+  sourcing: own_footage_first
+  image_model: flux/schnell         # backgrounds and lifestyle context only — never the product itself
+  ai_video: approval_gated
+  character_bible: null
+
+music:
+  mood: "Upbeat electronic or lo-fi beat, driving but light; drops out under the verdict line"
+  source_order: [music_library, elevenlabs_music]
+
+publishing:
+  title_language: hinglish
+  thumbnail: "Product hero on dark seamless plus the verdict word or score"
+  description: "Specs, price at time of recording, and affiliate disclosure if any"
+
+policies:
+  - "The product is always shown as it really is — real footage or official images, never an AI-generated product."
+  - "Always pros AND cons; no pure hype piece."
+  - "Sponsorship, free review units and affiliate links are disclosed on screen and in the description."
+  - "Specs and prices are verified against the official source on the recording date."
+
+open_questions:
+  - "Real YouTube channel name and handle."
+  - "Which product categories (phones, gadgets, home, beauty, apps…)? This changes the spec-card templates."
+  - "Narrator voice: supply 2-3 candidate ElevenLabs voice IDs, or will you use your own recorded voice for footage-led videos?"
+  - "Score format for the verdict card: out of 10, stars, or Buy / Wait / Skip?"
+  - "Long-form: are 8-12 min chaptered reviews right, and do you also want head-to-head comparison videos? Are Shorts quick-verdict cut-downs of the long review, or standalone?"
+  - "Hinglish script convention: Devanagari for Hindi plus Latin for English, or all-Roman Hinglish?"

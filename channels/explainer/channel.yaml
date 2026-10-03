@@ -1,0 +1,90 @@
+# Channel profile: Curious India (Hindi explainers — long-form and Shorts)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# Every value here was confirmed in earlier productions (scam-factories-hindi,
+# himalaya-glacier-timebomb-hindi, cockroach-janta-party-mumbai-hindi).
+
+id: explainer
+display_name: "Curious India"
+youtube_handle: null
+status: active
+description: "Hindi explainers and myth-busting documentaries in the Vox 'Explained' style — a mystery to solve, told by a warm narrator who talks straight to you. Long-form videos plus Shorts."
+audience: "General Hindi-speaking Indian YouTube viewers — curious, not experts. Skip background they already know; a 1-2 line recap in the teaser is enough."
+
+language:
+  narration: hi
+  script: "Devanagari. English terms Indians actually say in English stay in Latin script. No ALL-CAPS emphasis (Devanagari has no case) — use audio tags, em-dashes and short fragments."
+  on_screen_text: hi
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [600, 900]
+    structure: "teaser (cold open -> 3 numbered open loops -> 'मैं' promise -> title) -> escalating sections -> thesis echo"
+    composition_mode: atelier
+    pacing: "New visual every 3-5 s; curiosity beat every 20-40 s"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [45, 60]
+    structure: "strangest fact (0-2 s) -> one idea as a mini-mystery -> reveal -> pointer to the full video"
+    composition_mode: atelier       # cut-downs reuse the long video's bespoke scenes, reframed to 9:16
+    sources: [cut_down, standalone]
+    pacing: "New visual every 1.5-3 s"
+
+production:
+  default_pipeline: animated-explainer
+  style_playbook: vox-explainer
+  render_runtime_recommendation: remotion
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: 7b9mYhmnp0y2qSH1FnBL
+  voice_audition_required: false
+  output_format: mp3_44100_128      # mp3_44100_192 returns HTTP 403 on this account tier
+  stability: { creative: [0.15, 0.20], natural: [0.25, 0.30] }   # creative = comic/high-energy, natural = grave/reflective
+  similarity_boost: 0.82
+  speed: [1.0, 1.03]
+  planning_wpm: 156                 # measured; never calibrate from another script's planned duration
+  register: "Warm second-person 'आप' friend — 'मैं आपको बताता हूँ', 'चलिए, साथ में', 'अब आप पूछेंगे…'. Grave beats stay restrained."
+  delivery_markup: eleven_v3_audio_tags
+  sample_riskiest_section_first: true
+  pauses: "[pause] usually renders 1.1-1.5 s — measure with silencedetect; never blanket-pad"
+  sync: "Time every cut, label and SFX from ElevenLabs forced-alignment word onsets"
+
+script:
+  guide: script-guide.md
+  humor: medium
+  review_deliverable: "Tagged-script HTML/MD (audio tags highlighted, copy per section) before any TTS spend"
+
+visuals:
+  approach: "Editorial/documentary photos and stock first, animated maps and charts, Vox-red keyword highlights. A genuinely new image per narration beat — never the same image reframed with new text. Cuts land on the sentence that introduces the subject."
+  sourcing: stock_first
+  image_model: flux/schnell
+  ai_video: approval_gated
+  character_bible: null
+  typography: "vox-explainer's heading fonts have no Devanagari: use Teko 600-700 for headlines/stats/chips and Mukta 500 for labels and subtitles (Google Fonts, via @remotion/google-fonts)"
+  exact_text: "Dates, numbers, place names and quotes are always Remotion overlays, never baked into a generated image"
+
+music:
+  mood: "Understated cinematic documentary underscore — sparse felt piano over a warm low synth pad, soft sub-bass pulse, no drums or bright hi-hats"
+  source_order: [music_library, elevenlabs_music]
+  mix: "Music around -20 dB under -17 LUFS narration, 3 kHz dip, sidechain ducking"
+
+publishing:
+  title_language: hi
+  thumbnail: "Vox-style: one bold subject, a single red highlight, a 3-5 word Hindi hook"
+
+policies:
+  - "No AI likeness of real, named people — show them as a text/quote card or a non-identifying shot."
+  - "Photoreal generated images that depict a real event carry a small 'AI चित्रण' corner tag (#F7F7F5 on a 70% #111111 chip); tick YouTube's altered/synthetic-content disclosure at upload."
+  - "No person in harm's way in disaster or aftermath imagery; ordinary-life scenes may include people and vehicles."
+  - "India maps use official Survey of India boundaries (all of J&K and Ladakh as Indian territory); draw neighbours first and India on top."
+  - "Humor targets systems and absurdity, never victims or real human cost."
+
+quality_bar: "projects/himalaya-glacier-timebomb-hindi"
+
+open_questions:
+  - "YouTube handle (youtube_handle)."
+  - "Shorts: mostly cut-downs from the long videos, mostly standalone, or both equally? And keep 45-60 s, or go longer (YouTube allows up to 3 min)?"

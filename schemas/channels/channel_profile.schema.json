@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmontage/channels/channel_profile",
+  "title": "Channel Profile",
+  "description": "Standing creative defaults for one YouTube channel (channels/<id>/channel.yaml). Agents load it at the start of a production to pre-fill proposal, script, scene, asset and publish decisions. Defaults only — approval gates and governance rules still apply. See skills/meta/channel-profiles.md.",
+  "type": "object",
+  "required": ["id", "display_name", "language", "formats", "production", "narration", "script", "visuals"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Kebab-case id; must match the channel's folder name."
+    },
+    "display_name": { "type": "string", "minLength": 1, "description": "The channel's real YouTube name." },
+    "youtube_handle": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["active", "paused", "planned"] },
+    "description": { "type": "string" },
+    "audience": { "type": "string" },
+    "language": {
+      "type": "object",
+      "required": ["narration"],
+      "properties": {
+        "narration": { "type": "string", "description": "e.g. hi, en, hinglish" },
+        "script": { "type": "string", "description": "Script-writing convention, e.g. which words go in Devanagari vs Latin." },
+        "on_screen_text": { "type": "string" }
+      }
+    },
+    "formats": {
+      "type": "object",
+      "description": "The video formats this channel publishes. Each production picks one (recorded as video_format in project.json).",
+      "minProperties": 1,
+      "properties": {
+        "long_form": { "$ref": "#/$defs/format" },
+        "shorts": { "$ref": "#/$defs/format" }
+      },
+      "additionalProperties": false
+    },
+    "production": {
+      "type": "object",
+      "required": ["default_pipeline", "style_playbook"],
+      "properties": {
+        "default_pipeline": { "type": "string", "description": "A manifest name in pipeline_defs/. A format may override it." },
+        "alternate_pipelines": {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "situation -> pipeline name, e.g. no_footage: animated-explainer."
+        },
+        "style_playbook": { "type": "string", "description": "A playbook name in styles/." },
+        "render_runtime_recommendation": { "type": "string", "enum": ["remotion", "hyperframes", "ffmpeg"] }
+      }
+    },
+    "narration": {
+      "type": "object",
+      "required": ["provider"],
+      "properties": {
+        "provider": { "type": "string" },
+        "model": { "type": ["string", "null"] },
+        "voice_id": { "type": ["string", "null"] },
+        "voice_audition_required": { "type": "boolean" },
+        "output_format": { "type": "string" },
+        "planning_wpm": { "type": "number", "minimum": 60, "maximum": 260 },
+        "register": { "type": "string" },
+        "delivery_markup": { "type": "string" }
+      }
+    },
+    "script": {
+      "type": "object",
+      "required": ["guide", "humor"],
+      "properties": {
+        "guide": { "type": "string", "description": "Path relative to the channel folder. Holds a section per format." },
+        "humor": { "type": "string", "enum": ["none", "low", "medium", "high"] }
+      }
+    },
+    "visuals": {
+      "type": "object",
+      "required": ["approach", "ai_video"],
+      "properties": {
+        "approach": { "type": "string" },
+        "sourcing": { "type": "string" },
+        "image_model": { "type": ["string", "null"] },
+        "ai_video": { "type": "string", "enum": ["approval_gated", "never"] },
+        "character_bible": { "type": ["string", "null"], "description": "Path relative to the channel folder." }
+      }
+    },
+    "music": { "type": "object" },
+    "publishing": { "type": "object" },
+    "policies": { "type": "array", "items": { "type": "string" } },
+    "quality_bar": { "type": "string" },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Defaults still awaiting the user's confirmation. The agent raises these at the channel's next proposal."
+    }
+  },
+  "$defs": {
+    "format": {
+      "type": "object",
+      "required": ["aspect_ratio", "media_profile", "target_seconds", "structure"],
+      "properties": {
+        "aspect_ratio": { "type": "string", "enum": ["16:9", "9:16", "1:1", "4:5"] },
+        "media_profile": { "type": "string", "description": "A profile name from lib/media_profiles.py." },
+        "target_seconds": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 1 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[min, max] target runtime."
+        },
+        "structure": { "type": "string", "description": "Beat map in brief; the script guide's section for this format has the detail." },
+        "pipeline": { "type": "string", "description": "Overrides production.default_pipeline for this format." },
+        "composition_mode": { "type": "string", "enum": ["atelier", "templated"] },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["standalone", "cut_down"] },
+          "description": "standalone = made for this format; cut_down = re-cut from a long-form video's strongest beat."
+        },
+        "pacing": { "type": "string" }
+      }
+    }
+  }
+}

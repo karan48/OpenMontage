@@ -1,0 +1,106 @@
+identity:
+  name: "Lifestyle Reel"
+  category: custom
+  mood: warm, aspirational, cozy, confident
+  pace: moderate
+  best_for: "Lifestyle videos with a recurring on-screen persona, long-form vlogs (16:9) and Shorts/Reels (9:16) — routines, tips, outfits, confidence, day-in-the-life"
+
+visual_language:
+  color_palette:
+    primary: ["#7A1F3D", "#E8B4A0"]
+    accent: ["#C9A227"]
+    background: "#FBF4EE"
+    text: "#2A1A1F"
+    muted: "#6E5A60"
+  composition: persona framed mid-shot or full-body with the eye-line at the upper third; 16:9 = persona on a third with the room or setting visible beside her; 9:16 = persona in the centre third, soft negative space for captions in the upper third, nothing important in the bottom 20% (Shorts UI)
+  texture: soft natural window light, warm golden-hour tones, gentle film grain, creamy bokeh
+
+typography:
+  headings:
+    font: "Playfair Display (Devanagari: Tiro Devanagari Hindi)"
+    weight: 700
+  body:
+    font: "Poppins"
+    weight: 400
+    line_height: 1.5
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Playfair Display (Devanagari: Tiro Devanagari Hindi)"
+    weight: 700
+    size_multiplier: 2.5
+  scale_system: "major_third"
+  weight_matrix:
+    title: 700
+    heading: 600
+    body: 400
+    caption: 400
+
+motion:
+  transitions: [cut, soft-dissolve, match-cut, whip-pan]
+  animation_style: "gentle handheld-feel drift and slow push-ins on stills, captions fade up a word-group at a time, match cuts on action between routine beats"
+  pacing_rules:
+    min_scene_hold_seconds: 1.2
+    max_scene_hold_seconds: 4.0
+    text_card_hold_seconds: 2.0
+    stat_card_hold_seconds: 2.5
+    transition_duration_seconds: 0.3
+  entrance: "soft fade-up with a 4px rise"
+  exit: "match cut or soft dissolve"
+
+audio:
+  voice_style: "first person, warm and confident friend — casual Hinglish, smiling delivery, never salesy"
+  music_mood: "chill pop or lo-fi, warm and bright, 90-110 BPM"
+  music_volume: 0.14
+  sfx_style: "soft whooshes, camera shutter on outfit reveals, subtle chimes on tips"
+  ducking_threshold_db: -4
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slower and sincere, closer to the mic on the takeaway line"
+  transition_voice_shift: "a light breath, then the next beat"
+
+asset_generation:
+  image_prompt_prefix: "lifestyle photography, soft natural window light, warm tones, candid moment, shallow depth of field, "
+  image_negative_prompt: "revealing clothing, cleavage, lingerie, distorted hands, extra fingers, plastic skin, oversaturated, text, watermark"
+  diagram_style: "simple checklist cards with gold tick marks"
+  consistency_anchors:
+    - "Persona appearance locked to the channel's character bible and pasted verbatim into every prompt — same face, build, hair and outfit"
+    - "Warm natural light and golden tones in every image"
+    - "Modest casual clothing in every shot"
+    - "Maroon (#7A1F3D) and gold (#C9A227) as the brand colours on cards"
+
+overlays:
+  stat_card:
+    bg: "#FFFFFF"
+    border: "#7A1F3D"
+    text: "#2A1A1F"
+    radius: 14
+    shadow: "0 6px 20px rgba(122,31,61,0.15)"
+  key_term:
+    bg: "#7A1F3D"
+    text: "#FFFFFF"
+    radius: 8
+  code_block:
+    bg: "#2A1A1F"
+    text: "#FBF4EE"
+    highlight: "#C9A227"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Open on a relatable problem or a striking moment — within 2 seconds in a Short, 15 seconds in a long video"
+  - "One clear takeaway per video (in a long video, one per segment plus one main takeaway)"
+  - "The persona looks identical in every shot — same face, build, hair and outfit"
+  - "Modest casual clothing only"
+  - "Captions on every spoken line"
+  - "Soft call to action at the end, never mid-video"
+
+chart_palette:
+  - "#7A1F3D"
+  - "#C9A227"
+  - "#4A6FA5"
+  - "#9AA3B2"
+
+color_rules:
+  harmony_type: "analogous"
+  contrast_validation: true
+  colorblind_safe: true

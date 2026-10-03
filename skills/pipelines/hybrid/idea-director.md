@@ -1,5 +1,7 @@
 # Idea Director - Hybrid Pipeline
 
+> **Channel profile:** if `project.json` has a `channel`, load `channels/<id>/channel.yaml` (`lib.channel_profile.load_channel`) and start from its playbook, voice, runtime recommendation, music and `open_questions`, plus the pipeline, length, structure, composition mode and pacing of the project's `video_format` (`resolve_format`). See `skills/meta/channel-profiles.md`. These are defaults only: present choices and gates exactly as below.
+
 ## When To Use
 
 Use this pipeline when the project combines real source media with support visuals: interviews plus diagrams, footage plus overlays, screen recording plus branded graphics, or source-led edits with generated inserts.

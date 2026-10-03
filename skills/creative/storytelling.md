@@ -66,6 +66,12 @@ audience (engineers, developers, policy professionals, medical practitioners), *
 defaults to the general, non-expert viewer** — a smart person with no background in the topic.
 This is a standing project preference, not a per-video judgment call: apply it automatically.
 
+**Channel profiles tune the dial.** When the project belongs to a channel (`project.json` →
+`channel`), that channel's `channels/<id>/script-guide.md` and `script.humor` level
+(none/low/medium/high) set the register, how much humor to use, and the language of the
+examples. A cinematic documentary Short runs low, a cartoon story runs high. Plain-language-first
+and the humor hard limit below apply to every channel.
+
 - **Analogy before jargon.** Never introduce a technical term cold. Explain the idea through a
   concrete, everyday analogy first — something from ordinary life, not another abstract concept —
   then attach the technical term afterward as a label, not a starting point.

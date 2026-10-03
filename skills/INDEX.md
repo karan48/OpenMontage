@@ -284,6 +284,7 @@ Cross-cutting skills that apply to all pipelines:
 | Animation Runtime Selector | `meta/animation-runtime-selector.md` | Choose render runtime + animation library per scene |
 | Taste Direction | `meta/taste-direction.md` | Convert a brief into taste dials, anti-patterns, and reference strategy for proposal/playbook/atelier work |
 | Bespoke Composition (Atelier) | `meta/bespoke-composition.md` | Hand-author a composition from scratch (hero work) — no stock scene-types; routes art-direction → motion principles → engine mechanics → atelier render |
+| Channel Profiles | `meta/channel-profiles.md` | Identify which YouTube channel a production is for, pick long-form or Shorts, load `channels/<id>/` defaults (language, formats, pipeline, playbook, voice, script guide, cast), and seed every stage from them |
 
 ## Style Playbooks
 
@@ -295,6 +296,10 @@ Style playbooks (`styles/*.yaml`) define visual language, typography, motion, au
 | `premium-minimalist` | minimalist | calm, editorial | Investor updates, expert explainers, product narratives |
 | `flat-motion-graphics` | motion-graphics | energetic, bold | Social media, TikTok, startups |
 | `minimalist-diagram` | whiteboard | focused, technical | Technical deep-dives, architecture |
+| `cinematic-documentary` | cinematic | brooding, suspenseful | Cinematic documentaries, long-form and Shorts |
+| `toon-story` | motion-graphics | playful, comic | 2D cartoon stories with a rigged cast, episodes and Shorts |
+| `tech-review` | motion-graphics | crisp, honest | Product reviews, long-form and Shorts |
+| `lifestyle-reel` | custom | warm, aspirational | Lifestyle vlogs and Shorts/Reels with a recurring persona |
 
 Load via `styles/playbook_loader.py`: `load_playbook("clean-professional")`
 

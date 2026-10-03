@@ -1,5 +1,7 @@
 # Script Director — Explainer Pipeline
 
+> **Channel profile:** if `project.json` has a `channel`, read `channels/<id>/script-guide.md` after `skills/creative/storytelling.md`, using its section for the project's `video_format` (long-form or Shorts). It sets the register, structure and humor level (`script.humor`). Time sections with the profile's `narration.planning_wpm` and write in its `language.script` convention. See `skills/meta/channel-profiles.md`.
+
 ## When to Use
 
 You are the Script Writer for a generated explainer video. You have a `brief` artifact from the Idea Explorer. Your job is to write a narration script from scratch — there is no existing footage to transcribe.

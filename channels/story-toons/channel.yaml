@@ -1,0 +1,81 @@
+# Channel profile: Kids Story (Hinglish 2D cartoon stories — long-form episodes and Shorts)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# DRAFT — review the open_questions at the bottom.
+
+id: story-toons
+display_name: "Kids Story"
+youtube_handle: null
+status: active
+description: "2D cartoon stories with a recurring rigged cast — everyday Indian situations that set up, twist and pay off. Long-form episodes plus Shorts."
+audience: "Indian viewers of all ages, including families; stories must be clean enough for kids and witty enough for adults."
+
+language:
+  narration: hinglish
+  script: "Hindi words in Devanagari, English words in Latin script (draft — confirm at the voice audition). Dialogue lines are tagged with the speaking character."
+  on_screen_text: hinglish
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [240, 480]      # draft — confirm
+    structure: "cold-open gag -> setup -> 3 acts, each a bigger problem -> twist -> payoff + moral -> end-tag gag"
+    pacing: "New shot or pose change every 2-4 s; comic holds on reactions"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [40, 60]
+    structure: "hook (0-2 s) -> setup -> conflict -> twist (final third) -> payoff + one-line moral"
+    sources: [standalone, cut_down]
+    pacing: "New shot or pose change every 1-2 s"
+
+production:
+  default_pipeline: character-animation   # beta pipeline — expect rough edges
+  style_playbook: toon-story
+  render_runtime_recommendation: remotion
+  cast_reuse: "Characters are designed and rigged once, then reused every episode from channels/story-toons/cast/ (see characters.md)"
+  long_form_note: "The pipeline is beta and tuned for short pieces (20 min wall-time budget per run); prove a long episode act by act, sampling act 1 before committing the rest"
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: null                    # narrator; character voices live in characters.md
+  voice_audition_required: true
+  output_format: mp3_44100_128
+  planning_wpm: 160                 # draft — comic timing is quick; measure at audition
+  register: "Playful, slightly mischievous storyteller; each character voice clearly distinct"
+  delivery_markup: eleven_v3_audio_tags
+  sample_riskiest_section_first: true
+
+script:
+  guide: script-guide.md
+  humor: high
+
+visuals:
+  approach: "Rigged flat-vector cast acting every beat (anticipation, squash and stretch, held reaction poses); simple flat backgrounds of Indian homes, streets, schools and offices."
+  sourcing: generated
+  image_model: flux/schnell         # only for background plates and concept sheets; characters are SVG rigs
+  ai_video: never
+  character_bible: characters.md
+
+music:
+  mood: "Playful light underscore — pizzicato, ukulele, marimba; stings on punchlines"
+  source_order: [music_library, elevenlabs_music]
+
+publishing:
+  title_language: hinglish
+  thumbnail: "The lead character's biggest reaction pose in the first 2 seconds"
+
+policies:
+  - "Family-safe: no violence beyond slapstick, no crude humor, no real people or brands."
+  - "Every character comes from the cast bible; a new recurring character is added to characters.md before use."
+  - "The moral is shown through the payoff, never preached."
+
+open_questions:
+  - "YouTube handle (youtube_handle)."
+  - "Audience: the name says kids. Is the channel primarily for children (then set 'Made for Kids' on YouTube, which turns off comments and personalised ads, and write simpler, slower scripts), or for families of all ages as drafted?"
+  - "Who is the cast? Lead character, sidekick and recurring side characters (names, ages, personality). Designed on episode 1."
+  - "Narrator voice plus one voice per character: supply candidate ElevenLabs voice IDs, or use ElevenLabs voice design."
+  - "Narrated story, character dialogue, or both? (Default: narrator plus short dialogue lines.)"
+  - "Long-form: are 4-8 min episodes right? Are Shorts standalone gags or cut-downs from the episodes?"
+  - "Hinglish script convention: Devanagari for Hindi plus Latin for English, or all-Roman Hinglish?"

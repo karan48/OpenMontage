@@ -1,0 +1,83 @@
+# Channel profile: Cinematic (Hinglish documentaries — long-form and Shorts)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# DRAFT — review the open_questions at the bottom.
+
+id: cinematic
+display_name: "Cinematic (Hinglish)"   # replace with the real YouTube channel name
+youtube_handle: null
+status: active
+description: "Cinematic documentaries — true stories, mysteries and history told like a film: a hook, rising tension, a reveal, and an ending that loops back to the start. Long-form films plus Shorts."
+audience: "Indian viewers aged 18-35 who love a gripping story; on Shorts they decide in 2 seconds whether to stay."
+
+language:
+  narration: hinglish
+  script: "Hindi words in Devanagari, English words in Latin script (draft — confirm at the voice audition)."
+  on_screen_text: hinglish
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [600, 1200]     # draft — confirm
+    structure: "cold open (the strangest moment) -> title -> 3-5 chapters that escalate, each ending on a question -> reveal -> epilogue that loops back to the cold open"
+    composition_mode: atelier
+    pacing: "New visual every 3-6 s; slow holds allowed on emotional beats"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [45, 60]
+    structure: "hook (0-2 s) -> context (one line) -> escalation x2-3 -> reveal (final 20%) -> loop-back line"
+    composition_mode: atelier
+    sources: [standalone, cut_down]
+    pacing: "New visual every 1.5-3 s"
+
+production:
+  default_pipeline: cinematic
+  style_playbook: cinematic-documentary
+  render_runtime_recommendation: remotion
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: null
+  voice_audition_required: true
+  output_format: mp3_44100_128
+  planning_wpm: 145                 # draft; slower than the explainer because silence is part of the style — measure at audition
+  register: "Low, intimate storyteller — measured and suspenseful. Lets silence work. Never hype, never a news read."
+  delivery_markup: eleven_v3_audio_tags
+  sample_riskiest_section_first: true
+  sync: "Time every cut and SFX from ElevenLabs forced-alignment word onsets"
+
+script:
+  guide: script-guide.md
+  humor: low
+
+visuals:
+  approach: "Stock and archival video carry the real motion; film-graded stills get 2.5D parallax push-ins. Teal-amber grade, one light source, deep shadow. Pacing per format (see formats)."
+  sourcing: stock_first
+  image_model: flux/schnell
+  ai_video: approval_gated          # motion comes from stock and parallax; propose i2v with a cost estimate only where a beat truly needs it
+  character_bible: null
+  motion_treatment: "Declared up front: stock footage plus parallax stills is this channel's approved motion treatment, not a downgrade. Raise any beat that needs AI video at proposal."
+
+music:
+  mood: "Dark ambient drones, low strings, sparse piano; a pulse rises under the escalation and cuts to near-silence before the reveal"
+  source_order: [music_library, elevenlabs_music]
+
+publishing:
+  title_language: hinglish
+  thumbnail: "The Shorts frame itself is the thumbnail: pick the most striking frame from the first 2 seconds"
+
+policies:
+  - "Death, violence and trauma are shown symbolically, never graphically."
+  - "No AI likeness of identifiable real people in harm, disaster or crime moments; no AI face of a real named person at all."
+  - "Photoreal generated images that depict a real event carry an 'AI चित्रण' corner tag; tick YouTube's altered/synthetic-content disclosure at upload."
+  - "Every factual claim is verified; a mystery may be open, but its facts may not be invented."
+  - "India maps use official Survey of India boundaries."
+
+open_questions:
+  - "Real YouTube channel name and handle."
+  - "Narrator voice: supply 2-3 candidate ElevenLabs voice IDs (a deep male or female storyteller) for the first audition."
+  - "Hinglish script convention: Devanagari for Hindi plus Latin for English, or all-Roman Hinglish?"
+  - "Length: lib/media_profiles.py caps youtube_shorts at 60 s, but YouTube now allows Shorts up to 3 minutes. Keep 45-60 s or allow up to 90 s?"
+  - "Long-form: is 10-20 min with 3-5 chapters right? Are Shorts mostly cut-downs from the long films or standalone stories?"

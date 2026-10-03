@@ -46,6 +46,19 @@ This is a first-class workflow in OpenMontage.
 
 If a model misses this distinction, it will often fall back to plain search + guesswork. That is incorrect for OpenMontage.
 
+## Channel Profiles — Which Channel Is This For?
+
+The user runs several YouTube channels. Each has its own language, format, narration voice, script style, look and policies, stored in `channels/<id>/` (`channel.yaml`, `script-guide.md`, optional `characters.md`). **Every production request belongs to a channel.**
+
+Before Rule Zero's step 1, **read `skills/meta/channel-profiles.md`**. Then:
+
+1. Identify the channel (`lib.channel_profile.list_channels()`). If the user didn't name one, **ask**. Never guess silently.
+2. Identify the format: **long-form** (16:9) or **Shorts** (9:16). Every channel makes both, so ask if it's unclear.
+3. Load the profile with `load_channel('<id>')` and the format with `resolve_format(profile, '<long_form|shorts>')`. Pass `channel=` and `video_format=` to `init_project`.
+4. Use the profile's pipeline, playbook, voice, the format's structure, length, composition mode and pacing, the script guide and the character bible as the **defaults** you recommend at each stage.
+
+A profile supplies defaults, never permission. Every gate and every rule below still applies, including "Present Both Composition Runtimes". A standing preference for one channel goes into that channel's files, not into global defaults.
+
 ## Rule Zero — All Production Goes Through a Pipeline
 
 **Every video production request MUST go through the pipeline system. No exceptions.**
@@ -221,7 +234,7 @@ projects/<project-name>/
 
 At pipeline initialization, before any stage runs:
 
-1. **Initialize the workspace**: `python -c "from lib.checkpoint import init_project; init_project('<project-id>', title='<Title>', pipeline_type='<pipeline>')"` — creates the layout above and writes `project.json` (the marker the Backlot board reads).
+1. **Initialize the workspace**: `python -c "from lib.checkpoint import init_project; init_project('<project-id>', title='<Title>', pipeline_type='<pipeline>', channel='<channel-id>', video_format='<long_form|shorts>')"` — creates the layout above and writes `project.json` (the marker the Backlot board reads). Omit `channel` and `video_format` only for a production that belongs to no channel (see "Channel Profiles").
 2. **Open the board**: run `python -m backlot open <project-id>`. This starts the Backlot server if needed and opens the user's browser at the project's live board. If the command fails, continue the production — the board is an observer, never a blocker. This is the agent's ONLY board duty; the board derives everything else from disk.
 
 All tools and agents must write outputs to these paths — **always pass an explicit `output_path` under `projects/<project-id>/`**. Assets written to the repo root, cwd, or temp dirs are invisible to the user's board and violate the workspace contract.
@@ -635,6 +648,12 @@ Tool rules:
 | `minimalist-diagram` | Technical deep-dives, architecture |
 | `vox-explainer` | Story-driven YouTube explainers and myth-busting narrative documentaries (Vox "Explained"/"Glad You Asked" style) — documentary photos, animated maps/charts, red keyword-highlight typography, curiosity-paced cuts |
 | `ink-sketch` (Ink Theater) | Hand-drawn ink-on-white doodle animation; a character that draws itself, walks, dances; contraption explainers |
+| `cinematic-documentary` | Cinematic documentaries, long-form and Shorts — teal-amber film grade, parallax stills plus stock motion, hook → escalation → reveal → loop-back |
+| `toon-story` | 2D cartoon stories with a recurring rigged cast, episodes and Shorts — flat vector, thick outlines, Disney-12 cartoon acting |
+| `tech-review` | Product reviews, long-form and Shorts — dark studio product hero, spec cards, pros/cons, comparison tables, verdict card |
+| `lifestyle-reel` | Lifestyle vlogs and Shorts/Reels with a recurring on-screen persona — warm natural light, maroon/gold brand cards |
+
+Channel profiles (`channels/<id>/channel.yaml`) name each channel's default playbook. See "Channel Profiles" above.
 
 For custom, atelier, brand, launch, or hero work, read `skills/meta/taste-direction.md` before choosing a playbook. Carry its `taste_profile` into the proposal so later stages can preserve the design read, visual variance, motion intensity, information density, reference strategy, and anti-patterns.
 

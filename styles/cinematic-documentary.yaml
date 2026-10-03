@@ -1,0 +1,107 @@
+identity:
+  name: "Cinematic Documentary"
+  category: cinematic
+  mood: brooding, suspenseful, intimate, film-like
+  pace: deliberate
+  best_for: "Cinematic documentaries, long-form (16:9) and Shorts (9:16) — true stories, mysteries and history told like a film: a hook, rising tension, a reveal, a loop-back ending"
+
+visual_language:
+  color_palette:
+    primary: ["#D4A35A", "#1E2A36"]
+    accent: ["#C0392B"]
+    background: "#0A0C0F"
+    text: "#F1ECE2"
+    muted: "#9CA3AF"
+  composition: one motivated light source per frame, deep negative space in shadow; 16:9 = wide establishing frames with the subject on a third and chapter cards lower-left; 9:16 = subject in the upper two-thirds, text kept out of the bottom 20% and right 15% (Shorts UI)
+  texture: 35mm film grain, gentle halation on highlights, teal-amber grade, soft vignette
+
+typography:
+  headings:
+    font: "Cormorant Garamond (Devanagari: Noto Serif Devanagari)"
+    weight: 700
+    tracking: "0.02em"
+  body:
+    font: "Inter (Devanagari: Noto Sans Devanagari)"
+    weight: 400
+    line_height: 1.5
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Cormorant Garamond (Devanagari: Noto Serif Devanagari)"
+    weight: 700
+    size_multiplier: 3.0
+  scale_system: "perfect_fourth"
+  weight_matrix:
+    title: 700
+    heading: 600
+    body: 400
+    caption: 400
+
+motion:
+  transitions: [cut, slow-dissolve, dip-to-black, light-leak]
+  animation_style: "slow 2.5D parallax push-ins on stills, one camera move per shot, drifting dust and haze particles, restrained type fades; stock and archival footage carries the real motion"
+  pacing_rules:
+    min_scene_hold_seconds: 1.5
+    max_scene_hold_seconds: 7
+    text_card_hold_seconds: 2.0
+    stat_card_hold_seconds: 2.5
+    transition_duration_seconds: 0.5
+  entrance: "fade up from black with a slow 1.0 -> 1.04 scale drift"
+  exit: "dip to black or hard cut on the narration beat"
+
+audio:
+  voice_style: "low, intimate storyteller — measured and suspenseful, lets silence do work; never hype, never a news read"
+  music_mood: "dark ambient drones, low strings, sparse piano; a pulse rises under the escalation and cuts to near-silence before the reveal"
+  music_volume: 0.12
+  sfx_style: "deep booms on reveals, room tone, wind, subtle risers into the reveal"
+  ducking_threshold_db: -5
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "drop to a near-whisper with a long pause before the key line"
+  transition_voice_shift: "a beat of silence, then resume slightly lower"
+
+asset_generation:
+  image_prompt_prefix: "cinematic film still, 35mm, low-key lighting, single motivated light source, teal and amber grade, shallow depth of field, "
+  image_negative_prompt: "cartoon, illustration, flat lighting, oversaturated, text, watermark, gore, graphic violence"
+  diagram_style: "minimal amber map lines on black with a slow line-draw reveal"
+  consistency_anchors:
+    - "Teal-amber film grade with near-black shadows in every image"
+    - "Single motivated light source; faces partly in shadow"
+    - "Film grain and slight halation on all generated stills"
+    - "Amber (#D4A35A) is the only highlight colour for text and data"
+
+overlays:
+  stat_card:
+    bg: "#14181D"
+    border: "#D4A35A"
+    text: "#F1ECE2"
+    radius: 2
+    shadow: "0 6px 24px rgba(0,0,0,0.5)"
+  key_term:
+    bg: "#D4A35A"
+    text: "#0A0C0F"
+    radius: 2
+  code_block:
+    bg: "#14181D"
+    text: "#F1ECE2"
+    highlight: "#D4A35A"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "The hook lands before any title or preamble — within 2 seconds in a Short, inside the cold open's first 15 seconds in a long film"
+  - "Every still moves (push-in or parallax) — never a static frame through a full sentence"
+  - "Tension escalates with no flat plateaus — every 8-12 seconds in a Short, every chapter in a long film"
+  - "The reveal lands in the final 20% and is followed by a loop-back line or epilogue that returns to the opening"
+  - "In 9:16, text stays outside the Shorts UI zones (bottom 20%, right 15%)"
+  - "Death, violence and trauma are shown symbolically, never graphically"
+
+chart_palette:
+  - "#D4A35A"
+  - "#5B8DB8"
+  - "#C0392B"
+  - "#9CA3AF"
+
+color_rules:
+  harmony_type: "complementary"
+  contrast_validation: true
+  colorblind_safe: true
