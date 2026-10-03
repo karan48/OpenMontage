@@ -1,0 +1,97 @@
+{
+ "cue": "glp1_cueB_fish_lizard",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "curious",
+  "comic",
+  "discovery",
+  "wonder",
+  "desert",
+  "pizzicato",
+  "celesta"
+ ],
+ "planned_seconds": 261.98,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "the ugly fish",
+    "positive_local_styles": [
+     "low cello pizzicato",
+     "nautical and slightly comic",
+     "curious"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 46740,
+    "lines": []
+   },
+   {
+    "section_name": "the hidden piece",
+    "positive_local_styles": [
+     "soft arpeggiated piano",
+     "discovery",
+     "slowly building wonder"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 57960,
+    "lines": []
+   },
+   {
+    "section_name": "the desert lizard",
+    "positive_local_styles": [
+     "muted acoustic guitar harmonics",
+     "light shaker",
+     "warm desert feel",
+     "a little comic"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 53160,
+    "lines": []
+   },
+   {
+    "section_name": "the molecule that would not break",
+    "positive_local_styles": [
+     "celesta and soft strings",
+     "wonder and reveal",
+     "a swell that settles"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 52480,
+    "lines": []
+   },
+   {
+    "section_name": "the declined patent",
+    "positive_local_styles": [
+     "sly comic pizzicato and bassoon",
+     "playful irony",
+     "ends with a short rising motif like the start of a race"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 51640,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.4366,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

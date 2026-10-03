@@ -1,0 +1,360 @@
+{
+ "wind_bed": {
+  "text": "Cold thin high-altitude wind blowing steadily across a remote empty Himalayan glacier valley, airy and distant, no gusts too loud, no voices, no birds",
+  "duration_requested": 10.5,
+  "duration": 10.48,
+  "prompt_influence": 0.5,
+  "loop": true,
+  "integrated_lufs": -32.8,
+  "max_momentary_lufs": -29.3,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "avalanche_rumble": {
+  "text": "Deep distant rumble of a massive rock and ice avalanche collapsing far away in high mountains, heavy low-frequency roar building and rolling",
+  "duration_requested": 4.0,
+  "duration": 4.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -14.1,
+  "max_momentary_lufs": -11.2,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "stylus_scratch": {
+  "text": "Close quiet mechanical scratching of a seismograph pen stylus on a slowly rotating paper drum, faint motor hum",
+  "duration_requested": 4.5,
+  "duration": 4.48,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -43.0,
+  "max_momentary_lufs": -42.0,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "flood_roar": {
+  "text": "Sustained violent roar of a flash flood of mud, boulders and churning water crashing through a narrow rocky mountain gorge, heavy deep rumble at constant full intensity, relentless, no fade",
+  "duration_requested": 6.0,
+  "duration": 6.0,
+  "prompt_influence": 0.6,
+  "loop": true,
+  "integrated_lufs": -15.2,
+  "max_momentary_lufs": -12.5,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "tick": {
+  "text": "Single soft muted wooden tick, subtle interface click",
+  "duration_requested": 0.5,
+  "duration": 0.48,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -35.3,
+  "max_momentary_lufs": -35.3,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "card_snap": {
+  "text": "Soft paper card snapping down flat onto a desk, subtle and dry",
+  "duration_requested": 0.6,
+  "duration": 0.6,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -34.0,
+  "max_momentary_lufs": -33.8,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "card_flip": {
+  "text": "Quick soft paper card flip, dry",
+  "duration_requested": 0.5,
+  "duration": 0.48,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -29.6,
+  "max_momentary_lufs": -29.6,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "marker_strokes": {
+  "text": "Two quick bold felt marker pen strokes on paper, swish swish",
+  "duration_requested": 0.8,
+  "duration": 0.8,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -26.7,
+  "max_momentary_lufs": -25.4,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "whoosh": {
+  "text": "Soft airy cinematic whoosh, gentle and short",
+  "duration_requested": 1.0,
+  "duration": 1.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -12.9,
+  "max_momentary_lufs": -11.4,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "plink_cascade": {
+  "text": "Rapid cascade of many tiny soft glassy plinks, like light raindrops on glass, gentle and quiet",
+  "duration_requested": 1.6,
+  "duration": 1.6,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -25.0,
+  "max_momentary_lufs": -22.1,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "sonar_ping": {
+  "text": "Single soft low sonar ping with a gentle fading echo",
+  "duration_requested": 1.6,
+  "duration": 1.6,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -23.6,
+  "max_momentary_lufs": -19.5,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "dark_drone": {
+  "text": "Low ominous cinematic synth drone swelling up slowly, dark and quiet",
+  "duration_requested": 2.5,
+  "duration": 2.48,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -7.2,
+  "max_momentary_lufs": -4.1,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "lock_clunk": {
+  "text": "Heavy iron padlock and chain clunking shut against an old wooden door, close",
+  "duration_requested": 1.0,
+  "duration": 1.0,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -15.0,
+  "max_momentary_lufs": -13.8,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "title_boom": {
+  "text": "Deep soft cinematic low boom impact with a long dark reverb tail, understated",
+  "duration_requested": 3.5,
+  "duration": 3.48,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -16.2,
+  "max_momentary_lufs": -10.4,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "river_rush": {
+  "text": "Steady rushing of a fast glacial mountain river over rocks in a deep gorge, constant medium intensity, heard from a little distance, no birds, no voices",
+  "duration_requested": 10.0,
+  "duration": 10.0,
+  "prompt_influence": 0.5,
+  "loop": true,
+  "integrated_lufs": -17.9,
+  "max_momentary_lufs": -17.2,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "debris_churn": {
+  "text": "Heavy wet churning of mud, gravel and boulders grinding and tumbling together in a thick debris flow, deep rumbling, constant intensity, no voices",
+  "duration_requested": 8.0,
+  "duration": 8.0,
+  "prompt_influence": 0.55,
+  "loop": true,
+  "integrated_lufs": -11.7,
+  "max_momentary_lufs": -9.5,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "slurry_pour": {
+  "text": "Close thick wet concrete slurry sliding and slopping heavily down a steel chute, viscous gloopy pour, low and wet",
+  "duration_requested": 3.5,
+  "duration": 3.48,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -25.6,
+  "max_momentary_lufs": -20.4,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "train_pass": {
+  "text": "Fast express passenger train passing by at speed on rails, doppler whoosh with rhythmic wheel clatter, short pass-by, no horn",
+  "duration_requested": 3.0,
+  "duration": 3.0,
+  "prompt_influence": 0.55,
+  "loop": false,
+  "integrated_lufs": -10.2,
+  "max_momentary_lufs": -6.7,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "drum_hit": {
+  "text": "A single sharp loud open-palm hit on a traditional Indian dhol drum, a loud crack that decays almost instantly, dry and punchy",
+  "duration_requested": 1.0,
+  "duration": 1.0,
+  "prompt_influence": 0.65,
+  "loop": false,
+  "integrated_lufs": -24.9,
+  "max_momentary_lufs": -22.2,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "cupboard_drag": {
+  "text": "A heavy iron cupboard being dragged slowly across a bare concrete floor, a long low scraping metallic screech, continuous and effortful",
+  "duration_requested": 4.0,
+  "duration": 4.0,
+  "prompt_influence": 0.6,
+  "loop": true,
+  "integrated_lufs": -8.3,
+  "max_momentary_lufs": -3.6,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "reveal_chime": {
+  "text": "A single soft bright bell chime with a short clean ring and a little sparkle, quiet and understated, not celebratory",
+  "duration_requested": 1.5,
+  "duration": 1.48,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -36.3,
+  "max_momentary_lufs": -30.4,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "water_trickle": {
+  "text": "Gentle trickling and soft lapping of meltwater slowly filling a still mountain pool, quiet and continuous, no birds",
+  "duration_requested": 6.0,
+  "duration": 6.0,
+  "prompt_influence": 0.55,
+  "loop": true,
+  "integrated_lufs": -38.1,
+  "max_momentary_lufs": -33.3,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "dam_break": {
+  "text": "A loose earthen and rock dam cracking and bursting open, a heavy crumbling crack followed by a rushing surge of water breaking through debris",
+  "duration_requested": 3.0,
+  "duration": 3.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -7.6,
+  "max_momentary_lufs": -3.1,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "broom_sweep": {
+  "text": "Three brisk strokes of a dry grass broom sweeping dust and small pebbles across a cement floor, close, dry scratchy swish",
+  "duration_requested": 2.0,
+  "duration": 2.0,
+  "prompt_influence": 0.65,
+  "loop": false,
+  "integrated_lufs": -21.7,
+  "max_momentary_lufs": -18.5,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "scan_sweep": {
+  "text": "Soft electronic scanning sweep, a smooth rising digital hum with faint data blips, subtle interface sound",
+  "duration_requested": 2.0,
+  "duration": 2.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -11.9,
+  "max_momentary_lufs": -8.6,
+  "model": "eleven_text_to_sound_v2"
+ },
+ "scissors_snip": {
+  "text": "A single crisp snip of heavy brass scissors closing, sharp metallic",
+  "duration_requested": 0.6,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -24.2,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "metal_clank": {
+  "text": "Small brass scissors bouncing off a hard glass surface, one bright metallic clank",
+  "duration_requested": 0.6,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -28.3,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "drawer_slide": {
+  "text": "A wooden cabinet drawer sliding open smoothly on old runners",
+  "duration_requested": 1.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -19.2,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "drawer_slam": {
+  "text": "A heavy wooden cabinet drawer slammed shut, one solid thud with a small rattle",
+  "duration_requested": 1.0,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -30.7,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "bead_clatter": {
+  "text": "Small glass beads rolling and clicking together into a neat line on a hard surface",
+  "duration_requested": 1.6,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -18.1,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "bead_click": {
+  "text": "One small glass bead clicking into place, tiny and crisp",
+  "duration_requested": 0.5,
+  "prompt_influence": 0.7,
+  "loop": false,
+  "integrated_lufs": -20.6,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "msg_pop": {
+  "text": "A soft friendly phone message notification pop",
+  "duration_requested": 0.5,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -13.4,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "coin_stack": {
+  "text": "Coins being stacked quickly on a wooden table, light metallic clinks",
+  "duration_requested": 1.6,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -15.0,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "stopwatch_tick": {
+  "text": "A mechanical stopwatch ticking quickly, close and dry",
+  "duration_requested": 3.0,
+  "prompt_influence": 0.7,
+  "loop": true,
+  "integrated_lufs": -21.0,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "shop_shutter": {
+  "text": "A metal shop shutter rolling up in the morning, rattling",
+  "duration_requested": 2.0,
+  "prompt_influence": 0.6,
+  "loop": false,
+  "integrated_lufs": -10.9,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "desert_wind_bed": {
+  "text": "Hot dry desert wind, soft and steady, faint distant insects, wide open space, no birds, no voices",
+  "duration_requested": 10.0,
+  "prompt_influence": 0.5,
+  "loop": true,
+  "integrated_lufs": -55.8,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ },
+ "harbor_bed": {
+  "text": "Cold grey harbour, small waves slapping a wooden fishing boat, distant gulls, steady",
+  "duration_requested": 10.0,
+  "prompt_influence": 0.5,
+  "loop": true,
+  "integrated_lufs": -29.0,
+  "model": "eleven_text_to_sound_v2",
+  "project": "lizard-spit-semaglutide-hindi"
+ }
+}

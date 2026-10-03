@@ -1,0 +1,99 @@
+{
+ "cue": "glp1_cueA_teaser_act1",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "curious",
+  "playful",
+  "mysterious",
+  "light",
+  "marimba",
+  "kalimba",
+  "pizzicato"
+ ],
+ "planned_seconds": 167.68,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "chemist today and three questions",
+    "positive_local_styles": [
+     "sparse plucked kalimba motif",
+     "soft marimba",
+     "curious and a little mysterious",
+     "very quiet"
+    ],
+    "negative_local_styles": [
+     "drums",
+     "percussion"
+    ],
+    "duration_ms": 52260,
+    "lines": []
+   },
+   {
+    "section_name": "the promise",
+    "positive_local_styles": [
+     "the kalimba motif warms up",
+     "soft felt piano joins",
+     "gentle hopeful swell"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 19880,
+    "lines": []
+   },
+   {
+    "section_name": "title sting",
+    "positive_local_styles": [
+     "one warm low marimba chord with a soft frame drum hit",
+     "short title sting with a natural tail"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 3300,
+    "lines": []
+   },
+   {
+    "section_name": "the hunger message",
+    "positive_local_styles": [
+     "playful pizzicato strings and marimba",
+     "light curious groove",
+     "friendly"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 41240,
+    "lines": []
+   },
+   {
+    "section_name": "the two-minute message",
+    "positive_local_styles": [
+     "playful groove continues with a soft shaker",
+     "near the end it thins to one sustained note",
+     "then an airy sea-like pad"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 51000,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.2795,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

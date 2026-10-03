@@ -1,0 +1,9 @@
+{
+  "cue": "cue1_title_act1",
+  "prompt": "Understated cinematic documentary underscore, 72 BPM, E minor, a sparse felt piano motif over a warm low analog synth pad and a soft sub-bass pulse, faint distant wind texture. Opens on a single sustained low note, then slowly builds tension and weight over the first ninety seconds with no drums and no bright hi-hats, then thins back to only the pad for the final twenty seconds. Restrained, grave and curious. Background music for spoken narration about a Himalayan mountain collapse, leaving clear space for the voice.",
+  "duration_requested": 113,
+  "provider": "elevenlabs",
+  "model": "music_v1",
+  "force_instrumental": true,
+  "status": "sample generated 2026-09-25, awaiting user listen"
+}

@@ -1,0 +1,90 @@
+{
+ "cue": "glp1_cueE1_india",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "india",
+  "warm",
+  "homely",
+  "santoor",
+  "tabla",
+  "market",
+  "tension"
+ ],
+ "planned_seconds": 166.61,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "home",
+    "positive_local_styles": [
+     "warm Indian textures",
+     "soft santoor and light tabla",
+     "homely, then playful"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 60100,
+    "lines": []
+   },
+   {
+    "section_name": "the twentieth of March",
+    "positive_local_styles": [
+     "brisk market energy",
+     "tabla groove picks up",
+     "upbeat and bright"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 54760,
+    "lines": []
+   },
+   {
+    "section_name": "good news",
+    "positive_local_styles": [
+     "warm and hopeful",
+     "soft santoor"
+    ],
+    "negative_local_styles": [
+     "drums"
+    ],
+    "duration_ms": 8540,
+    "lines": []
+   },
+   {
+    "section_name": "the other side",
+    "positive_local_styles": [
+     "restrained low drone",
+     "uneasy",
+     "sparse low piano notes"
+    ],
+    "negative_local_styles": [
+     "tabla",
+     "drums",
+     "groove"
+    ],
+    "duration_ms": 43210,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.2777,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

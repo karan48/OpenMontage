@@ -1,0 +1,79 @@
+{
+ "cue": "glp1_cueD_credit",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "bittersweet",
+  "reflective",
+  "fair",
+  "felt piano",
+  "light ending"
+ ],
+ "planned_seconds": 77.0,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "the overlooked scientist",
+    "positive_local_styles": [
+     "sparse felt piano",
+     "bittersweet and fair",
+     "quiet low strings pad",
+     "no rhythm"
+    ],
+    "negative_local_styles": [
+     "drums",
+     "percussion"
+    ],
+    "duration_ms": 28040,
+    "lines": []
+   },
+   {
+    "section_name": "the awards",
+    "positive_local_styles": [
+     "piano warms",
+     "soft rising strings",
+     "dignified recognition"
+    ],
+    "negative_local_styles": [
+     "drums"
+    ],
+    "duration_ms": 25320,
+    "lines": []
+   },
+   {
+    "section_name": "the nobel and the golden goose",
+    "positive_local_styles": [
+     "calm, then a light playful pizzicato touch at the end",
+     "gentle resolve"
+    ],
+    "negative_local_styles": [
+     "drums"
+    ],
+    "duration_ms": 23640,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.1283,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

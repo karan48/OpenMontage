@@ -1,0 +1,67 @@
+{
+ "cue": "glp1_cueE2_honest_close",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "restrained",
+  "caring",
+  "reflective",
+  "resolve",
+  "kalimba"
+ ],
+ "planned_seconds": 143.04,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "what the ads won't say",
+    "positive_local_styles": [
+     "restrained calm pad",
+     "steady soft low piano",
+     "caring",
+     "no rhythm"
+    ],
+    "negative_local_styles": [
+     "drums",
+     "percussion",
+     "groove"
+    ],
+    "duration_ms": 76240,
+    "lines": []
+   },
+   {
+    "section_name": "forty years of stubbornness",
+    "positive_local_styles": [
+     "the curious plucked kalimba motif from the opening returns",
+     "warm resolve",
+     "gentle",
+     "fades out completely at the very end"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 66800,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.2384,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

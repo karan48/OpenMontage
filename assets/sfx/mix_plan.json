@@ -1,0 +1,2429 @@
+{
+  "targets": {
+    "wind_bed": [
+      "I",
+      -38
+    ],
+    "stylus_scratch": [
+      "I",
+      -38
+    ],
+    "flood_roar": [
+      "I",
+      -28
+    ],
+    "avalanche_rumble": [
+      "M",
+      -24
+    ],
+    "lock_clunk": [
+      "M",
+      -24
+    ],
+    "title_boom": [
+      "M",
+      -18
+    ],
+    "tick": [
+      "M",
+      -30
+    ],
+    "card_snap": [
+      "M",
+      -28
+    ],
+    "card_flip": [
+      "M",
+      -28
+    ],
+    "marker_strokes": [
+      "M",
+      -27
+    ],
+    "whoosh": [
+      "M",
+      -28
+    ],
+    "plink_cascade": [
+      "M",
+      -28
+    ],
+    "sonar_ping": [
+      "M",
+      -28
+    ],
+    "dark_drone": [
+      "M",
+      -27
+    ]
+  },
+  "gains_db": {
+    "wind_bed": -5.2,
+    "stylus_scratch": 5.0,
+    "flood_roar": -12.8,
+    "avalanche_rumble": -12.8,
+    "lock_clunk": -10.2,
+    "title_boom": -7.6,
+    "tick": 5.3,
+    "card_snap": 5.8,
+    "card_flip": 1.6,
+    "marker_strokes": -1.6,
+    "whoosh": -16.6,
+    "plink_cascade": -5.9,
+    "sonar_ping": -8.5,
+    "dark_drone": -22.9
+  },
+  "schedule": [
+    {
+      "src": "sfx/wind_bed.mp3",
+      "from": 0.0,
+      "to": 10.4,
+      "fadeIn": 0.8,
+      "fadeOut": 0.6,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/avalanche_rumble.mp3",
+      "from": 10.3,
+      "to": 12.8,
+      "fadeIn": 0.2,
+      "fadeOut": 0.7,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/stylus_scratch.mp3",
+      "from": 12.1,
+      "to": 15.9,
+      "fadeIn": 0.1,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/flood_roar.mp3",
+      "from": 18.0,
+      "to": 28.65,
+      "fadeIn": 0.0,
+      "fadeOut": 0.05,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/tick.mp3",
+      "from": 29.6,
+      "to": 30.1,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/tick.mp3",
+      "from": 29.72,
+      "to": 30.2,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/tick.mp3",
+      "from": 29.84,
+      "to": 30.3,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/card_snap.mp3",
+      "from": 36.4,
+      "to": 37.0,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/card_flip.mp3",
+      "from": 37.9,
+      "to": 38.4,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/marker_strokes.mp3",
+      "from": 45.12,
+      "to": 45.95,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/whoosh.mp3",
+      "from": 47.5,
+      "to": 48.5,
+      "fadeIn": 0.0,
+      "fadeOut": 0.2,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/plink_cascade.mp3",
+      "from": 50.8,
+      "to": 52.4,
+      "fadeIn": 0.0,
+      "fadeOut": 0.2,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/sonar_ping.mp3",
+      "from": 53.2,
+      "to": 54.8,
+      "fadeIn": 0.0,
+      "fadeOut": 0.3,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/dark_drone.mp3",
+      "from": 55.55,
+      "to": 57.4,
+      "fadeIn": 0.1,
+      "fadeOut": 0.5,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/lock_clunk.mp3",
+      "from": 63.15,
+      "to": 64.15,
+      "fadeIn": 0.0,
+      "fadeOut": 0.03,
+      "volume": 1.0
+    },
+    {
+      "src": "sfx/title_boom.mp3",
+      "from": 67.2,
+      "to": 70.2,
+      "fadeIn": 0.0,
+      "fadeOut": 0.3,
+      "volume": 1.0
+    },
+    {
+      "src": "music/cue1_title_act1.mp3",
+      "from": 67.2,
+      "to": 70.2,
+      "fadeIn": 0.0,
+      "fadeOut": 0.0,
+      "volume": 0.1
+    }
+  ],
+  "act1": {
+    "targets": {
+      "river_rush": [
+        "I",
+        -37
+      ],
+      "debris_churn": [
+        "I",
+        -31
+      ],
+      "slurry_pour": [
+        "M",
+        -27
+      ],
+      "train_pass": [
+        "M",
+        -27
+      ]
+    },
+    "gains_db": {
+      "river_rush": -19.1,
+      "debris_churn": -19.3,
+      "slurry_pour": -6.6,
+      "train_pass": -20.3
+    },
+    "music_gain_db": -16.0,
+    "long_beds": {
+      "flood_roar_long": "21 s loop, -28 I (scheduled at 0.7)",
+      "wind_bed_long": "19 s loop, -38 I"
+    },
+    "schedule": [
+      {
+        "src": "music/cue1_v2.mp3",
+        "from": 67.2,
+        "to": 179.45,
+        "fadeIn": 1.0,
+        "fadeOut": 3.3,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 70.3,
+        "to": 71.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.7
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 73.55,
+        "to": 74.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 78.52,
+        "to": 79.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/river_rush.mp3",
+        "from": 82.7,
+        "to": 88.95,
+        "fadeIn": 0.25,
+        "fadeOut": 0.35,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 88.95,
+        "to": 89.95,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 91.03,
+        "to": 91.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 94.02,
+        "to": 94.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/river_rush.mp3",
+        "from": 99.78,
+        "to": 104.68,
+        "fadeIn": 0.2,
+        "fadeOut": 0.3,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 104.68,
+        "to": 112.75,
+        "fadeIn": 0.5,
+        "fadeOut": 0.3,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 116.15,
+        "to": 117.75,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/avalanche_rumble.mp3",
+        "from": 121.95,
+        "to": 125.95,
+        "fadeIn": 0.1,
+        "fadeOut": 0.8,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 129.88,
+        "to": 130.35,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 131.62,
+        "to": 131.92,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 131.71,
+        "to": 132.01,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 131.8,
+        "to": 132.1,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 131.89,
+        "to": 132.19,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 131.98,
+        "to": 132.28,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.07,
+        "to": 132.37,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.16,
+        "to": 132.46,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.25,
+        "to": 132.55,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.34,
+        "to": 132.64,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.43,
+        "to": 132.73,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.52,
+        "to": 132.82,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.61,
+        "to": 132.91,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.7,
+        "to": 133.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.79,
+        "to": 133.09,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.88,
+        "to": 133.18,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 132.97,
+        "to": 133.27,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/debris_churn.mp3",
+        "from": 136.0,
+        "to": 152.0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.7,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 149.6,
+        "to": 150.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/slurry_pour.mp3",
+        "from": 151.4,
+        "to": 154.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 156.26,
+        "to": 175.85,
+        "fadeIn": 0.0,
+        "fadeOut": 0.05,
+        "volume": 0.7
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 158.18,
+        "to": 158.65,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 160.57,
+        "to": 161.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/train_pass.mp3",
+        "from": 162.98,
+        "to": 165.95,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 168.2,
+        "to": 168.7,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 175.85,
+        "to": 193.62,
+        "fadeIn": 0.4,
+        "fadeOut": 0.9,
+        "volume": 1.0
+      }
+    ]
+  },
+  "act2": {
+    "targets": {
+      "drum_hit": [
+        "M",
+        -22
+      ],
+      "cupboard_drag": [
+        "I",
+        -30
+      ],
+      "reveal_chime": [
+        "M",
+        -24
+      ]
+    },
+    "gains_db": {
+      "drum_hit": 0.2,
+      "cupboard_drag": -21.7,
+      "reveal_chime": 6.4
+    },
+    "schedule": [
+      {
+        "src": "sfx/tick.mp3",
+        "from": 194.0,
+        "to": 194.4,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.7
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 199.35,
+        "to": 199.85,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/stylus_scratch.mp3",
+        "from": 198.15,
+        "to": 203.49,
+        "fadeIn": 0.3,
+        "fadeOut": 0.4,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 203.49,
+        "to": 204.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 209.36,
+        "to": 210.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 215.35,
+        "to": 215.85,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.7
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 216.51,
+        "to": 216.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 217.93,
+        "to": 218.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 219.84,
+        "to": 220.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 222.46,
+        "to": 222.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 223.49,
+        "to": 223.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 224.46,
+        "to": 224.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 225.77,
+        "to": 226.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 228.85,
+        "to": 229.25,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 234.4,
+        "to": 234.8,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/drum_hit.mp3",
+        "from": 240.6,
+        "to": 241.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.1,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/cupboard_drag.mp3",
+        "from": 249.25,
+        "to": 258.55,
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 260.1,
+        "to": 260.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 262.43,
+        "to": 262.83,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 269.35,
+        "to": 269.75,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 270.9,
+        "to": 271.4,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 271.9,
+        "to": 274.5,
+        "fadeIn": 0.15,
+        "fadeOut": 0.6,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 275.42,
+        "to": 275.82,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 277.41,
+        "to": 280.5,
+        "fadeIn": 0.1,
+        "fadeOut": 0.7,
+        "volume": 0.75
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 283.09,
+        "to": 284.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 1.0
+      }
+    ]
+  },
+  "act3": {
+    "version": "v3 (2026-09-26): re-timed to forced-alignment word onsets",
+    "targets": {
+      "water_trickle": [
+        "I",
+        -34
+      ],
+      "dam_break": [
+        "M",
+        -20
+      ],
+      "broom_sweep": [
+        "M",
+        -26
+      ],
+      "scan_sweep": [
+        "M",
+        -30
+      ]
+    },
+    "gains_db": {
+      "water_trickle": 4.1,
+      "dam_break": -16.9,
+      "broom_sweep": -7.5,
+      "scan_sweep": -21.4
+    },
+    "schedule": [
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 292.36,
+        "to": 292.81,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 292.88,
+        "to": 293.33,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 293.18,
+        "to": 293.63,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 294.1,
+        "to": 294.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.65
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 295.44,
+        "to": 295.84,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 295.8,
+        "to": 296.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 296.16,
+        "to": 296.56,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 296.46,
+        "to": 296.86,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 298.52,
+        "to": 298.92,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 299.6,
+        "to": 300.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 300.04,
+        "to": 300.44,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 301.7,
+        "to": 310.3,
+        "fadeIn": 0.5,
+        "fadeOut": 0.6,
+        "volume": 0.85
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 303.7,
+        "to": 304.7,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 308.7,
+        "to": 309.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/broom_sweep.mp3",
+        "from": 310.75,
+        "to": 312.75,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 312.78,
+        "to": 313.23,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/water_trickle.mp3",
+        "from": 315.5,
+        "to": 320.88,
+        "fadeIn": 0.6,
+        "fadeOut": 0.4,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 319.42,
+        "to": 319.82,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 322.36,
+        "to": 322.76,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 323.1,
+        "to": 323.55,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/marker_strokes.mp3",
+        "from": 323.58,
+        "to": 324.38,
+        "fadeIn": 0.0,
+        "fadeOut": 0.1,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 325.0,
+        "to": 325.8,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 328.95,
+        "to": 331.95,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 330.6,
+        "to": 333.84,
+        "fadeIn": 0.5,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 332.86,
+        "to": 333.26,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 334.2,
+        "to": 335.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 334.36,
+        "to": 335.96,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 335.5,
+        "to": 335.95,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 337.5,
+        "to": 338.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/sonar_ping.mp3",
+        "from": 339.38,
+        "to": 340.98,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 342.1,
+        "to": 344.4,
+        "fadeIn": 0.2,
+        "fadeOut": 0.6,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 344.4,
+        "to": 345.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 345.76,
+        "to": 346.21,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 346.42,
+        "to": 346.87,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 349.3,
+        "to": 351.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.9
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 352.0,
+        "to": 352.8,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 352.48,
+        "to": 352.88,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 352.58,
+        "to": 352.98,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 352.68,
+        "to": 353.08,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 352.76,
+        "to": 353.21,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 356.86,
+        "to": 357.26,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 358.68,
+        "to": 360.16,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 359.88,
+        "to": 370.4,
+        "fadeIn": 0.6,
+        "fadeOut": 0.4,
+        "volume": 0.3
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 368.38,
+        "to": 368.83,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 370.46,
+        "to": 370.91,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.65
+      },
+      {
+        "src": "sfx/avalanche_rumble.mp3",
+        "from": 370.6,
+        "to": 374.6,
+        "fadeIn": 0.1,
+        "fadeOut": 0.8,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 375.24,
+        "to": 375.69,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.65
+      },
+      {
+        "src": "sfx/river_rush.mp3",
+        "from": 375.3,
+        "to": 383.2,
+        "fadeIn": 0.4,
+        "fadeOut": 0.5,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 381.62,
+        "to": 382.07,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 382.18,
+        "to": 382.63,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 383.15,
+        "to": 383.95,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 385.7,
+        "to": 386.15,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.65
+      },
+      {
+        "src": "sfx/water_trickle.mp3",
+        "from": 385.8,
+        "to": 391.9,
+        "fadeIn": 0.4,
+        "fadeOut": 0.3,
+        "volume": 0.8
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 387.96,
+        "to": 388.36,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 389.54,
+        "to": 392.3,
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 393.05,
+        "to": 396.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 1.0
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 394.8,
+        "to": 400.06,
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 395.02,
+        "to": 395.47,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.65
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 400.06,
+        "to": 402.9,
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/marker_strokes.mp3",
+        "from": 402.0,
+        "to": 402.8,
+        "fadeIn": 0.0,
+        "fadeOut": 0.1,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 402.24,
+        "to": 402.69,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.75
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 403.5,
+        "to": 406.55,
+        "fadeIn": 0.3,
+        "fadeOut": 0.4,
+        "volume": 0.7
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 404.0,
+        "to": 404.4,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 406.68,
+        "to": 407.08,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 409.2,
+        "to": 409.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 412.2,
+        "to": 412.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 412.9,
+        "to": 415.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.6,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 415.3,
+        "to": 416.78,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 420.24,
+        "to": 420.64,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      }
+    ]
+  },
+  "act4": {
+    "version": "v1 (2026-09-26): timed from forced-alignment word onsets from the start",
+    "schedule": [
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 422.06,
+        "to": 423.06,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 424.5,
+        "to": 426.1,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 426.4,
+        "to": 428.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 428.28,
+        "to": 429.76,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 428.3,
+        "to": 429.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 433.9,
+        "to": 437.0,
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 437.6,
+        "to": 438.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 440.9,
+        "to": 442.1,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 444.94,
+        "to": 445.39,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 446.38,
+        "to": 447.86,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 447.88,
+        "to": 448.33,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 449.46,
+        "to": 449.86,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 451.22,
+        "to": 451.62,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 452.34,
+        "to": 453.34,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 456.3,
+        "to": 457.78,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 459.94,
+        "to": 461.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 467.34,
+        "to": 467.74,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 470.26,
+        "to": 470.66,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 472.72,
+        "to": 473.12,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 475.36,
+        "to": 475.76,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 478.62,
+        "to": 479.02,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 481.38,
+        "to": 481.78,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 486.24,
+        "to": 486.69,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 488.8,
+        "to": 489.25,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 492.48,
+        "to": 493.28,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 494.26,
+        "to": 495.74,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 496.52,
+        "to": 496.92,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 498.62,
+        "to": 518.4,
+        "fadeIn": 0.5,
+        "fadeOut": 0.6,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/plink_cascade.mp3",
+        "from": 501.84,
+        "to": 503.4,
+        "fadeIn": 0.0,
+        "fadeOut": 0.2,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/sonar_ping.mp3",
+        "from": 506.42,
+        "to": 508.02,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 508.72,
+        "to": 509.12,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 510.5,
+        "to": 511.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 514.68,
+        "to": 519.5,
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 519.5,
+        "to": 520.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 522.4,
+        "to": 522.85,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 526.54,
+        "to": 530.5,
+        "fadeIn": 0.15,
+        "fadeOut": 0.4,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/avalanche_rumble.mp3",
+        "from": 529.98,
+        "to": 533.98,
+        "fadeIn": 0.05,
+        "fadeOut": 0.8,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 537.5,
+        "to": 542.0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 543.52,
+        "to": 544.72,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 545.5,
+        "to": 548.48,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/river_rush.mp3",
+        "from": 548.48,
+        "to": 563.46,
+        "fadeIn": 0.4,
+        "fadeOut": 0.5,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 552.3,
+        "to": 552.75,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 555.12,
+        "to": 558.8,
+        "fadeIn": 0.15,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 558.6,
+        "to": 559.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 560.16,
+        "to": 562.16,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 564.12,
+        "to": 564.52,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 567.66,
+        "to": 568.11,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 572.56,
+        "to": 573.01,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 575.64,
+        "to": 576.09,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 582.5,
+        "to": 586.0,
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 584.54,
+        "to": 584.99,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 588.76,
+        "to": 589.21,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 592.6,
+        "to": 593.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 595.42,
+        "to": 595.87,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 596.6,
+        "to": 611.5,
+        "fadeIn": 0.3,
+        "fadeOut": 0.5,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 603.18,
+        "to": 607.0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 604.66,
+        "to": 605.06,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 609.3,
+        "to": 611.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 612.02,
+        "to": 617.0,
+        "fadeIn": 0.15,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 618.12,
+        "to": 624.6,
+        "fadeIn": 0.15,
+        "fadeOut": 0.5,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 624.6,
+        "to": 625.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_flip.mp3",
+        "from": 624.8,
+        "to": 625.25,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 625.52,
+        "to": 627.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.6
+      }
+    ]
+  },
+  "act5": {
+    "version": "v1 (2026-10-01): timed from forced-alignment word onsets from the start",
+    "schedule": [
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 628.54,
+        "to": 639.9,
+        "fadeIn": 0.4,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 637.72,
+        "to": 638.17,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 639.9,
+        "to": 641.38,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 643.0,
+        "to": 648.68,
+        "fadeIn": 0.2,
+        "fadeOut": 0.3,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 648.68,
+        "to": 649.88,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 648.68,
+        "to": 661.78,
+        "fadeIn": 0.3,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 650.54,
+        "to": 652.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/debris_churn.mp3",
+        "from": 655.04,
+        "to": 659.0,
+        "fadeIn": 0.1,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 661.78,
+        "to": 672.44,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 665.9,
+        "to": 666.35,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 667.92,
+        "to": 668.37,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dam_break.mp3",
+        "from": 672.44,
+        "to": 674.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/flood_roar_long.mp3",
+        "from": 672.44,
+        "to": 678.44,
+        "fadeIn": 0.1,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 674.4,
+        "to": 675.88,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 678.44,
+        "to": 685.7,
+        "fadeIn": 0.2,
+        "fadeOut": 0.5,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/lock_clunk.mp3",
+        "from": 681.86,
+        "to": 682.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/sonar_ping.mp3",
+        "from": 685.7,
+        "to": 687.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 689.48,
+        "to": 689.88,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 693.94,
+        "to": 694.34,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 693.94,
+        "to": 695.42,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 696.84,
+        "to": 712.1,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 697.66,
+        "to": 698.11,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 704.8,
+        "to": 711.8,
+        "fadeIn": 0.2,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/avalanche_rumble.mp3",
+        "from": 712.1,
+        "to": 715.6,
+        "fadeIn": 0.05,
+        "fadeOut": 0.6,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 713.62,
+        "to": 714.62,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 716.9,
+        "to": 717.35,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 718.9,
+        "to": 719.35,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 721.84,
+        "to": 723.32,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/lock_clunk.mp3",
+        "from": 724.72,
+        "to": 725.3,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 726.4,
+        "to": 726.85,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 729.32,
+        "to": 735.74,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/title_boom.mp3",
+        "from": 735.74,
+        "to": 737.4,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.55
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 737.72,
+        "to": 748.56,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 741.92,
+        "to": 743.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 748.56,
+        "to": 757.56,
+        "fadeIn": 0.1,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/title_boom.mp3",
+        "from": 757.56,
+        "to": 759.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 762.6,
+        "to": 772.84,
+        "fadeIn": 0.2,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 769.3,
+        "to": 769.75,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 773.3,
+        "to": 775.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 774.9,
+        "to": 776.6,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 774.9,
+        "to": 776.38,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 777.04,
+        "to": 788.7,
+        "fadeIn": 0.4,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 788.7,
+        "to": 802.24,
+        "fadeIn": 0.4,
+        "fadeOut": 0.4,
+        "volume": 0.3
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 802.24,
+        "to": 810.14,
+        "fadeIn": 0.2,
+        "fadeOut": 0.4,
+        "volume": 0.3
+      },
+      {
+        "src": "sfx/scan_sweep.mp3",
+        "from": 810.8,
+        "to": 812.5,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 815.26,
+        "to": 827.48,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/marker_strokes.mp3",
+        "from": 815.26,
+        "to": 822.0,
+        "fadeIn": 0.0,
+        "fadeOut": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 822.88,
+        "to": 824.36,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 827.48,
+        "to": 835.56,
+        "fadeIn": 0.2,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 830.38,
+        "to": 830.78,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 831.84,
+        "to": 832.24,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 835.56,
+        "to": 839.44,
+        "fadeIn": 0.2,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/whoosh.mp3",
+        "from": 839.44,
+        "to": 840.44,
+        "fadeIn": 0.0,
+        "fadeOut": 0.25,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 841.6,
+        "to": 842.05,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 843.58,
+        "to": 844.03,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 848.24,
+        "to": 849.72,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 849.84,
+        "to": 859.88,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 860.0,
+        "to": 860.45,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 861.44,
+        "to": 861.89,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/card_snap.mp3",
+        "from": 862.1,
+        "to": 862.55,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 864.5,
+        "to": 868.24,
+        "fadeIn": 0.2,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 868.24,
+        "to": 873.42,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 873.42,
+        "to": 874.9,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 873.56,
+        "to": 873.96,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/tick.mp3",
+        "from": 876.3,
+        "to": 876.7,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.45
+      },
+      {
+        "src": "sfx/wind_bed.mp3",
+        "from": 881.36,
+        "to": 884.6,
+        "fadeIn": 0.3,
+        "fadeOut": 0.3,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/dark_drone.mp3",
+        "from": 884.6,
+        "to": 887.56,
+        "fadeIn": 0.2,
+        "fadeOut": 0.4,
+        "volume": 0.5
+      },
+      {
+        "src": "sfx/lock_clunk.mp3",
+        "from": 887.56,
+        "to": 888.2,
+        "fadeIn": 0.0,
+        "fadeOut": 0.03,
+        "volume": 0.6
+      },
+      {
+        "src": "sfx/wind_bed_long.mp3",
+        "from": 891.08,
+        "to": 903.4,
+        "fadeIn": 0.5,
+        "fadeOut": 0.8,
+        "volume": 0.35
+      },
+      {
+        "src": "sfx/reveal_chime.mp3",
+        "from": 899.62,
+        "to": 901.1,
+        "fadeIn": 0.0,
+        "fadeOut": 0.4,
+        "volume": 0.4
+      }
+    ]
+  }
+}

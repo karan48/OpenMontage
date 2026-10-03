@@ -1,0 +1,72 @@
+{
+ "cue": "glp1_cueC_two_minutes_seven_days",
+ "project": "lizard-spit-semaglutide-hindi",
+ "provider": "elevenlabs",
+ "model": "music_v1",
+ "mood_tags": [
+  "inventive",
+  "clever",
+  "build",
+  "reveal",
+  "momentum"
+ ],
+ "planned_seconds": 156.16,
+ "composition_plan": {
+  "positive_global_styles": [
+   "curious documentary underscore",
+   "instrumental",
+   "warm organic acoustic textures",
+   "clean modern mix",
+   "sits quietly under spoken narration",
+   "leaves space for a voice"
+  ],
+  "negative_global_styles": [
+   "vocals",
+   "singing",
+   "choir",
+   "humming",
+   "EDM drop",
+   "trailer braams",
+   "heavy drums",
+   "loud crash cymbals",
+   "distorted guitar"
+  ],
+  "sections": [
+   {
+    "section_name": "bus and tail",
+    "positive_local_styles": [
+     "bright inventive plucked strings and marimba",
+     "clever and light",
+     "steady gentle pulse"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 53620,
+    "lines": []
+   },
+   {
+    "section_name": "two minutes to seven days",
+    "positive_local_styles": [
+     "rising arpeggios building toward a reveal",
+     "a warm full major chord blooms at the climax",
+     "then calm and satisfied"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 59660,
+    "lines": []
+   },
+   {
+    "section_name": "bigger than a country",
+    "positive_local_styles": [
+     "confident steady pulse",
+     "momentum",
+     "thins at the end to an unresolved questioning chord"
+    ],
+    "negative_local_styles": [],
+    "duration_ms": 42880,
+    "lines": []
+   }
+  ]
+ },
+ "cost_usd_est": 0.2603,
+ "reuse_note": "Instrumental documentary underscore; section moods listed in the plan."
+}

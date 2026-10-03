@@ -1,0 +1,214 @@
+{
+  "cue": "cue1_title_act1",
+  "version": 2,
+  "provider": "elevenlabs",
+  "model": "music_v1",
+  "tool": "projects/<slug>/tools/elevenlabs_music_plan.py (d-026)",
+  "video_start": 67.2,
+  "composition_plan": {
+    "positive_global_styles": [
+      "cinematic documentary underscore",
+      "instrumental",
+      "72 BPM",
+      "E minor",
+      "sparse felt piano motif",
+      "warm low analog synth pad",
+      "soft sub-bass pulse",
+      "low cello and double bass",
+      "restrained and grave",
+      "leaves clear space for a spoken voice"
+    ],
+    "negative_global_styles": [
+      "vocals",
+      "choir",
+      "spoken word",
+      "bright hi-hats",
+      "EDM drop",
+      "trailer braams",
+      "electric guitar",
+      "happy",
+      "major key"
+    ],
+    "sections": [
+      {
+        "section_name": "Title and the map",
+        "positive_local_styles": [
+          "a single sustained low E note on the warm synth pad",
+          "a sparse felt piano motif enters softly after a few seconds",
+          "very quiet",
+          "curious"
+        ],
+        "negative_local_styles": [
+          "percussion",
+          "strings",
+          "pulse"
+        ],
+        "duration_ms": 15500,
+        "lines": []
+      },
+      {
+        "section_name": "The valley road",
+        "positive_local_styles": [
+          "sparse felt piano motif over the warm pad",
+          "calm, curious, ordinary",
+          "very low intensity",
+          "gentle and open"
+        ],
+        "negative_local_styles": [
+          "percussion",
+          "sub-bass pulse",
+          "tension"
+        ],
+        "duration_ms": 22000,
+        "lines": []
+      },
+      {
+        "section_name": "The block on the mountain",
+        "positive_local_styles": [
+          "the piano motif moves to a lower register",
+          "a held suspended note that does not resolve",
+          "quiet unease creeping in",
+          "a low cello drone enters"
+        ],
+        "negative_local_styles": [
+          "drums",
+          "loud"
+        ],
+        "duration_ms": 14860,
+        "lines": []
+      },
+      {
+        "section_name": "The fall",
+        "positive_local_styles": [
+          "a soft sub-bass pulse enters at 72 BPM",
+          "low strings swell slowly",
+          "tension rising",
+          "ominous"
+        ],
+        "negative_local_styles": [
+          "drums",
+          "hi-hats"
+        ],
+        "duration_ms": 16440,
+        "lines": []
+      },
+      {
+        "section_name": "The debris flow",
+        "positive_local_styles": [
+          "building weight and momentum",
+          "a low string ostinato",
+          "the deep pulse grows stronger",
+          "soft low tom hits",
+          "heavy and dark"
+        ],
+        "negative_local_styles": [
+          "hi-hats",
+          "cymbals",
+          "bright synths"
+        ],
+        "duration_ms": 20260,
+        "lines": []
+      },
+      {
+        "section_name": "The wall of mud",
+        "positive_local_styles": [
+          "peak intensity of the cue",
+          "full low strings over a deep driving pulse",
+          "heavy, relentless, urgent but controlled",
+          "dark"
+        ],
+        "negative_local_styles": [
+          "hi-hats",
+          "cymbals",
+          "trailer braams",
+          "melodic lead"
+        ],
+        "duration_ms": 19590,
+        "lines": []
+      },
+      {
+        "section_name": "Aftermath",
+        "positive_local_styles": [
+          "sudden drop to near silence",
+          "only a single soft held pad note fading out to silence"
+        ],
+        "negative_local_styles": [
+          "percussion",
+          "strings",
+          "pulse"
+        ],
+        "duration_ms": 4000,
+        "lines": []
+      }
+    ]
+  },
+  "duration": 112.69,
+  "integrated_lufs": -13.1,
+  "section_loudness": [
+    {
+      "section": "Title and the map",
+      "video": [
+        67.2,
+        82.7
+      ],
+      "short_term_mean": -30.5,
+      "short_term_max": -21.1
+    },
+    {
+      "section": "The valley road",
+      "video": [
+        82.7,
+        104.7
+      ],
+      "short_term_mean": -17.9,
+      "short_term_max": -15.4
+    },
+    {
+      "section": "The block on the mountain",
+      "video": [
+        104.7,
+        119.56
+      ],
+      "short_term_mean": -16.0,
+      "short_term_max": -13.2
+    },
+    {
+      "section": "The fall",
+      "video": [
+        119.56,
+        136.0
+      ],
+      "short_term_mean": -15.5,
+      "short_term_max": -13.2
+    },
+    {
+      "section": "The debris flow",
+      "video": [
+        136.0,
+        156.26
+      ],
+      "short_term_mean": -12.1,
+      "short_term_max": -10.6
+    },
+    {
+      "section": "The wall of mud",
+      "video": [
+        156.26,
+        175.85
+      ],
+      "short_term_mean": -10.8,
+      "short_term_max": -8.8
+    },
+    {
+      "section": "Aftermath",
+      "video": [
+        175.85,
+        179.85
+      ],
+      "short_term_mean": -16.6,
+      "short_term_max": -10.7
+    }
+  ],
+  "supersedes": "cue1_title_act1.v1.mp3 (prose prompt, 113 s; arc peaked under s4-g/h)",
+  "status": "generated 2026-09-25 for the Act 1 cut (d-025)"
+}
