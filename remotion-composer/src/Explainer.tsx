@@ -54,6 +54,8 @@ import type { TerminalStep } from "./components/TerminalScene";
 import { ScreenshotScene } from "./components/ScreenshotScene";
 import type { ScreenshotStep } from "./components/ScreenshotScene";
 import { ProviderChip } from "./components/ProviderChip";
+import { PhoneChat } from "./components/PhoneChat";
+import type { PhoneChatStep, PhoneChatLane, PhoneChatBubble, PhoneChatStatus } from "./components/PhoneChat";
 import type { ParticleType } from "./components/ParticleOverlay";
 import { resolveTheme, type ThemeConfig, DEFAULT_THEME } from "./Root";
 
@@ -285,6 +287,20 @@ interface Cut {
   screenshotSteps?: ScreenshotStep[];
   screenshotSize?: { width: number; height: number };
   cursorStartAt?: [number, number];
+  // Phone chat props (type: "phone_chat")
+  phoneLayout?: "full" | "split" | "pill";
+  contactName?: string;
+  chatSteps?: PhoneChatStep[];
+  chatLanes?: PhoneChatLane[];
+  chatHistory?: PhoneChatBubble[];
+  chatInitialStatus?: PhoneChatStatus;
+  phoneBackdrop?: string;
+  phoneBackdropBlur?: number;
+  phoneBackdropDim?: number;
+  counterLabel?: string;
+  counterStart?: number;
+  clockText?: string;
+  entrance?: "none" | "rise";
 }
 
 interface Overlay {
@@ -299,6 +315,9 @@ interface Overlay {
   providers?: string[];
   cycleSeconds?: number;
   label?: string;
+  // section_title sizing / placement
+  scale?: number;
+  offsetTopPercent?: number;
 }
 
 interface AudioLayer {
@@ -324,6 +343,18 @@ export interface ExplainerProps {
   cuts: Cut[];
   overlays?: Overlay[];
   captions?: WordCaption[];
+  /** Optional caption styling; unset fields keep the defaults below. */
+  captionOptions?: {
+    wordsPerPage?: number;
+    fontSize?: number;
+    fontFamily?: string;
+    bottomPercent?: number;
+    breakOnGapMs?: number;
+    holdAfterMs?: number;
+    breakAfterSentence?: boolean;
+    highlightColor?: string;
+    backgroundColor?: string;
+  };
   audio?: AudioConfig;
 }
 
@@ -774,6 +805,30 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
     );
   }
 
+  // --- Phone chat (typing / delete / "typing…" status story beats) ---
+  if (cut.type === "phone_chat") {
+    return (
+      <PhoneChat
+        layout={cut.phoneLayout}
+        contactName={cut.contactName}
+        steps={cut.chatSteps}
+        lanes={cut.chatLanes}
+        history={cut.chatHistory}
+        initialStatus={cut.chatInitialStatus}
+        backdropImage={cut.phoneBackdrop}
+        backdropBlur={cut.phoneBackdropBlur}
+        backdropDim={cut.phoneBackdropDim}
+        counterLabel={cut.counterLabel}
+        counterStart={cut.counterStart}
+        clockText={cut.clockText}
+        accentColor={cut.accentColor}
+        backgroundColor={cut.backgroundColor}
+        entrance={cut.entrance}
+        sceneDurationSeconds={cut.out_seconds - cut.in_seconds}
+      />
+    );
+  }
+
   // --- Anime scene (multi-image crossfade + particles) ---
   if (cut.type === "anime_scene" && cut.images && cut.images.length > 0) {
     return (
@@ -825,6 +880,8 @@ const OverlayRenderer: React.FC<{ overlay: Overlay }> = ({ overlay }) => {
         subtitle={overlay.subtitle}
         accentColor={overlay.accentColor}
         position={(overlay.position as any) || "top-left"}
+        scale={overlay.scale}
+        offsetTopPercent={overlay.offsetTopPercent}
       />
     );
   }
@@ -898,10 +955,15 @@ export const Explainer: React.FC<ExplainerProps> = (props) => {
       {captions && captions.length > 0 && (
         <CaptionOverlay
           words={captions}
-          wordsPerPage={6}
-          fontSize={42}
-          highlightColor={theme.captionHighlightColor}
-          backgroundColor={theme.captionBackgroundColor}
+          wordsPerPage={props.captionOptions?.wordsPerPage ?? 6}
+          fontSize={props.captionOptions?.fontSize ?? 42}
+          fontFamily={props.captionOptions?.fontFamily}
+          bottomPercent={props.captionOptions?.bottomPercent}
+          breakOnGapMs={props.captionOptions?.breakOnGapMs}
+          holdAfterMs={props.captionOptions?.holdAfterMs}
+          breakAfterSentence={props.captionOptions?.breakAfterSentence}
+          highlightColor={props.captionOptions?.highlightColor ?? theme.captionHighlightColor}
+          backgroundColor={props.captionOptions?.backgroundColor ?? theme.captionBackgroundColor}
         />
       )}
       {/* Layer 4: Audio — narration */}

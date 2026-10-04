@@ -11,6 +11,10 @@ interface SectionTitleProps {
   subtitle?: string;
   accentColor?: string;
   position?: "top-left" | "bottom-left" | "center";
+  /** Multiplies the title/subtitle size (default 1). */
+  scale?: number;
+  /** For top-left: distance from the top edge as % of frame height (default: 60px padding). */
+  offsetTopPercent?: number;
 }
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({
@@ -18,9 +22,11 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   subtitle,
   accentColor = "#22D3EE",
   position = "top-left",
+  scale = 1,
+  offsetTopPercent,
 }) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps, durationInFrames, height } = useVideoConfig();
 
   // Entrance spring
   const slideIn = spring({
@@ -43,7 +49,12 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       ? { justifyContent: "center", alignItems: "center" }
       : position === "bottom-left"
       ? { justifyContent: "flex-end", alignItems: "flex-start", padding: 60 }
-      : { justifyContent: "flex-start", alignItems: "flex-start", padding: 60 };
+      : {
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+          padding: 60,
+          ...(offsetTopPercent !== undefined ? { paddingTop: Math.round((height * offsetTopPercent) / 100) } : {}),
+        };
 
   return (
     <AbsoluteFill style={positionStyles}>
@@ -65,7 +76,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         />
         <div
           style={{
-            fontSize: 28,
+            fontSize: 28 * scale,
             fontWeight: 700,
             color: "#F8FAFC",
             fontFamily: "Space Grotesk, Inter, system-ui, sans-serif",
@@ -79,7 +90,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         {subtitle && (
           <div
             style={{
-              fontSize: 18,
+              fontSize: 18 * scale,
               fontWeight: 400,
               color: accentColor,
               fontFamily: "Space Grotesk, Inter, system-ui, sans-serif",

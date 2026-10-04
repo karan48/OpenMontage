@@ -300,6 +300,7 @@ Style playbooks (`styles/*.yaml`) define visual language, typography, motion, au
 | `toon-story` | motion-graphics | playful, comic | 2D cartoon stories with a rigged cast, episodes and Shorts |
 | `tech-review` | motion-graphics | crisp, honest | Product reviews, long-form and Shorts |
 | `lifestyle-reel` | custom | warm, aspirational | Lifestyle vlogs and Shorts/Reels with a recurring persona |
+| `anime-drama` | custom | emotional, bittersweet | Young-adult drama/romance with anime-style illustrated stills, episodes and Shorts |
 
 Load via `styles/playbook_loader.py`: `load_playbook("clean-professional")`
 

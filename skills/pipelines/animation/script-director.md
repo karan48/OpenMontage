@@ -1,5 +1,7 @@
 # Script Director — Animation Pipeline
 
+> **Channel profile:** if `project.json` has a `channel`, read `channels/<id>/script-guide.md` after `skills/creative/storytelling.md`, using its section for the project's `video_format` (long-form or Shorts). It sets the register, structure and humor level (`script.humor`). Time sections with the profile's `narration.planning_wpm` and write in its `language.script` convention. See `skills/meta/channel-profiles.md`.
+
 ## When to Use
 
 This stage turns the approved proposal into animation-ready beats. The script must leave room for motion, staging, and hold time — and must integrate the research findings and respect the selected animation mode.

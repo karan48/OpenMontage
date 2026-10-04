@@ -1,0 +1,88 @@
+# Channel profile: Young Story (Hinglish young-adult drama and romance — long-form episodes and Shorts)
+# Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
+# DRAFT — review the open_questions at the bottom.
+
+id: young-story
+display_name: "Young Story"
+youtube_handle: null
+status: active
+description: "Young-adult drama and romance — college life, friendship, first love, heartbreak and family pressure — told with anime-style illustrated scenes, a narrator and voiced characters. Long-form episodes plus Shorts."
+audience: "Indian viewers aged 16-30 who binge emotional stories; they come for the feeling and stay for the cliffhanger."
+
+language:
+  narration: hinglish
+  script: "Hindi words in Devanagari, English words in Latin script (draft — confirm at the voice audition). Dialogue lines are tagged with the speaking character."
+  on_screen_text: hinglish
+
+formats:
+  long_form:
+    aspect_ratio: "16:9"
+    media_profile: youtube_landscape
+    target_seconds: [480, 900]      # draft — confirm
+    structure: "flash-forward cold open on the emotional peak -> 'कुछ दिन पहले…' -> setup (who, what they want) -> 2-3 rising complications -> turning point (confession, betrayal, choice) -> aftermath -> resolution or cliffhanger into the next part"
+    composition_mode: templated     # anime_scene stills grammar; propose atelier for a hero episode
+    pacing: "New illustration every 3-5 s; emotional close-ups may hold up to 6 s"
+  shorts:
+    aspect_ratio: "9:16"
+    media_profile: youtube_shorts
+    target_seconds: [45, 60]
+    structure: "emotional hook line (0-2 s) -> setup in one breath -> the twist or confession -> gut-punch ending or 'Part 2' cliffhanger"
+    composition_mode: templated
+    sources: [standalone, cut_down]
+    pacing: "New illustration every 2-3 s"
+
+production:
+  default_pipeline: animation
+  style_playbook: anime-drama
+  render_runtime_recommendation: remotion
+  scene_type: anime_scene           # Remotion: illustration variants + particles + lighting shifts + camera motion
+
+narration:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: XcWoPxj7pwnIgM3dQnWv    # narrator: "Kanika" (ElevenLabs library, late-night storytelling); picked by the user at the 2026-10-03 audition (47 Drafts). Character voices live in characters.md
+  voice_audition_required: false
+  settings: {stability: 0.30, similarity_boost: 0.82, speed: 0.95}   # narrator, as auditioned
+  output_format: mp3_44100_128
+  planning_wpm: 150                 # draft — drama breathes; measure at audition
+  register: "Intimate young narrator — warm, slightly wistful, like a friend telling you what happened. Characters speak in their own voices."
+  delivery_markup: eleven_v3_audio_tags   # [whispers], [crying], [laughs], [angry], [sighs], [pause]
+  dialogue: "Each character's lines are rendered with that character's voice from characters.md; the narrator never voices a character's line"
+  sample_riskiest_section_first: true     # usually the confession or breakup scene
+  sync: "Time cuts and subtitles from ElevenLabs forced-alignment word onsets"
+
+script:
+  guide: script-guide.md
+  humor: low
+
+visuals:
+  approach: "One new anime-style illustration per story beat, with 2-3 subtle variants crossfaded (anime_scene), particles (rain, petals, dust motes, city bokeh), slow camera moves and lighting shifts on mood turns. Texts and DMs appear as phone-screen and chat-bubble overlays."
+  sourcing: generated
+  image_model: flux/schnell
+  ai_video: approval_gated
+  character_bible: characters.md
+  consistency: "flux_image is text-to-image only: paste each character's locked description verbatim in every prompt. If a lead keeps drifting across episodes, consider training a LoRA for them (as was done for Rani)."
+
+music:
+  mood: "Emotional piano, soft strings and lo-fi beats; swells on confessions and heartbreak; silence before the biggest line"
+  source_order: [music_library, elevenlabs_music]
+
+publishing:
+  title_language: hinglish
+  thumbnail: "The most emotional close-up (tears, a look, a held hand) plus a 2-4 word Hinglish hook"
+  series: "Multi-part stories are titled 'Part 1/2/3' and get one playlist per story"
+
+policies:
+  - "Anyone in a romantic storyline is an adult (18+), written and drawn as an adult."
+  - "Romance stays PG-13: no sexual content, no revealing clothing."
+  - "Toxic behaviour (stalking, possessiveness, violence) is never framed as romantic."
+  - "Heavy themes (depression, abuse, self-harm) are handled with care — never glamorised, never shown as methods; a story touching self-harm ends with a helpline card (Tele-MANAS 14416)."
+  - "Stories are fiction; no real, identifiable people."
+
+open_questions:
+  - "YouTube handle (youtube_handle)."
+  - "Cast: recurring leads across many stories, or a new cast per story (with a shared art style)?"
+  - "Character voices: per story, or recurring? (Narrator locked to Kanika. 47 Drafts used Aisha for Riya and Laksh for Aarav — see projects/young-story-short-01.)"
+  - "Long-form: are 8-15 min episodes right? Mostly multi-part series or one-shot stories?"
+  - "Are Shorts standalone mini-stories, or cut-downs of each episode's emotional peak?"
+  - "Hinglish script convention: Devanagari for Hindi plus Latin for English, or all-Roman Hinglish?"

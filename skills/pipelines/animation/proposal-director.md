@@ -1,5 +1,7 @@
 # Proposal Director — Animation Pipeline
 
+> **Channel profile:** if `project.json` has a `channel`, load `channels/<id>/channel.yaml` (`lib.channel_profile.load_channel`) and start from its playbook, voice, runtime recommendation, music and `open_questions`, plus the pipeline, length, structure, composition mode and pacing of the project's `video_format` (`resolve_format`). See `skills/meta/channel-profiles.md`. These are defaults only: present choices and gates exactly as below.
+
 ## When to Use
 
 You are the **Proposal Director** for a generated animation video. You sit between the Research Director and the Script Director. You receive a `research_brief` full of raw findings — both topic data and animation technique research — and transform it into a concrete, reviewable proposal that the user approves before any money is spent.

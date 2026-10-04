@@ -18,6 +18,7 @@ Every channel publishes both **long-form (16:9)** and **Shorts (9:16)**. Each pr
 | `story-toons` (Kids Story) | Hinglish | 4-8 min | 40-60 s | `character-animation` | `toon-story` |
 | `product-review` | Hinglish | 8-12 min | 40-60 s | `hybrid` (with alternates) | `tech-review` |
 | `rani-ai` | Hinglish | 5-10 min | 20-45 s (plus Reels) | `cinematic` | `lifestyle-reel` |
+| `young-story` (Young Story) | Hinglish | 8-15 min | 45-60 s | `animation` | `anime-drama` |
 
 ## How the agent uses a profile
 

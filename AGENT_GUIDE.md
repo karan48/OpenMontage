@@ -652,6 +652,7 @@ Tool rules:
 | `toon-story` | 2D cartoon stories with a recurring rigged cast, episodes and Shorts — flat vector, thick outlines, Disney-12 cartoon acting |
 | `tech-review` | Product reviews, long-form and Shorts — dark studio product hero, spec cards, pros/cons, comparison tables, verdict card |
 | `lifestyle-reel` | Lifestyle vlogs and Shorts/Reels with a recurring on-screen persona — warm natural light, maroon/gold brand cards |
+| `anime-drama` | Young-adult drama and romance with modern anime-style illustrated stills, episodes and Shorts — luminous skies, rain and petal particles, voiced characters |
 
 Channel profiles (`channels/<id>/channel.yaml`) name each channel's default playbook. See "Channel Profiles" above.
 

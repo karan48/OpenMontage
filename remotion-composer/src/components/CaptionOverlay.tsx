@@ -23,6 +23,17 @@ interface CaptionOverlayProps {
   highlightColor?: string;
   backgroundColor?: string;
   fontFamily?: string;
+  /** Distance of the caption box from the bottom edge, as % of frame height.
+   *  Unset = 80px (legacy). Shorts: ~22-26 keeps captions above the Shorts UI. */
+  bottomPercent?: number;
+  /** Start a new page when the gap between two words exceeds this (ms),
+   *  e.g. at a speaker change or a silent beat. Unset = fixed-size pages only. */
+  breakOnGapMs?: number;
+  /** Hide a page this long (ms) after its last word ends instead of holding it
+   *  until the next page starts. Unset = hold until the next page (legacy). */
+  holdAfterMs?: number;
+  /** Start a new page after a word ending a sentence (. ? ! । —). */
+  breakAfterSentence?: boolean;
 }
 
 interface CaptionPage {
@@ -31,17 +42,23 @@ interface CaptionPage {
   endMs: number;
 }
 
-function buildPages(words: WordCaption[], wordsPerPage: number): CaptionPage[] {
+function buildPages(words: WordCaption[], wordsPerPage: number, breakOnGapMs?: number, breakAfterSentence?: boolean): CaptionPage[] {
   const pages: CaptionPage[] = [];
-  for (let i = 0; i < words.length; i += wordsPerPage) {
-    const pageWords = words.slice(i, i + wordsPerPage);
-    if (pageWords.length === 0) continue;
-    pages.push({
-      words: pageWords,
-      startMs: pageWords[0].startMs,
-      endMs: pageWords[pageWords.length - 1].endMs,
-    });
-  }
+  let current: WordCaption[] = [];
+  const flush = () => {
+    if (current.length === 0) return;
+    pages.push({ words: current, startMs: current[0].startMs, endMs: current[current.length - 1].endMs });
+    current = [];
+  };
+  words.forEach((w, i) => {
+    const prev = words[i - 1];
+    const sentenceEnded = breakAfterSentence && prev && /[.?!।—]$/.test(prev.word.trim());
+    if (current.length >= wordsPerPage || sentenceEnded || (breakOnGapMs !== undefined && prev && w.startMs - prev.endMs > breakOnGapMs)) {
+      flush();
+    }
+    current.push(w);
+  });
+  flush();
   return pages;
 }
 
@@ -52,7 +69,8 @@ const PageRenderer: React.FC<{
   highlightColor: string;
   backgroundColor: string;
   fontFamily: string;
-}> = ({ page, fontSize, color, highlightColor, backgroundColor, fontFamily }) => {
+  paddingBottom: number;
+}> = ({ page, fontSize, color, highlightColor, backgroundColor, fontFamily, paddingBottom }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -70,7 +88,7 @@ const PageRenderer: React.FC<{
       style={{
         justifyContent: "flex-end",
         alignItems: "center",
-        paddingBottom: 80,
+        paddingBottom,
       }}
     >
       <div
@@ -125,18 +143,24 @@ export const CaptionOverlay: React.FC<CaptionOverlayProps> = ({
   highlightColor = "#22D3EE",
   backgroundColor = "rgba(15, 23, 42, 0.75)",
   fontFamily = "Space Grotesk, Inter, system-ui, sans-serif",
+  bottomPercent,
+  breakOnGapMs,
+  holdAfterMs,
+  breakAfterSentence,
 }) => {
-  const { fps } = useVideoConfig();
-  const pages = buildPages(words, wordsPerPage);
+  const { fps, height } = useVideoConfig();
+  const pages = buildPages(words, wordsPerPage, breakOnGapMs, breakAfterSentence);
+  const paddingBottom = bottomPercent !== undefined ? Math.round((height * bottomPercent) / 100) : 80;
 
   return (
     <AbsoluteFill>
       {pages.map((page, i) => {
         const fromFrame = Math.round((page.startMs / 1000) * fps);
         const nextStart = pages[i + 1]?.startMs ?? page.endMs + 500;
+        const endAt = holdAfterMs !== undefined ? Math.min(nextStart, page.endMs + holdAfterMs) : nextStart;
         const duration = Math.max(
           1,
-          Math.round(((nextStart - page.startMs) / 1000) * fps)
+          Math.round(((endAt - page.startMs) / 1000) * fps)
         );
 
         return (
@@ -148,6 +172,7 @@ export const CaptionOverlay: React.FC<CaptionOverlayProps> = ({
               highlightColor={highlightColor}
               backgroundColor={backgroundColor}
               fontFamily={fontFamily}
+              paddingBottom={paddingBottom}
             />
           </Sequence>
         );

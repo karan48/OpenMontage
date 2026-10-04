@@ -1,0 +1,106 @@
+identity:
+  name: "Anime Drama"
+  category: custom
+  mood: emotional, bittersweet, romantic, luminous
+  pace: moderate
+  best_for: "Young-adult drama and romance told with modern anime-style illustrated stills — long-form episodes (16:9) and Shorts (9:16)"
+
+visual_language:
+  color_palette:
+    primary: ["#5B6CFF", "#1C2240"]
+    accent: ["#FF8FA3", "#FFC56E"]
+    background: "#0E1022"
+    text: "#F4F1FA"
+    muted: "#A3A8C3"
+  composition: emotional close-ups for feeling, wide establishing shots under luminous painted skies; 16:9 = cinematic wide frames with characters on thirds; 9:16 = one character or a stacked two-shot, faces in the upper third, subtitles above the bottom 20% (Shorts UI)
+  texture: clean anime line art with soft cel shading, painterly detailed backgrounds, light bloom and lens flare, rain, petal and dust-mote particle layers
+
+typography:
+  headings:
+    font: "Poppins (Devanagari + Latin)"
+    weight: 700
+  body:
+    font: "Hind (Devanagari + Latin)"
+    weight: 500
+    line_height: 1.4
+  code:
+    font: "JetBrains Mono"
+    weight: 400
+  stat_card:
+    font: "Poppins (Devanagari + Latin)"
+    weight: 700
+    size_multiplier: 2.5
+  scale_system: "major_third"
+  weight_matrix:
+    title: 700
+    heading: 600
+    body: 500
+    caption: 500
+
+motion:
+  transitions: [crossfade, slow-dissolve, cut, flash-to-white, drift]
+  animation_style: "illustrated-stills grammar (Remotion anime_scene): 2-3 subtle variants of each illustration crossfaded to suggest motion (hair, eyes, rain), slow pans and push-ins, particle layers (rain, petals, dust motes, city bokeh), lighting shifts on mood turns"
+  pacing_rules:
+    min_scene_hold_seconds: 2.0
+    max_scene_hold_seconds: 6
+    text_card_hold_seconds: 2.5
+    stat_card_hold_seconds: 2.5
+    transition_duration_seconds: 0.8
+  entrance: "soft crossfade with a slow 1.0 -> 1.05 push-in"
+  exit: "slow dissolve, or a flash-to-white on a memory or flashback"
+
+audio:
+  voice_style: "intimate young narrator — warm and slightly wistful, like a friend telling you what happened; character voices natural, college-age and clearly distinct; dialogue is acted, not read"
+  music_mood: "emotional piano, soft strings and lo-fi beats for everyday scenes; swells on confessions and heartbreak; silence just before the biggest line"
+  music_volume: 0.14
+  sfx_style: "rain, city and campus ambience, phone notification pings, footsteps, a heartbeat on tense moments"
+  ducking_threshold_db: -4
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slow and close to the mic, a breath before the line"
+  transition_voice_shift: "a beat of ambience, then the next scene"
+
+asset_generation:
+  image_prompt_prefix: "modern anime film still, clean line art, soft cel shading, detailed painted background, luminous sky, cinematic lighting, Indian setting, "
+  image_negative_prompt: "photorealistic, 3d render, chibi, childlike proportions, revealing clothing, text, watermark, extra fingers"
+  diagram_style: "phone-screen chat bubbles and notification overlays in the same palette"
+  consistency_anchors:
+    - "Every recurring character matches their locked description in the character bible — same face, hair, outfit and colours"
+    - "Characters in romantic storylines are drawn as adults with adult proportions — never childlike"
+    - "Golden-hour or twilight light with luminous skies is the default mood; rain and night for heartbreak"
+    - "Indian settings — college campus, metro, chai tapri, hostel room, rooftop — not generic foreign streets"
+
+overlays:
+  stat_card:
+    bg: "#1C2240"
+    border: "#FF8FA3"
+    text: "#F4F1FA"
+    radius: 14
+    shadow: "0 6px 24px rgba(0,0,0,0.4)"
+  key_term:
+    bg: "#FF8FA3"
+    text: "#0E1022"
+    radius: 10
+  code_block:
+    bg: "#1C2240"
+    text: "#F4F1FA"
+    highlight: "#FFC56E"
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Open on an emotional moment — within 2 seconds in a Short, within the first 20 seconds of an episode"
+  - "A new illustration for every story beat; at most 3 crossfaded variants of one illustration"
+  - "Every scene moves — particles, a camera move or a lighting shift; never a dead still"
+  - "Dialogue is voiced by the character and subtitled, never baked into the image"
+  - "Romance stays PG-13 — no sexual content"
+  - "Characters never drift from their character-bible description"
+
+chart_palette:
+  - "#FF8FA3"
+  - "#5B6CFF"
+  - "#FFC56E"
+  - "#A3A8C3"
+
+color_rules:
+  harmony_type: "split-complementary"
+  contrast_validation: true
+  colorblind_safe: true
