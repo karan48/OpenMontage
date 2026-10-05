@@ -102,9 +102,10 @@ def validate_channel(profile: dict, folder: Path) -> None:
     for label, rel in (
         ("script.guide", profile["script"]["guide"]),
         ("visuals.character_bible", profile["visuals"].get("character_bible")),
+        ("visuals.cast_dir", profile["visuals"].get("cast_dir")),
     ):
         if rel and not (folder / rel).exists():
-            raise ChannelProfileError(f"{folder.name}: {label} file '{rel}' not found")
+            raise ChannelProfileError(f"{folder.name}: {label} path '{rel}' not found")
 
 
 def load_channel(channel_id: str, channels_dir: Optional[Path] = None) -> dict[str, Any]:

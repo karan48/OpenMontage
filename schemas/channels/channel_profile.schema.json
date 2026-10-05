@@ -79,7 +79,25 @@
         "sourcing": { "type": "string" },
         "image_model": { "type": ["string", "null"] },
         "ai_video": { "type": "string", "enum": ["approval_gated", "never"] },
-        "character_bible": { "type": ["string", "null"], "description": "Path relative to the channel folder." }
+        "character_bible": { "type": ["string", "null"], "description": "Path relative to the channel folder." },
+        "cast_dir": {
+          "type": ["string", "null"],
+          "description": "Structured character bible folder, relative to the channel folder (cast.yaml + one folder per character with character.yaml and approved refs/). Loaded by lib/character_bible.py; see skills/meta/character-bible.md."
+        },
+        "character_image_model": {
+          "type": ["string", "null"],
+          "description": "Reference-conditioned image model for shots that show a bible character, e.g. meta/muse-image/edit (tool fal_reference_image)."
+        },
+        "hero_clips": {
+          "type": "object",
+          "description": "Standing policy for AI image-to-video hero clips: how many per episode, how long, which model, and how they are approved.",
+          "properties": {
+            "per_episode": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 },
+            "clip_seconds": { "type": "number", "minimum": 1 },
+            "model": { "type": "string" },
+            "rule": { "type": "string" }
+          }
+        }
       }
     },
     "music": { "type": "object" },

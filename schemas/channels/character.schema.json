@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmontage/channels/character",
+  "title": "Character Bible Record",
+  "description": "The canonical, human-edited description of one character (cast/<id>/character.yaml). Every image prompt that shows this character is assembled from these fields by lib/character_bible.py; approved reference images live beside it in refs/. Code never rewrites this file. See skills/meta/character-bible.md.",
+  "type": "object",
+  "required": ["id", "name", "role", "status", "identity", "wardrobe"],
+  "additionalProperties": false,
+  "$defs": {
+    "item_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "text": { "type": "string", "minLength": 1 }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/item_id",
+      "description": "Kebab-case id; must match the character's folder name."
+    },
+    "name": { "$ref": "#/$defs/text", "description": "The name used in scripts and prompts." },
+    "role": { "type": "string", "enum": ["lead", "supporting", "recurring", "guest", "narrator"] },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "locked"],
+      "description": "draft while the look is being designed; locked once the master reference is approved. A locked identity is changed only on purpose (see the skill)."
+    },
+    "locked_on": { "type": ["string", "null"], "description": "ISO date the master reference was approved." },
+    "variant_of": {
+      "type": ["string", "null"],
+      "description": "The id of the same person at another age or in another era (time jumps), e.g. meera-young -> meera."
+    },
+    "age": { "type": ["string", "number", "null"] },
+    "personality": { "type": "string" },
+    "speech": { "type": "string", "description": "How the character talks: register, slang, catchphrase." },
+    "relationships": {
+      "type": "object",
+      "description": "other character id -> relationship, e.g. raj: husband.",
+      "additionalProperties": { "type": "string" }
+    },
+    "voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider": { "type": ["string", "null"] },
+        "model": { "type": ["string", "null"] },
+        "voice_id": { "type": ["string", "null"] },
+        "settings": { "type": "object" },
+        "sample_line": { "type": "string" }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "description": "The locked look. Pasted verbatim into prompts; never paraphrased.",
+      "required": ["summary", "face", "hair", "skin"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "$ref": "#/$defs/text", "description": "Short noun phrase, e.g. 'a 34-year-old Indian woman'." },
+        "face": { "$ref": "#/$defs/text" },
+        "eyes": { "$ref": "#/$defs/text" },
+        "hair": { "$ref": "#/$defs/text" },
+        "skin": { "$ref": "#/$defs/text" },
+        "build": { "$ref": "#/$defs/text" },
+        "marks": { "$ref": "#/$defs/text", "description": "Distinguishing details: a mole, a scar, spectacles." },
+        "accessories": { "$ref": "#/$defs/text", "description": "Worn in every outfit: mangalsutra, bangles, watch." }
+      }
+    },
+    "wardrobe": {
+      "type": "object",
+      "required": ["default", "outfits"],
+      "additionalProperties": false,
+      "properties": {
+        "default": { "$ref": "#/$defs/item_id" },
+        "outfits": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": { "$ref": "#/$defs/item_id" },
+          "additionalProperties": {
+            "type": "object",
+            "required": ["description"],
+            "additionalProperties": false,
+            "properties": {
+              "description": { "$ref": "#/$defs/text", "description": "Full description, used in text-only prompts and outfit reference jobs." },
+              "short": { "$ref": "#/$defs/text", "description": "Short form used in the 'keep exact …' lock clause, e.g. 'faded green cotton saree'." }
+            }
+          }
+        }
+      }
+    },
+    "poses": {
+      "type": "object",
+      "description": "pose id -> canonical pose text. An approved image may exist at refs/poses/<id>.jpg.",
+      "propertyNames": { "$ref": "#/$defs/item_id" },
+      "additionalProperties": { "$ref": "#/$defs/text" }
+    },
+    "expressions": {
+      "type": "object",
+      "description": "expression id -> canonical expression text. An approved image may exist at refs/expressions/<id>.jpg.",
+      "propertyNames": { "$ref": "#/$defs/item_id" },
+      "additionalProperties": { "$ref": "#/$defs/text" }
+    },
+    "ref_notes": {
+      "type": "string",
+      "description": "Extra instruction about this character's reference images, e.g. 'Ignore the paint strokes and labels in the reference sheet.'"
+    },
+    "forbidden": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Drift traps and never-dos for this character, checked at image QA."
+    },
+    "fal_entity": {
+      "type": ["object", "null"],
+      "description": "Optional mirror of this character in the fal asset library (read/write through the fal MCP).",
+      "additionalProperties": false,
+      "properties": {
+        "handle": { "type": "string" },
+        "id": { "type": "string" }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

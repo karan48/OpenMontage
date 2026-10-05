@@ -285,6 +285,7 @@ Cross-cutting skills that apply to all pipelines:
 | Taste Direction | `meta/taste-direction.md` | Convert a brief into taste dials, anti-patterns, and reference strategy for proposal/playbook/atelier work |
 | Bespoke Composition (Atelier) | `meta/bespoke-composition.md` | Hand-author a composition from scratch (hero work) — no stock scene-types; routes art-direction → motion principles → engine mechanics → atelier render |
 | Channel Profiles | `meta/channel-profiles.md` | Identify which YouTube channel a production is for, pick long-form or Shorts, load `channels/<id>/` defaults (language, formats, pipeline, playbook, voice, script guide, cast), and seed every stage from them |
+| Character Bible | `meta/character-bible.md` | Persistent cast: character text → approved master → turnaround/outfits → poses → expressions → scenes. `lib/character_bible.py` builds every character prompt and reference list; `fal_reference_image` draws it. Runs as the animation pipeline's `scene_plan.cast` sub-stage |
 
 ## Style Playbooks
 
@@ -314,7 +315,7 @@ Claude Code accesses them via symlinks in `.claude/skills/`.
 | **Video Composition** | `remotion-best-practices`, `remotion`, `hyperframes` (router), `hyperframes-core`, `hyperframes-creative`, `hyperframes-media`, `hyperframes-animation`, `hyperframes-cli`, `hyperframes-registry`, `media-use`, `motion-graphics`, `music-to-video`, `remotion-to-hyperframes`, `website-to-video` | `remotion-dev/skills`, `digitalsamba/claude-code-video-toolkit`, `heygen-com/hyperframes` (vendored v0.7.17, see `.agents/skills/hyperframes/PROVENANCE.md`) |
 | **Video Processing** | `ffmpeg`, `video-toolkit` | `digitalsamba/claude-code-video-toolkit` |
 | **TTS & Audio** | `text-to-speech`, `speech-to-text` (whisper, default STT), `azure-speech-to-text` (optional cloud STT), `music`, `sound-effects`, `elevenlabs`, `agents`, `setup-api-key` | `elevenlabs/skills`, `digitalsamba/claude-code-video-toolkit` |
-| **Image Generation** | `flux-best-practices`, `bfl-api`, `grok-media` | `black-forest-labs/skills`, local OpenMontage skill |
+| **Image Generation** | `flux-best-practices`, `bfl-api`, `grok-media`, `reference-image-edit` (Meta Muse edit / FLUX Kontext on fal: reference-conditioned character shots, for `fal_reference_image`) | `black-forest-labs/skills`, local OpenMontage skills |
 | **Math Animation** | `manimce-best-practices`, `manimgl-best-practices`, `manim-composer` | `adithya-s-k/manim_skill` |
 | **3D Graphics** | `threejs-animation`, `threejs-fundamentals`, `threejs-geometry`, `threejs-interaction`, `threejs-lighting`, `threejs-loaders`, `threejs-materials`, `threejs-postprocessing`, `threejs-shaders`, `threejs-textures` | `cloudai-x/threejs-skills` |
 | **Diagrams** | `beautiful-mermaid`, `d3-viz` | `intellectronica/agent-skills`, `davila7/claude-code-templates` |

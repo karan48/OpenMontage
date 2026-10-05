@@ -70,7 +70,7 @@
           },
           "character_actions": {
             "type": "array",
-            "description": "Character-specific acting beats for rigged character animation scenes",
+            "description": "Character-specific acting beats: rigged character animation scenes, and illustrated scenes whose cast comes from a character bible (lib/character_bible.py builds the image prompt from character_id + pose + expression + outfit)",
             "items": {
               "type": "object",
               "required": ["character_id", "action_sequence"],
@@ -84,7 +84,11 @@
                 },
                 "dialogue": { "type": "string" },
                 "target": { "type": "string" },
-                "notes": { "type": "string" }
+                "notes": { "type": "string" },
+                "pose": { "type": "string", "description": "A pose id from the character's bible record (poses)." },
+                "expression": { "type": "string", "description": "An expression id from the character's bible record (expressions)." },
+                "outfit": { "type": "string", "description": "An outfit id from the character's bible record (wardrobe.outfits). Omit for the default outfit." },
+                "frame_position": { "type": "string", "enum": ["left", "center", "right", "background", "foreground"], "description": "Where the character sits in the frame; required in practice for two-shots." }
               },
               "additionalProperties": false
             }

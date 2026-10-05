@@ -1,0 +1,60 @@
+# Example character record. Copy this folder to cast/<character-id>/ (no leading underscore)
+# and set id to the folder name. Schema: schemas/channels/character.schema.json
+# The loader skips folders starting with '_'; add --include-examples to the CLI to load this one.
+# Everything under identity and wardrobe is pasted verbatim into image prompts. Never paraphrase it.
+
+id: example                        # kebab-case, must match the folder name (a leading '_' is ignored)
+name: Meera
+role: lead                         # lead | supporting | recurring | guest | narrator
+status: draft                      # draft -> locked once refs/master.jpg is approved
+locked_on: null
+variant_of: null                   # e.g. meera-young -> meera for a time jump
+age: "34"
+personality: "Patient, proud and quietly stubborn; holds the family together and never raises her voice."
+speech: "Soft Hindi with a little English; says 'कोई बात नहीं' when it matters most."
+relationships: {}                  # other character id -> relationship, e.g. raj: husband
+
+voice:
+  provider: elevenlabs
+  model: eleven_v3
+  voice_id: null                   # set after the voice audition
+  settings: {}
+  sample_line: "[whispers] माँजी, मैंने कुछ नहीं किया."
+
+identity:
+  summary: "a 34-year-old Indian woman"
+  face: "soft oval face with high cheekbones and a small dimple in her left cheek"
+  eyes: "large dark-brown almond eyes with thick lashes"
+  hair: "long black hair in a low bun with a centre parting"
+  skin: "warm wheat-brown skin"
+  build: "medium height, slim"
+  marks: "a small mole above her upper lip"
+  accessories: "a thin gold mangalsutra, a small red bindi and red-and-white bangles"
+
+wardrobe:
+  default: home
+  outfits:
+    home:
+      description: "a faded green cotton saree with a thin maroon border and an elbow-sleeve blouse"
+      short: "faded green cotton saree"
+    wedding:
+      description: "a deep red silk saree with gold zari work, the gold-bordered pallu over one shoulder"
+      short: "red silk wedding saree"
+
+poses:                             # only what stories need; the library grows story by story
+  standing: "standing upright, hands folded in front of her"
+  sitting-floor: "sitting cross-legged on the floor, back straight"
+  doorway: "standing in a doorway, one hand on the door frame"
+
+expressions:
+  neutral: "calm, a soft closed-mouth smile"
+  shocked: "eyes wide, eyebrows raised, lips parted"
+  crying: "tears rolling down her cheeks, lips pressed together, trying not to cry"
+  determined: "steady gaze, jaw set, chin slightly raised"
+
+forbidden:
+  - "never without the mangalsutra and the bindi"
+  - "no lipstick or heavy makeup"
+
+fal_entity: null                   # optional mirror in the fal asset library: {handle: "@meera", id: "..."}
+notes: ""

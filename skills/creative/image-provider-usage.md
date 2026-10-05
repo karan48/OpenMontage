@@ -13,6 +13,7 @@
 | `grok_image` | Grok Imagine Image (xAI) | $0.02/output + $0.002/input edit image | ~5-15s | Image edits, style transfer, multi-image compositing |
 | `openai_image` | GPT Image 2 (OpenAI) | ~$0.01-0.21 | ~5-15s | Complex instructions, text in images, multi-element |
 | `recraft_image` | Recraft V4 via fal.ai | ~$0.04-0.25 | ~5-10s | Logos, SVG vectors, brand assets, text rendering (see caveat below) |
+| `fal_reference_image` | Meta Muse edit (default) / FLUX Kontext via fal.ai | $0.01 (Muse) / $0.04 (Kontext) | ~10-30s | A known character in a new scene from approved reference images; pose/expression/outfit refs; change-one-thing variants. Needs ≥1 reference image. Never chosen for text-only requests |
 | `local_diffusion` | Stable Diffusion (local) | Free | ~30s+ | Offline, privacy, free |
 | `image_gen` | Multi (legacy, deprecated) | Varies | Varies | **Deprecated** — use `image_selector` or per-provider tools |
 
@@ -36,6 +37,7 @@
 | **Real-world photo** (city, nature, people) | `pexels_image` | Real photos > AI for realism | `pixabay_image` → `flux_image` |
 | **Technical diagram** | `diagram_gen` | Structured, editable | `flux_image` with diagram prompt |
 | **Abstract/conceptual illustration** | `flux_image` | AI excels at custom concepts | `openai_image` |
+| **Recurring character in a new scene** (story channels, personas) | `fal_reference_image` with a request built by `lib/character_bible.py` (`skills/meta/character-bible.md`) | Copies identity from approved references: no face drift, no swapped clothes in two-shots | `fal_reference_image` with `model: fal-ai/flux-pro/kontext` (ask first) |
 | **Style transfer / repaint of an existing image** | `grok_image` | Native edit flow, strong promptable transforms | `openai_image` |
 | **Multi-image merge / composite** | `grok_image` | Can combine multiple source images into one scene | `openai_image` |
 | **Logo or brand asset** | `recraft_image` | SVG support, text accuracy | `openai_image` |

@@ -48,7 +48,7 @@ import { SectionTitle } from "./components/SectionTitle";
 import { StatReveal } from "./components/StatReveal";
 import { HeroTitle } from "./components/HeroTitle";
 import { AnimeScene } from "./components/AnimeScene";
-import type { CameraMotion } from "./components/AnimeScene";
+import type { AnimeCue, CameraMotion } from "./components/AnimeScene";
 import { TerminalScene } from "./components/TerminalScene";
 import type { TerminalStep } from "./components/TerminalScene";
 import { ScreenshotScene } from "./components/ScreenshotScene";
@@ -272,6 +272,7 @@ interface Cut {
   };
   // Anime scene props (type: "anime_scene")
   images?: string[];
+  cues?: AnimeCue[]; // timed image switches, seconds from the cut start (e.g. forced-alignment word onsets)
   particles?: ParticleType;
   particleColor?: string;
   particleCount?: number;
@@ -834,6 +835,7 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
     return (
       <AnimeScene
         images={cut.images}
+        cues={cut.cues}
         animation={(cut.animation as CameraMotion) || "ken-burns"}
         particles={cut.particles}
         particleColor={cut.particleColor}

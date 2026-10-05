@@ -40,9 +40,65 @@ export type CameraMotion =
   | "parallax"
   | "static";
 
+/**
+ * A timed switch to one of the scene's images, so an expression change, a
+ * blink or a mouth movement lands on a spoken word instead of at an evenly
+ * spaced point. Times usually come from forced-alignment word onsets.
+ */
+export interface AnimeCue {
+  /** Index into `images` to show from `at` onwards */
+  image: number;
+  /** Seconds from the start of the scene */
+  at: number;
+  /** Fade-in seconds over the image it replaces (default 0.25; ~0.06 for a blink, 0 for a hard cut) */
+  fade?: number;
+}
+
+const DEFAULT_CUE_FADE = 0.25;
+
+/**
+ * Which image is current at time `t` (seconds) under a cue schedule, which
+ * one it is fading in over, and how far the fade has got. images[0] shows
+ * until the first cue. Invalid cues (unknown image, non-finite time) are
+ * ignored; a cue to the image already showing is a no-op.
+ */
+export function cueLayers(
+  cues: AnimeCue[],
+  imageCount: number,
+  t: number
+): { current: number; previous: number | null; progress: number } {
+  const valid = cues
+    .filter(
+      (c) =>
+        Number.isInteger(c.image) &&
+        c.image >= 0 &&
+        c.image < imageCount &&
+        Number.isFinite(c.at)
+    )
+    .sort((a, b) => a.at - b.at);
+  let current = 0;
+  let previous: number | null = null;
+  let progress = 1;
+  for (const cue of valid) {
+    if (cue.at > t) break;
+    if (cue.image === current) continue;
+    const fade = Math.max(0, cue.fade ?? DEFAULT_CUE_FADE);
+    previous = current;
+    current = cue.image;
+    progress = fade === 0 ? 1 : Math.min(1, (t - cue.at) / fade);
+  }
+  return { current, previous: progress >= 1 ? null : previous, progress };
+}
+
 export interface AnimeSceneProps {
-  /** Array of 1-4 image paths — crossfaded sequentially within the scene */
+  /** Image paths. Without `cues`: 1-4 images crossfaded at even intervals. With `cues`: any number, switched at the cue times */
   images: string[];
+  /**
+   * Timed image switches (seconds from the scene start). When set, replaces the
+   * even crossfade schedule: images[0] shows until the first cue, and each cue
+   * fades its image in on top of the previous one. Keep cues at least one fade apart.
+   */
+  cues?: AnimeCue[];
   /** Camera motion applied to all image layers */
   animation?: CameraMotion;
   /** Particle effect overlay */
@@ -148,6 +204,7 @@ function useCameraMotion(animation: CameraMotion, effectiveDuration: number) {
 
 export const AnimeScene: React.FC<AnimeSceneProps> = ({
   images,
+  cues,
   animation = "ken-burns",
   particles,
   particleColor = "#FFE082",
@@ -188,19 +245,39 @@ export const AnimeScene: React.FC<AnimeSceneProps> = ({
    *                  as the next image fades in. Creates a continuous morph
    *                  that simulates subtle motion within the scene.
    */
+  // Scene-level fade-in (first 0.5s) and fade-out (last 0.3s)
+  const sceneIn = spring({
+    frame,
+    fps,
+    config: { damping: 18, stiffness: 80 },
+  });
+  const sceneOut = interpolate(
+    frame,
+    [effectiveDuration - 10, effectiveDuration],
+    [1, 0.25],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+  );
+
+  // Cue schedule: the incoming image fades in ON TOP of the one it replaces
+  // (which stays fully opaque underneath), so a switch never dips to the
+  // background the way an opacity cross-dissolve does.
+  const cueState =
+    cues && cues.length > 0 ? cueLayers(cues, imageCount, frame / fps) : null;
+
+  const getZIndex = (idx: number): number | undefined => {
+    if (!cueState) return undefined;
+    if (idx === cueState.current) return 2;
+    return idx === cueState.previous ? 1 : 0;
+  };
+
   const getOpacity = (idx: number): number => {
-    // Scene-level fade-in (first 0.5s) and fade-out (last 0.3s)
-    const sceneIn = spring({
-      frame,
-      fps,
-      config: { damping: 18, stiffness: 80 },
-    });
-    const sceneOut = interpolate(
-      frame,
-      [effectiveDuration - 10, effectiveDuration],
-      [1, 0.25],
-      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-    );
+    if (cueState) {
+      const stack = sceneIn * sceneOut;
+      if (idx === cueState.current) {
+        return stack * (cueState.previous === null ? 1 : cueState.progress);
+      }
+      return idx === cueState.previous ? stack : 0;
+    }
 
     if (imageCount <= 1) {
       return sceneIn * sceneOut;
@@ -260,7 +337,7 @@ export const AnimeScene: React.FC<AnimeSceneProps> = ({
     <AbsoluteFill style={{ overflow: "hidden", background: backgroundColor }}>
       {/* Layer 1: Image stack with crossfade + camera motion */}
       {images.map((src, i) => (
-        <AbsoluteFill key={i}>
+        <AbsoluteFill key={i} style={{ zIndex: getZIndex(i) }}>
           <Img
             src={resolveAsset(src)}
             style={{

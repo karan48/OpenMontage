@@ -42,7 +42,8 @@
               "playbook_override",
               "visual_accuracy_check",
               "approval_policy",
-              "channel_selection"
+              "channel_selection",
+              "character_bible"
             ],
             "description": "What class of decision this is"
           },

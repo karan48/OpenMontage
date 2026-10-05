@@ -5,6 +5,13 @@ description: Toolkit-specific Remotion patterns — custom transitions, shared c
 
 # Remotion — Toolkit Extensions
 
+> **OpenMontage: read this first.** This skill is vendored from claude-code-video-toolkit. The paths it uses (`lib/components/`, `lib/transitions/`, `showcase/`, `.claude/skills/remotion-official/`) **do not exist in this repo**, and importing them breaks the render. In OpenMontage:
+> - **The Remotion project is `remotion-composer/`.** Scene types and their props are in `remotion-composer/SCENE_TYPES.md`.
+> - **Components** live in `remotion-composer/src/components/`: `AnimeScene` (with word-timed `cues`), `CaptionOverlay`, `PhoneChat`, `ParticleOverlay`, `SectionTitle`, `HeroTitle`, `EndTag`, `TextCard`, `StatCard` and others.
+> - **Compositions** (`Explainer`, `CinematicRenderer`, `TitledVideo`, `TalkingHead`) are registered in `remotion-composer/src/Root.tsx`. Production renders go through `video_compose` (`remotion_render`).
+> - **Transitions:** `@remotion/transitions` is installed; the custom transitions in the table below are not.
+> - **Core framework knowledge:** the `remotion-best-practices` skill.
+
 > **Core Remotion knowledge** lives in `.claude/skills/remotion-official/` (synced from the official [remotion-dev/skills](https://github.com/remotion-dev/skills) repo). This file covers **toolkit-specific** patterns only.
 
 ## Shared Components

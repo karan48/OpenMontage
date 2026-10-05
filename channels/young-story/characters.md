@@ -2,6 +2,8 @@
 
 Locked descriptions for recurring characters. **Paste each description verbatim into every prompt the character appears in.** `flux_image` is text-to-image only, so consistency comes entirely from identical wording. Small rewordings between scenes are how faces drift.
 
+Characters with a fal entity (Aarav `@aarav`, Riya `@riya`, created by the user 2026-10-04) are drawn with Meta Muse edit from that entity's reference sheet. See `visuals.consistency` in `channel.yaml`.
+
 ## Style anchors (all characters)
 
 - Modern anime film still: clean line art, soft cel shading, detailed painted Indian backgrounds.

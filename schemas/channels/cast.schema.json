@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmontage/channels/cast",
+  "title": "Cast Settings",
+  "description": "Cast-wide settings for a character bible (cast/cast.yaml): where the style line comes from, the no-text clause, which models draw the bible and the scenes, and which reference images go into each shot. Every key is optional; lib/character_bible.py fills in defaults. See skills/meta/character-bible.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "aspect": { "type": "string", "pattern": "^[1-9][0-9]{0,4}:[1-9][0-9]{0,4}$" }
+  },
+  "properties": {
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["playbook", "inline"],
+          "description": "playbook = use the channel playbook's asset_generation.image_prompt_prefix; inline = use line."
+        },
+        "line": { "type": ["string", "null"] }
+      }
+    },
+    "no_text_clause": {
+      "type": "string",
+      "description": "Appended to every prompt. Reference models take no negative prompt, so text bans are written as plain instructions."
+    },
+    "sheet_background": {
+      "type": "string",
+      "description": "Background for bible reference images (master, turnaround, outfits, poses, expressions)."
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reference": { "type": "string", "description": "Reference-conditioned model for character shots and every bible job after the master." },
+        "reference_fallback": { "type": "string", "description": "Used only after the user approves the switch." },
+        "master": { "type": "string", "description": "Text-to-image model for master candidates (flux_image model name)." },
+        "plates": { "type": "string", "description": "Text-to-image model for shots with no bible character." }
+      }
+    },
+    "max_references": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "master_candidates": { "type": "integer", "minimum": 1, "maximum": 8 },
+    "reference_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "enum": ["master", "turnaround", "master_and_turnaround"],
+          "description": "Which identity image(s) every shot attaches per character."
+        },
+        "pose_image": {
+          "type": "string",
+          "enum": ["attach", "when_outfit_matches", "never"],
+          "description": "When to attach an approved pose image (the pose text is always included)."
+        },
+        "expression_image": {
+          "type": "string",
+          "enum": ["always", "closeups", "never"],
+          "description": "When to attach an approved expression image (the expression text is always included)."
+        }
+      }
+    },
+    "format_hints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "long_form": { "type": "string" },
+        "shorts": { "type": "string" }
+      }
+    },
+    "ref_aspect": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "master": { "$ref": "#/$defs/aspect" },
+        "turnaround": { "$ref": "#/$defs/aspect" },
+        "outfit": { "$ref": "#/$defs/aspect" },
+        "pose": { "$ref": "#/$defs/aspect" },
+        "expression": { "$ref": "#/$defs/aspect" }
+      }
+    }
+  }
+}

@@ -58,10 +58,11 @@ script:
 visuals:
   approach: "One new anime-style illustration per story beat, with 2-3 subtle variants crossfaded (anime_scene), particles (rain, petals, dust motes, city bokeh), slow camera moves and lighting shifts on mood turns. Texts and DMs appear as phone-screen and chat-bubble overlays."
   sourcing: generated
-  image_model: flux/schnell
+  image_model: flux/schnell                     # environments, inserts, faceless shots
+  character_image_model: meta/muse-image/edit   # any frame showing a character's face; user's pick 2026-10-04 (~$0.01/image)
   ai_video: approval_gated
   character_bible: characters.md
-  consistency: "flux_image is text-to-image only: paste each character's locked description verbatim in every prompt. If a lead keeps drifting across episodes, consider training a LoRA for them (as was done for Rani)."
+  consistency: "Character frames: Meta Muse edit via the fal MCP, with the character's fal entity reference sheet (@aarav, @riya; read them with list_entities) as image 1 plus the scene description and locked wardrobe. Do not pass an old frame as a second reference: Muse keeps the old character. Two-shots: pass both sheets and name who is left/right. Muse has no seed, so keep every output. flux/schnell is text-to-image only: for non-character frames, paste locked descriptions verbatim."
 
 music:
   mood: "Emotional piano, soft strings and lo-fi beats; swells on confessions and heartbreak; silence before the biggest line"

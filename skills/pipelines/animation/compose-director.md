@@ -92,7 +92,8 @@ For `anime_scene` compositions, build a JSON file at `remotion-composer/public/d
 | JSON Field | Type | Values | Required |
 |------------|------|--------|----------|
 | `type` | string | `"anime_scene"` | YES |
-| `images` | string[] | 1-4 image paths relative to `public/` | YES |
+| `images` | string[] | 1-4 image paths relative to `public/` (any number with `cues`) | YES |
+| `cues` | object[] | `{image, at, fade?}`: show `images[image]` from `at` seconds after the cut start, fading in over `fade` s on top of the previous image (default 0.25; ~0.06 for a blink, 0 for a hard cut). `images[0]` shows until the first cue. Replaces the even crossfade schedule | No |
 | `animation` | string | `zoom-in`, `zoom-out`, `pan-left`, `pan-right`, `ken-burns`, `drift-up`, `drift-down`, `parallax`, `static` | No (default: `ken-burns`) |
 | `particles` | string | `fireflies`, `petals`, `sparkles`, `mist`, `light-rays` | No |
 | `particleColor` | string | Hex color | No (default: `#FFE082`) |
@@ -102,6 +103,13 @@ For `anime_scene` compositions, build a JSON file at `remotion-composer/public/d
 | `vignette` | boolean | Cinematic vignette overlay | No (default: true) |
 | `lightingFrom` | string | Starting gradient color (`rgba(...)` or `transparent`) | No |
 | `lightingTo` | string | Ending gradient color | No |
+
+**Word-timed variants (`cues`).** To make an expression change, a blink or a mouth movement land on a spoken word, give the cut `cues` instead of relying on the even schedule.
+
+- **Timing:** take each word's onset from the narration's forced alignment (ElevenLabs `/v1/forced-alignment`), then subtract the cut's `in_seconds`. That gives `at`.
+- **Example:** a tear on "क्या?" at 12.40 s in a cut starting at 11.80 s is `{"image": 1, "at": 0.60, "fade": 0.3}`.
+- **Blinks:** a blink is a pair of cues: closed-eyes image at `fade: 0.06`, then back to open about 0.15 s later.
+- **Sources of variants:** variants come from `build_variant()` in `lib/character_bible.py` (change-one-thing edits of the approved still), never from fresh generations.
 
 **References:** See `mori-no-seishin.json` (Ghibli forest) and `deep-ocean.json` (underwater bioluminescence) for complete working examples.
 

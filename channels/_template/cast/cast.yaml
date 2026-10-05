@@ -1,0 +1,37 @@
+# Cast settings template. To give a channel a structured character bible:
+#   1. copy this cast/ folder into channels/<id>/ and set visuals.cast_dir: cast in channel.yaml
+#   2. copy _example/ to cast/<character-id>/ for each recurring character (no leading underscore)
+# Schema: schemas/channels/cast.schema.json. Every key is optional; these are the defaults.
+# Usage: skills/meta/character-bible.md
+
+style:
+  source: playbook                 # playbook = the channel playbook's image_prompt_prefix; inline = line below
+  line: null
+
+no_text_clause: "No text, no letters, no numbers, no signs, no logos, no watermark."
+sheet_background: "plain light-grey studio background, even soft lighting"
+
+models:
+  reference: meta/muse-image/edit              # character shots and every bible job after the master
+  reference_fallback: fal-ai/flux-pro/kontext  # only after the user approves the switch
+  master: flux/schnell                         # master candidates (text-to-image)
+  plates: flux/schnell                         # shots with no bible character
+
+max_references: 10
+master_candidates: 4
+
+reference_policy:
+  identity: master                 # master | turnaround | master_and_turnaround
+  pose_image: when_outfit_matches  # attach | when_outfit_matches | never
+  expression_image: closeups       # always | closeups | never
+
+format_hints:
+  long_form: "characters on the thirds, important detail clear of the bottom fifth for subtitles"
+  shorts: "faces in the upper third; keep the bottom 20% and the right 15% free of important detail"
+
+ref_aspect:
+  master: "2:3"
+  turnaround: "16:9"
+  outfit: "2:3"
+  pose: "2:3"
+  expression: "1:1"

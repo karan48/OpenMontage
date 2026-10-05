@@ -55,6 +55,8 @@ visuals:
   image_model: flux/schnell
   ai_video: approval_gated          # approval_gated | never
   character_bible: null             # e.g. characters.md
+  cast_dir: null                    # e.g. cast: a structured character bible (copy _template/cast/; skills/meta/character-bible.md)
+  character_image_model: null       # e.g. meta/muse-image/edit for shots that show a bible character
 
 music:
   mood: "Music direction."

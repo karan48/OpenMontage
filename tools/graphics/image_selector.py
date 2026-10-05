@@ -389,7 +389,12 @@ class ImageSelector(BaseTool):
             or inputs.get("image_paths")
         )
         if not wants_edit:
-            return candidates
+            # A reference-only provider (e.g. fal_reference_image) can't serve
+            # a text-only request, so never route one to it.
+            return [
+                tool for tool in candidates
+                if not getattr(tool, "supports", {}).get("requires_reference_image")
+            ]
 
         filtered: list[BaseTool] = []
         for tool in candidates:

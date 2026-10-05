@@ -90,6 +90,16 @@ When `animation_mode == "image_animation"`, each scene needs **2-3 images** for 
    ```
    **If you skip this step, the render will fail with missing file errors.** This is the #1 cause of render failures for new projects.
 
+### 1d. Shots With Bible Characters
+
+When the scene plan has `character_actions` from a character bible, follow **`skills/meta/character-bible.md`** ("Scene generation" and "QA"), and read the `reference-image-edit` Layer 3 skill before the first call.
+
+- **Build the request with the bible.** `build_scene(cast, scene, aspect_ratio=…, video_format=…)` from `lib/character_bible.py` returns the prompt, the ordered reference images, the model and `preferred_provider: "fal"`. Send it through `image_selector`, which routes it to `fal_reference_image` (Meta Muse edit, $0.01/image). Never hand-write a character's appearance into a prompt.
+- **Character-free plates** come back as text-only requests for `flux/schnell`.
+- **Crossfade variants** of a character still use `build_variant()` from the approved still, not new seeds. Muse has no seed, so a new generation is a new drawing.
+- **Keep every output** and log it in a `generation_log.json` (file, prompt, refs, verdict, cost). Run the bible QA checklist on every frame before the gate.
+- **Hero clips** (AI image-to-video) start from the approved still of that shot, and only for the list the user approved.
+
 ### 2. Build Reusable Systems
 
 Create once:

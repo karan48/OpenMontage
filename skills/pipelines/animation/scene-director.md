@@ -75,6 +75,22 @@ Use `anime_scene` type for each scene. Plan:
 Reference: `remotion-composer/public/demo-props/mori-no-seishin.json` — 6 scenes using this pattern.
 Reference: `remotion-composer/public/demo-props/deep-ocean.json` — 6 underwater scenes with different palette.
 
+### 3b. Recurring Characters: Cast Them From The Bible
+
+When the story has named or speaking characters (always on a channel with `visuals.cast_dir`), read **`skills/meta/character-bible.md`** and run its **`cast` sub-stage before planning shots**. Every character the approved script needs must be in the bible with an approved master, plus the outfits, poses and expressions the scenes will use. The user approves each step.
+
+Then, for every scene that shows a bible character:
+
+- Use `type: "character_scene"` and fill `character_actions` for **each** character in the frame:
+  - always `character_id` and `action_sequence`;
+  - the bible ids for `pose` and `expression`, and `outfit` (omit it for the default);
+  - `frame_position` in two-shots.
+- **Name characters in `description`; never describe their looks.** The bible supplies face, hair, skin and clothes. `lib/character_bible.py` builds the image prompt from `description` + `framing` + `character_actions`.
+- **Prefer solo shots and inserts.** Plan a two-shot only when the beat needs both faces.
+- **Hero-clip candidates:** mark beats that need real body motion with `hero_moment: true` and a note. The list the user approved at proposal is the limit.
+
+Dry-run any scene before the gate with `python -m lib.character_bible shot --channel <id> --project <p> --spec <scene.json>`, and resolve every warning it prints.
+
 ### 4. Use Metadata For Timing Rules
 
 Recommended metadata keys:

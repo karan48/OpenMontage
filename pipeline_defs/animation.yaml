@@ -41,6 +41,7 @@ required_skills:
   - meta/checkpoint-protocol
   - meta/animation-runtime-selector
   - meta/voice-performance-director
+  - meta/character-bible
 
 orchestration:
   mode: executive-producer
@@ -166,6 +167,17 @@ stages:
     success_criteria:
       - Schema-valid scene_plan artifact
       - Every scene includes animation mode and visual treatment
+    sub_stages:
+      - name: cast
+        description: "Before shots are planned: every named or speaking character in the approved script is in the character bible (channel cast/ or projects/<id>/cast/) with an approved master plus the outfits, poses and expressions the scenes use. Follow skills/meta/character-bible.md; each reference step is shown to the user and approved."
+        condition: "story_has_characters"
+        human_approval_default: true
+        tools_available: [image_selector]
+        review_focus:
+          - "Every speaking or recurring character has a character.yaml and an approved master (python -m lib.character_bible status)"
+          - "Locked characters are reused as-is, never redesigned for one story"
+          - "Pose, expression and outfit references are drawn from the approved master, and only the ones this story needs"
+          - "Each approved reference has a provenance sidecar; nothing is stale"
 
   - name: assets
     skill: pipelines/animation/asset-director
@@ -205,6 +217,7 @@ stages:
       - "Clip duration maximized (prefer 10s over 5s) to reduce API calls and cost"
       - "Use selector tools (video_selector, tts_selector, image_selector) — never call provider tools directly"
       - "Read Layer 2 skills for each tool BEFORE reading source code — skills contain usage guidance, source code is implementation detail"
+      - "Shots with bible characters are built by lib/character_bible.py (build_scene) and generated with their reference images; no hand-typed appearance text; every frame passes the bible QA checklist"
     success_criteria:
       - Schema-valid asset_manifest artifact
       - All referenced asset files exist on disk

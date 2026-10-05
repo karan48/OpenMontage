@@ -7,7 +7,10 @@ channels/<id>/
   channel.yaml      # structured defaults: language, formats (long_form / shorts), pipeline, playbook, voice, script, visuals, music, policies
   script-guide.md   # prose rules for this channel's scripts: register, a structure per format, examples
   characters.md     # optional character bible: recurring cast, locked appearance and voices
+  cast/             # optional structured bible (visuals.cast_dir): cast.yaml + <character>/character.yaml + refs/
 ```
+
+A **structured bible** (`cast/`) holds each character's locked text, plus approved reference images (master, turnaround, outfits, poses, expressions). `lib/character_bible.py` builds every character prompt from it. See [`skills/meta/character-bible.md`](../skills/meta/character-bible.md); the template is in `_template/cast/`.
 
 Every channel publishes both **long-form (16:9)** and **Shorts (9:16)**. Each production picks one, and the profile's `formats` block sets that format's length, structure, build mode and pacing.
 
@@ -33,7 +36,7 @@ See [`skills/meta/channel-profiles.md`](../skills/meta/channel-profiles.md). In 
 ## Add a channel
 
 1. Copy `_template/` to `channels/<new-id>/`. The id is kebab-case and must match the folder name.
-2. Fill in `channel.yaml` and `script-guide.md`. Add `characters.md` if the channel has recurring characters.
+2. Fill in `channel.yaml` and `script-guide.md`. If the channel has recurring characters, keep `cast/` and set `visuals.cast_dir: cast` (structured bible, best for story channels), or add a prose `characters.md`. Otherwise delete the copied `cast/` folder.
 3. Validate it:
    ```
    python -c "from lib.channel_profile import load_channel; load_channel('<new-id>'); print('ok')"

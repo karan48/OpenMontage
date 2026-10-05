@@ -59,6 +59,8 @@ Before Rule Zero's step 1, **read `skills/meta/channel-profiles.md`**. Then:
 
 A profile supplies defaults, never permission. Every gate and every rule below still applies, including "Present Both Composition Runtimes". A standing preference for one channel goes into that channel's files, not into global defaults.
 
+**Recurring characters.** When a story has named or speaking characters (always on a channel with `visuals.cast_dir`), read **`skills/meta/character-bible.md`**. Characters live in a persistent bible: locked text, then an approved master, outfits, poses and expressions. `lib/character_bible.py` builds every character prompt and reference list from it, and `fal_reference_image` draws the shot. Never hand-type a character's appearance into a prompt.
+
 ## Rule Zero — All Production Goes Through a Pipeline
 
 **Every video production request MUST go through the pipeline system. No exceptions.**
@@ -696,7 +698,7 @@ The `.agents/skills/` directory is large. When you're not coming in through a to
 | **Composition runtime** | `remotion`, `remotion-best-practices`, `synthetic-screen-recording` (fake terminal/UI demos via Remotion TerminalScene) |
 | **Animation knowledge (generic)** | `gsap-core`, `gsap-timeline`, `gsap-plugins` (SplitText / MorphSVG / DrawSVG / MotionPath / Flip / CustomEase), `gsap-utils`, `gsap-react`, `gsap-performance`, `gsap-scrolltrigger`, `gsap-frameworks`, `framer-motion` (Disney 12 principles), `lottie-bodymovin` (Lottie export) |
 | **Character animation** | `character-rigging`, `svg-character-animation`, `pose-library-design`, `canvas-procedural-animation`, `character-animation-qa` |
-| **Image generation** | `bfl-api`, `flux-best-practices` |
+| **Image generation** | `bfl-api`, `flux-best-practices`, `reference-image-edit` (Meta Muse edit / FLUX Kontext: a known character in a new scene, for `fal_reference_image`) |
 | **Video generation** | `seedance-2-0` (preferred premium default — cinematic, trailer, multi-shot, synced audio, lip-sync), `gemini-omni` (conversational video editing, reference tags, timecoded beats), `ai-video-gen`, `ltx2` |
 | **Audio** | `elevenlabs`, `music`, `sound-effects`, `acestep`, `text-to-speech`, `setup-api-key` |
 | **Speech-to-text** | `speech-to-text` (whisper `transcriber` — default, offline), `azure-speech-to-text` (optional cloud STT — tool `azure_stt`, preferred when `AZURE_SPEECH_KEY` is set) |

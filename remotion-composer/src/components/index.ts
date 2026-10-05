@@ -15,7 +15,7 @@ export { ScreenshotScene } from "./ScreenshotScene";
 export { PhoneChat } from "./PhoneChat";
 export { ProviderChip } from "./ProviderChip";
 export type { ParticleType } from "./ParticleOverlay";
-export type { CameraMotion, AnimeSceneProps } from "./AnimeScene";
+export type { AnimeCue, CameraMotion, AnimeSceneProps } from "./AnimeScene";
 export type { TerminalStep } from "./TerminalScene";
 export type { ScreenshotStep, Region, Point } from "./ScreenshotScene";
 export type { PhoneChatProps, PhoneChatStep, PhoneChatLane, PhoneChatBubble, PhoneChatStatus } from "./PhoneChat";
