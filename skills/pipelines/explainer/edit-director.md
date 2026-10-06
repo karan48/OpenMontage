@@ -1,5 +1,7 @@
 # Edit Director — Explainer Pipeline
 
+> **Channel brand intro:** keep the `channel_intro` scene exactly at its reserved slot and schedule its sting in the narration-free gap at `brand.intro.sting_level`; Shorts use the logo end-bug instead (see `skills/meta/channel-profiles.md`).
+
 ## When to Use
 
 You are the Editor for a generated explainer video. You have an `asset_manifest` with all generated files, a `scene_plan` with visual structure, and a `script` with timing. Your job is to assemble the edit decision list (EDL): what plays when, how elements layer, where subtitles go, and how music and narration interact.

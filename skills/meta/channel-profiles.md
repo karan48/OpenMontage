@@ -14,6 +14,7 @@ The user runs several YouTube channels, each with its own language, format, voic
 | `channels/<id>/script-guide.md` | The channel's register, hooks, humor and "never" list, plus **a structure section per format**, with example lines | Script stage, after `skills/creative/storytelling.md` |
 | `channels/<id>/characters.md` (optional) | Locked recurring cast: appearance blocks, LoRA, voices, reuse rules | Scene and asset stages, plus character design |
 | `channels/<id>/cast/` (optional, `visuals.cast_dir`) | **Structured character bible**: `cast.yaml` plus one folder per character, each with `character.yaml` (locked text) and `refs/` (approved master, turnaround, outfits, poses, expressions). Prompts are built from it by `lib/character_bible.py`; see `skills/meta/character-bible.md` | `scene_plan` (`cast` sub-stage) and `assets` |
+| `channels/<id>/brand/` (optional, `brand` in `channel.yaml`) | **Locked brand assets**: the logo (plus a circle-masked PNG), the channel intro clip and its sting, the intro's Remotion source and a README with the re-render recipe. `load_channel` fails if a file the `brand` block names is missing | Script, scene plan, assets, edit/compose and publish (see "Brand intro and standing structure") |
 
 Load and validate with the loader. Don't read the YAML by hand:
 
@@ -66,7 +67,21 @@ The profile supplies the recommendation. The stage director still runs its norma
 | **Script** | Read `script-guide.md` after `storytelling.md`, and use **the section for this format**. The guide wins on register, structure and humor level (`script.humor`). Plain-language rules stay universal. Time sections with `narration.planning_wpm` against the format's `target_seconds`, write in `language.script` convention, and use `narration.delivery_markup`. Put model, stability and similar settings into `script.voice_performance.provider_notes`. |
 | **Scene plan / assets** | With a `cast_dir`: cast the story and build every character shot from the bible (`skills/meta/character-bible.md`). Never paste appearance text by hand. Use `visuals.character_image_model` for character shots, and follow `visuals.hero_clips` for AI video. Without one: paste `characters.md` blocks verbatim into prompts. Follow `visuals.sourcing` and `visuals.image_model`, and the format's `pacing`. State the format's aspect ratio in every image prompt, because playbook prefixes are format-neutral. Honour `visuals.ai_video` (`approval_gated` = propose with a cost estimate, then wait for an explicit yes per use). Apply every `policies` entry. Pass `narration.*` settings to `tts_selector` (`preferred_provider`, `voice_id`, `model_id`, `stability`, `similarity_boost`, `speed`). |
 | **Edit / compose** | The format's `media_profile` and `aspect_ratio` set the render size. In 9:16, keep text out of the Shorts UI zones (bottom 20% and right 15%). |
-| **Publish** | The `publishing` block (title language, thumbnail direction, disclosures), plus the format's `cross_post` if set. |
+| **Publish** | The `publishing` block (title language, thumbnail direction, disclosures, closing question, pinned comment, comment moderation, sources), plus the format's `cross_post` if set. |
+| **Brand intro** | If the profile has a `brand` block, its intro belongs to every production in the formats it lists — see below. |
+
+#### Brand intro and standing structure
+
+A channel's `brand.intro` is a **locked brand asset**, like a logo file, not a creative scene. Never restyle, regenerate, re-time or swap it for a template per video. Stage by stage:
+
+- **Script:** reserve the gap. Set `delivery_cues.pause_after_seconds` on the section that ends the opening promise to the intro's `seconds`, and record `metadata.channel_intro = {after_section, seconds, asset}`. The slot is narration-free, so every later section start shifts by that amount.
+- **Scene plan:** one fixed scene `channel_intro` (type `animation`, `narrative_role: transition`) at the slot, using the brand clip. Nothing to generate.
+- **Assets:** copy `brand.intro.<format>.file` and `audio` into the project's `public/` folder and list them in the asset manifest as "channel brand asset", cost 0.
+- **Edit / compose:** play the clip muted inside the composition and schedule its sting in the mix, in the narration-free gap, at the level in `brand.intro.sting_level` (peaks at or below -6 dBFS). This is the one sanctioned exception to atelier's "no reuse of finished components": a finished brand asset is reused, scene components never are.
+- **Shorts:** `brand.intro.shorts.mode: end_bug` means no intro; show the circle-masked logo as a small bug with the short sting for the last `seconds` of the Short.
+- **Publish:** write the pinned starter comment and the description's source list from `publishing.pinned_comment` and `publishing.sources`, and remind the user to turn on comment hold-for-review.
+
+The profile's standing opening structure (`formats.long_form.structure` and `script-guide.md`) works the same way: it is the default the proposal starts from. A one-off deviation is logged as a `playbook_override`; only the user making it a standing preference changes the channel's files.
 
 ### 5. Voice Audition (when `narration.voice_audition_required: true`)
 

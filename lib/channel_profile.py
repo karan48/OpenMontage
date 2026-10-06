@@ -99,10 +99,22 @@ def validate_channel(profile: dict, folder: Path) -> None:
                 f"'{fmt['media_profile']}' not in lib/media_profiles.py"
             )
 
+    brand = profile.get("brand") or {}
+    intro = brand.get("intro") or {}
+    brand_refs = [
+        ("brand.logo", brand.get("logo")),
+        ("brand.logo_circle", brand.get("logo_circle")),
+        ("brand.intro.source", intro.get("source")),
+    ]
+    for fmt_name, spec in intro.items():
+        if isinstance(spec, dict):
+            brand_refs += [(f"brand.intro.{fmt_name}.{key}", spec.get(key)) for key in ("file", "audio", "logo")]
+
     for label, rel in (
         ("script.guide", profile["script"]["guide"]),
         ("visuals.character_bible", profile["visuals"].get("character_bible")),
         ("visuals.cast_dir", profile["visuals"].get("cast_dir")),
+        *brand_refs,
     ):
         if rel and not (folder / rel).exists():
             raise ChannelProfileError(f"{folder.name}: {label} path '{rel}' not found")
@@ -143,3 +155,24 @@ def resolve_format(profile: dict[str, Any], video_format: str) -> dict[str, Any]
             f"{profile['id']}: no '{video_format}' format (has: {', '.join(formats)})"
         )
     return {"pipeline": profile["production"]["default_pipeline"], **formats[video_format]}
+
+
+def brand_intro(
+    profile: dict[str, Any], video_format: str, channels_dir: Optional[Path] = None
+) -> Optional[dict[str, Any]]:
+    """Return the channel's locked intro for one format, with file paths made absolute.
+
+    Returns None when the profile has no ``brand.intro`` for that format. For Shorts the
+    spec is usually ``{"mode": "end_bug", ...}`` (a logo bug, not an intro clip). Agents
+    use this at the script, scene-plan, assets and compose stages — see
+    skills/meta/channel-profiles.md -> "Brand intro and standing structure".
+    """
+    spec = ((profile.get("brand") or {}).get("intro") or {}).get(video_format)
+    if not isinstance(spec, dict):
+        return None
+    folder = channel_dir(profile["id"], channels_dir)
+    resolved = dict(spec)
+    for key in ("file", "audio", "logo"):
+        if spec.get(key):
+            resolved[key] = str((folder / spec[key]).resolve())
+    return resolved

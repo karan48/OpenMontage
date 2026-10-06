@@ -2,17 +2,19 @@
 # Usage: skills/meta/channel-profiles.md. Defaults only — gates and governance still apply.
 # Every value here was confirmed in earlier productions (scam-factories-hindi,
 # himalaya-glacier-timebomb-hindi, cockroach-janta-party-mumbai-hindi).
+# 2026-10-05: the long-form opening was replaced (evidence first, then a 3 s channel intro, then a
+# closing A/B question + pinned comment) after the Himalaya analytics; see script-guide.md.
 
 id: explainer
 display_name: "Curious India"
 youtube_handle: null
 status: active
 description: "Hindi explainers and myth-busting documentaries in the Vox 'Explained' style — a mystery to solve, told by a warm narrator who talks straight to you. Long-form videos plus Shorts."
-audience: "General Hindi-speaking Indian YouTube viewers — curious, not experts. Skip background they already know; a 1-2 line recap in the teaser is enough."
+audience: "General Hindi-speaking Indian YouTube viewers — curious, not experts. Skip background they already know; a 1-2 line recap in the opening is enough."
 
 language:
   narration: hi
-  script: "Devanagari. English terms Indians actually say in English stay in Latin script. No ALL-CAPS emphasis (Devanagari has no case) — use audio tags, em-dashes and short fragments."
+  script: "Devanagari. English terms Indians actually say in English stay in Latin script (this is what the owner calls 'Hinglish'; never Roman-script Hindi). No ALL-CAPS emphasis (Devanagari has no case) — use audio tags, em-dashes and short fragments."
   on_screen_text: hi
 
 formats:
@@ -20,14 +22,14 @@ formats:
     aspect_ratio: "16:9"
     media_profile: youtube_landscape
     target_seconds: [600, 900]
-    structure: "teaser (cold open -> 3 numbered open loops -> 'मैं' promise -> title) -> escalating sections -> thesis echo"
+    structure: "evidence-first open (2-3 dated evidence contrasts in 30 s, no background) -> <=2-sentence promise + <=2 s title overlay -> 3 s channel intro -> background only after the first re-hook -> escalating sections -> thesis echo + closing A/B policy question + pinned comment"
     composition_mode: atelier
     pacing: "New visual every 3-5 s; curiosity beat every 20-40 s"
   shorts:
     aspect_ratio: "9:16"
     media_profile: youtube_shorts
     target_seconds: [45, 60]
-    structure: "strangest fact (0-2 s) -> one idea as a mini-mystery -> reveal -> pointer to the full video"
+    structure: "strangest fact (0-2 s) -> one idea as a mini-mystery -> reveal -> pointer to the full video (no intro; logo end-bug on the last 2 s)"
     composition_mode: atelier       # cut-downs reuse the long video's bespoke scenes, reframed to 9:16
     sources: [cut_down, standalone]
     pacing: "New visual every 1.5-3 s"
@@ -74,7 +76,32 @@ music:
 
 publishing:
   title_language: hi
-  thumbnail: "Vox-style: one bold subject, a single red highlight, a 3-5 word Hindi hook"
+  thumbnail: "Vox-style: one bold subject, a single red highlight, a 3-5 word Hindi hook. It must show the same evidence the first 5 s deliver."
+  closing_question: "Long-form, last ~75 s: one binary A/B policy question tied to the video's evidence, held on screen ~25 s, with a promise to read the strongest arguments from both sides in the next video. It must force a trade-off and ask for one reason."
+  pinned_comment: "One pinned starter comment (YouTube allows a single pin) restating the A/B question, asking for 'A or B + one reason', stating the comment rules and pointing to the sources in the description. Post and pin it right after publishing."
+  comment_moderation: "Turn on 'Hold potentially inappropriate comments for review' before publishing. Reply to the first ~10 comments within the first hour and heart the best argument on each side."
+  sources: "Sources with timestamps in the description; single-origin figures are attributed in the narration."
+
+# Locked brand assets (channels/explainer/brand/, see brand/README.md). The intro is part of every long-form
+# video; Shorts get a logo end-bug instead. How productions use it: skills/meta/channel-profiles.md.
+brand:
+  logo: brand/logo.jpg
+  logo_circle: brand/logo_circle.png     # circle-masked PNG with alpha, 584 px (native; never upscale)
+  tagline: "Know more | Understand deeper | See beyond"
+  intro:
+    status: "picture final; sting provisional (candidate A) until the owner picks A, B or C (auditioned 2026-10-05)"
+    long_form:
+      file: brand/intro_16x9.mp4         # 1920x1080, 30 fps, 3.000 s, includes the sting
+      audio: brand/intro_sting.wav       # the same sting as a WAV: compositions play the clip muted and mix this
+      seconds: 3.0
+      placement: after_promise           # right after the opening promise (~0:44); the title overlay runs over its last words
+    shorts:
+      mode: end_bug                      # no intro on Shorts
+      logo: brand/logo_circle.png
+      audio: brand/intro_sting_short.wav
+      seconds: 2.0                       # the bug stays on screen for the last 2 s
+    sting_level: "momentary max -18 LUFS in the narration-free gap, peaks <= -6 dBFS (narration sits at -17 LUFS integrated)"
+    source: brand/curious-india-intro    # Remotion source; re-render recipe in brand/README.md
 
 policies:
   - "No AI likeness of real, named people — show them as a text/quote card or a non-identifying shot."

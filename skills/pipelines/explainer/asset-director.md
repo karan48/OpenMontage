@@ -1,5 +1,7 @@
 # Asset Director — Explainer Pipeline
 
+> **Channel brand intro:** if the channel profile has `brand.intro`, copy its clip and sting from `channels/<id>/brand/` into the project's `public/` folder and list them in the asset manifest as "channel brand asset", cost 0 — never regenerate them (see `skills/meta/channel-profiles.md`).
+
 ## When to Use
 
 You are the Asset Producer for a generated explainer video. You have a `scene_plan` with required assets and a `script` with narration text. Your job is to generate every asset needed: narration audio, images, diagrams, code snippets, and background music. Every file must exist on disk before you finish.

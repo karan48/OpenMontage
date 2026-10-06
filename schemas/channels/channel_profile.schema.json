@@ -102,6 +102,44 @@
     },
     "music": { "type": "object" },
     "publishing": { "type": "object" },
+    "brand": {
+      "type": "object",
+      "description": "Optional locked brand assets for the channel. Files live in channels/<id>/brand/ and are named relative to the channel folder; load_channel fails if one is missing. See skills/meta/channel-profiles.md -> 'Brand intro and standing structure'.",
+      "properties": {
+        "logo": { "type": "string" },
+        "logo_circle": { "type": "string" },
+        "tagline": { "type": "string" },
+        "intro": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "long_form": {
+              "type": "object",
+              "required": ["file", "seconds"],
+              "properties": {
+                "file": { "type": "string" },
+                "audio": { "type": "string" },
+                "seconds": { "type": "number", "exclusiveMinimum": 0, "maximum": 10 },
+                "placement": { "type": "string", "enum": ["after_promise", "after_hook", "start"] }
+              }
+            },
+            "shorts": {
+              "type": "object",
+              "required": ["mode"],
+              "properties": {
+                "mode": { "type": "string", "enum": ["end_bug", "mini_intro", "none"] },
+                "logo": { "type": "string" },
+                "file": { "type": "string" },
+                "audio": { "type": "string" },
+                "seconds": { "type": "number", "exclusiveMinimum": 0, "maximum": 10 }
+              }
+            },
+            "sting_level": { "type": "string" },
+            "source": { "type": "string" }
+          }
+        }
+      }
+    },
     "policies": { "type": "array", "items": { "type": "string" } },
     "quality_bar": { "type": "string" },
     "open_questions": {

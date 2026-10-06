@@ -1,5 +1,7 @@
 # Compose Director — Explainer Pipeline
 
+> **Channel brand intro:** the locked intro clip plays muted inside the composition at its slot (a finished brand asset, the one sanctioned reuse in atelier mode); its sting comes from the mix. Verify the final render still has the full 3 s gap and the sting peak at or below -6 dBFS (see `skills/meta/channel-profiles.md`).
+
 ## When to Use
 
 You are the Compositor for a generated explainer video. You have `edit_decisions` with the complete edit timeline and an `asset_manifest` with all file paths. Your job is to render the final video: assemble visuals, layer audio, burn subtitles, and encode to the target format.

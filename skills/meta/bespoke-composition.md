@@ -255,6 +255,7 @@ registry (`src/components`, `src/Explainer`, etc.), and warns if `art_direction`
 - **Distinctness review (replaces conformance review).** Before final render, ask: *could this be
   any other product's video? Does it reuse a look I've made before?* If yes, the art direction
   failed — return to step 1. This is the inverse of "does it match the reference."
+- **Channel brand assets are the one sanctioned reuse.** If the project's channel profile has a `brand` block (e.g. Curious India's 3 s intro), play that locked clip as a finished media file (`<OffthreadVideo muted>` plus the sting in the mix). It is a logo-class asset: never restyle or rebuild it per video, and never turn it into a reusable scene component. Everything else stays hand-stitched.
 - **No silent fallback to stock.** "Keep it simple" applies to *mechanics* (a 10-line spring is
   fine), never to *design* (simple ≠ reaching for `text_card`). If you catch yourself adding a
   stock `cut.type` to a hero piece, stop.

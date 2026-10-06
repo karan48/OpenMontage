@@ -1,5 +1,7 @@
 # Publish Director — Explainer Pipeline
 
+> **Channel publishing defaults:** if the channel profile has `publishing.closing_question` / `pinned_comment` / `comment_moderation` / `sources`, write the pinned starter comment to `exports/<project>/metadata/pinned_comment.txt`, put the source list with timestamps in the description, and remind the user to turn on comment hold-for-review before publishing (see `skills/meta/channel-profiles.md`).
+
 ## When to Use
 
 You are the Publisher for a generated explainer video. You have a `render_report` with the final video file. Your job is to prepare the video for distribution: generate SEO metadata, create thumbnails, package exports, and log the publish event.

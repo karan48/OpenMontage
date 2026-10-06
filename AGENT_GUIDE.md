@@ -59,6 +59,8 @@ Before Rule Zero's step 1, **read `skills/meta/channel-profiles.md`**. Then:
 
 A profile supplies defaults, never permission. Every gate and every rule below still applies, including "Present Both Composition Runtimes". A standing preference for one channel goes into that channel's files, not into global defaults.
 
+**Brand intro.** If the profile has a `brand` block (Curious India does: a locked 3 s intro after the opening promise in long-form, a logo end-bug on Shorts), every production in those formats includes it. Reserve it at the script stage, place it in the scene plan, copy it at assets, mix it at compose, and write the pinned comment at publish. See "Brand intro and standing structure" in `skills/meta/channel-profiles.md`.
+
 **Recurring characters.** When a story has named or speaking characters (always on a channel with `visuals.cast_dir`), read **`skills/meta/character-bible.md`**. Characters live in a persistent bible: locked text, then an approved master, outfits, poses and expressions. `lib/character_bible.py` builds every character prompt and reference list from it, and `fal_reference_image` draws the shot. Never hand-type a character's appearance into a prompt.
 
 ## Rule Zero — All Production Goes Through a Pipeline

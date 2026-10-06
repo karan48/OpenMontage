@@ -1,5 +1,7 @@
 # Script Director — Explainer Pipeline
 
+> **Channel brand intro:** if the channel profile has `brand.intro`, reserve its slot in the script — `pause_after_seconds` on the promise section plus `metadata.channel_intro` (see `skills/meta/channel-profiles.md` → "Brand intro and standing structure").
+
 > **Channel profile:** if `project.json` has a `channel`, read `channels/<id>/script-guide.md` after `skills/creative/storytelling.md`, using its section for the project's `video_format` (long-form or Shorts). It sets the register, structure and humor level (`script.humor`). Time sections with the profile's `narration.planning_wpm` and write in its `language.script` convention. See `skills/meta/channel-profiles.md`.
 
 ## When to Use

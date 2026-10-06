@@ -4,6 +4,7 @@ records the channel in project.json."""
 
 import json
 import shutil
+from pathlib import Path
 
 import pytest
 import yaml
@@ -11,6 +12,7 @@ import yaml
 from lib.channel_profile import (
     CHANNELS_DIR,
     ChannelProfileError,
+    brand_intro,
     list_channels,
     load_channel,
     resolve_format,
@@ -139,6 +141,47 @@ class TestLoaderRejectsBrokenProfiles:
         profile["narration"]["register"] = "मैं आपको बताता हूँ"
         _write(folder, profile)
         assert load_channel("test-channel", channels_dir=tmp_path)["narration"]["register"] == "मैं आपको बताता हूँ"
+
+
+class TestBrand:
+    def test_explainer_intro_resolves(self):
+        profile = load_channel("explainer")
+        intro = brand_intro(profile, "long_form")
+        assert intro is not None and intro["seconds"] == 3.0 and intro["placement"] == "after_promise"
+        assert Path(intro["file"]).exists() and Path(intro["audio"]).exists()
+
+    def test_explainer_shorts_use_an_end_bug_not_an_intro(self):
+        shorts = brand_intro(load_channel("explainer"), "shorts")
+        assert shorts is not None and shorts["mode"] == "end_bug"
+        assert Path(shorts["logo"]).exists() and Path(shorts["audio"]).exists()
+
+    def test_brand_is_optional(self, tmp_path):
+        folder, profile = _template_copy(tmp_path)
+        _write(folder, profile)
+        loaded = load_channel("test-channel", channels_dir=tmp_path)
+        assert "brand" not in loaded
+        assert brand_intro(loaded, "long_form", channels_dir=tmp_path) is None
+
+    def test_missing_brand_logo_rejected(self, tmp_path):
+        folder, profile = _template_copy(tmp_path)
+        profile["brand"] = {"logo": "brand/nope.png"}
+        _write(folder, profile)
+        with pytest.raises(ChannelProfileError, match="brand.logo"):
+            load_channel("test-channel", channels_dir=tmp_path)
+
+    def test_missing_intro_file_rejected(self, tmp_path):
+        folder, profile = _template_copy(tmp_path)
+        profile["brand"] = {"intro": {"long_form": {"file": "brand/intro.mp4", "seconds": 3.0}}}
+        _write(folder, profile)
+        with pytest.raises(ChannelProfileError, match="brand.intro.long_form.file"):
+            load_channel("test-channel", channels_dir=tmp_path)
+
+    def test_intro_seconds_must_be_positive(self, tmp_path):
+        folder, profile = _template_copy(tmp_path)
+        profile["brand"] = {"intro": {"long_form": {"file": "x.mp4", "seconds": 0}}}
+        _write(folder, profile)
+        with pytest.raises(ChannelProfileError, match="brand/intro/long_form/seconds"):
+            load_channel("test-channel", channels_dir=tmp_path)
 
 
 class TestResolveFormat:

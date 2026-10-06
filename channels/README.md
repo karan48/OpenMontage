@@ -8,6 +8,7 @@ channels/<id>/
   script-guide.md   # prose rules for this channel's scripts: register, a structure per format, examples
   characters.md     # optional character bible: recurring cast, locked appearance and voices
   cast/             # optional structured bible (visuals.cast_dir): cast.yaml + <character>/character.yaml + refs/
+  brand/            # optional locked brand assets (`brand` in channel.yaml): logo, channel intro clip + sting, intro source, README
 ```
 
 A **structured bible** (`cast/`) holds each character's locked text, plus approved reference images (master, turnaround, outfits, poses, expressions). `lib/character_bible.py` builds every character prompt from it. See [`skills/meta/character-bible.md`](../skills/meta/character-bible.md); the template is in `_template/cast/`.
@@ -22,6 +23,8 @@ Every channel publishes both **long-form (16:9)** and **Shorts (9:16)**. Each pr
 | `product-review` | Hinglish | 8-12 min | 40-60 s | `hybrid` (with alternates) | `tech-review` |
 | `rani-ai` | Hinglish | 5-10 min | 20-45 s (plus Reels) | `cinematic` | `lifestyle-reel` |
 | `young-story` (Young Story) | Hinglish | 8-15 min | 45-60 s | `animation` | `anime-drama` |
+
+A **brand intro** (`brand` block) is a locked channel asset, like a logo file: the same clip in every video, never restyled per video. The script reserves its slot, the scene plan places it, assets copy it, compose mixes it; Shorts can use a logo end-bug instead. Curious India has one (3 s, after the opening promise). See "Brand intro and standing structure" in [`skills/meta/channel-profiles.md`](../skills/meta/channel-profiles.md).
 
 ## How the agent uses a profile
 

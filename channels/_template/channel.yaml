@@ -64,6 +64,17 @@ music:
 publishing:
   title_language: en
   thumbnail: "Thumbnail direction."
+  # closing_question / pinned_comment / comment_moderation / sources are free-form strings; see channels/explainer/channel.yaml
+
+# Optional locked brand assets (files live in channels/<id>/brand/; load_channel checks they exist).
+# brand:
+#   logo: brand/logo.jpg
+#   logo_circle: brand/logo_circle.png     # circle-masked PNG with alpha, for compositing
+#   tagline: "Your tagline"
+#   intro:
+#     long_form: { file: brand/intro_16x9.mp4, audio: brand/intro_sting.wav, seconds: 3.0, placement: after_promise }
+#     shorts:    { mode: end_bug, audio: brand/intro_sting_short.wav, seconds: 2.0 }
+#     sting_level: "momentary ~ -19 LUFS in a narration-free gap, peaks <= -6 dBFS"
 
 policies: []
 

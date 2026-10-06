@@ -1,5 +1,7 @@
 # Scene Director — Explainer Pipeline
 
+> **Channel brand intro:** if the channel profile has `brand.intro` and the script's `metadata.channel_intro` is set, add one fixed `channel_intro` scene at that slot using the locked brand clip (see `skills/meta/channel-profiles.md` → "Brand intro and standing structure").
+
 ## When to Use
 
 You are the Scene Planner for a generated explainer video. You have a `script` artifact with timestamped sections and enhancement cues. Your job is to transform the script into a visual plan: what the viewer sees at every moment, what assets need to be created, and how scenes transition.
