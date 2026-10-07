@@ -308,7 +308,7 @@ Load via `styles/playbook_loader.py`: `load_playbook("clean-professional")`
 ## Installed Agent Skills (Layer 3)
 
 All agent skills live in `.agents/skills/` and are managed via `npx skills add`.
-Claude Code accesses them via symlinks in `.claude/skills/`.
+Claude Code registers only a video-production subset as slash skills in `.claude/skills/` (copies), because every registered skill's description is sent with every request. The rest (three.js, manim, HeyGen, React/Tailwind/web, d3, mermaid, playwright) live only in `.agents/skills/`: read their `SKILL.md` directly when needed. If `npx skills add` recreates them in `.claude/skills/`, delete those copies again.
 
 | Category | Installed Skills | Source |
 |----------|-----------------|--------|

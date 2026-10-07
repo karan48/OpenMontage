@@ -68,6 +68,8 @@ visuals:
   character_bible: null
   typography: "vox-explainer's heading fonts have no Devanagari: use Teko 600-700 for headlines/stats/chips and Mukta 500 for labels and subtitles (Google Fonts, via @remotion/google-fonts)"
   exact_text: "Dates, numbers, place names and quotes are always Remotion overlays, never baked into a generated image"
+  # Standing rule (owner, 2026-10-06, after the Russia-plague v4 review found ~70/105 text-only shots):
+  media_first: "No text-only frames. Every shot shows a photo, footage, a satellite/archival image or an AI still. Text is a small overlay chip (a date, a number, a 2-4 word label, a short quote line) used only when the narration needs it pinned. Information graphics (maps, charts, timelines, decision cards) stay, but are laid over media, never on an empty field. Sourcing order: free stock/public-domain → flux/schnell still → AI motion only with per-use approval."
 
 music:
   mood: "Understated cinematic documentary underscore — sparse felt piano over a warm low synth pad, soft sub-bass pulse, no drums or bright hi-hats"
