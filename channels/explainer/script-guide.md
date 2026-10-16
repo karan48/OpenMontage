@@ -6,6 +6,8 @@ Quality bar: `projects/himalaya-glacier-timebomb-hindi` (its production quality;
 
 **Language.** "Hinglish" on this channel means Devanagari for Hindi plus the English words Indians actually say in English (FIR, takedown, Section 66A, NEET, X, portal) in Latin script. Never Roman-script Hindi.
 
+**On-screen text** follows the same convention: Hindi first, English in Latin script wherever it is needed. You don't have to transliterate English terms or names, and English signage in stock footage can stay unblurred. The Hindi-only rule of 2026-10-06 was lifted on 2026-10-14 (`language.viewer_text` in `channel.yaml`).
+
 ## Voice and register
 
 The narrator is a warm, direct friend who talks to you in second person with "आप". They are not a documentary host describing events from a distance.

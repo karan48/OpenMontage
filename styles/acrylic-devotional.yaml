@@ -1,0 +1,72 @@
+identity:
+  name: "Acrylic Devotional"
+  category: custom
+  mood: reverent, luminous, warm, quietly festive
+  pace: slow
+  best_for: "Devotional and festival storytelling told as hand-painted acrylic plates: heavy brush strokes, a deity portrait per chapter in that chapter's calendar colour, ambient diyas, marigold petals and havan smoke, a living prabhavali halo, mantra typography on painted parchment, ending on a ritual (aarti thali, havan kund)"
+
+visual_language:
+  color_palette:
+    primary: ["#C8501E", "#7A1E2B"]
+    accent: ["#E8B53A", "#1F6F6B"]
+    background: "#F3E6C8"
+    text: "#2A1A12"
+    muted: "#8C7A62"
+  composition: "centred or slightly off-axis deity portrait filling 55-70% of the frame with a radial halo (prabhavali) behind the head; foreground and background layers kept apart so petals, diyas and smoke can drift between them; text sits only on painted-parchment plates, never directly over busy strokes; lower third kept calm for chips and subtitles"
+  texture: "heavy acrylic impasto: visible bristle tracks, palette-knife ridges, canvas weave, thick gold-leaf highlights on crown, jewellery and weapon edges; no photographic grain, no smooth airbrushed gradients, no 3D render look, no flat vector icons except the map and the ring device"
+
+typography:
+  headings:
+    font: "Tiro Devanagari Hindi (mantra and chapter titles); Teko 600-700 for stat numerals"
+    weight: 400
+    tracking: "0.01em"
+  body:
+    font: "Mukta"
+    weight: 500
+    line_height: 1.6
+  stat_card:
+    font: "Teko"
+    weight: 700
+    size_multiplier: 3.0
+  scale_system: "major_third"
+  weight_matrix:
+    title: 400
+    heading: 400
+    body: 500
+    caption: 500
+
+motion:
+  transitions: [paint-bleed, ink-bloom, slow-cross-dissolve, brush-wipe, pan-down]
+  animation_style: "slow and devotional, never kinetic. Texture boil: crown, weapons and garments re-sample their brush texture at 10 fps (stepped, so it reads as hand-repainted frames) while the portrait itself holds still. Ambient layers drift slowly: diyas, marigold petals, havan smoke. The prabhavali is a looping set of radiating streaks that breathe and turn very slowly. Chapter openings are a paint/ink bleed in the day's colour; the video ends on a slow pan down to an aarti thali and havan kund"
+  pacing_rules:
+    min_scene_hold_seconds: 2.5
+    max_scene_hold_seconds: 8
+    text_card_hold_seconds: 3.0
+    stat_card_hold_seconds: 3.5
+    transition_duration_seconds: 0.8
+
+audio:
+  voice_style: "warm, unhurried second-person friend; mantra lines hushed and reverent; grave beats restrained"
+  voice_variation_allowed: true
+  music_mood: "sparse and warm: a drone or tanpura bed, soft bansuri or felt piano, a distant temple-bell accent, no drums or bright percussion"
+  music_volume: 0.12
+  sfx_style: "very soft: a single bell on each form reveal, a brush-on-canvas swish on bleeds, gentle flame crackle under the ritual close"
+
+asset_generation:
+  image_prompt_prefix: "hand-painted acrylic painting on canvas, heavy impasto brush strokes, visible bristle marks and palette-knife ridges, rich saturated Indian festive palette, gold-leaf highlights, devotional folk-art composition, "
+  image_negative_prompt: "photograph, photorealistic, 3d render, smooth airbrushed gradient, anime, cartoon, flat vector, visible text, letters, watermark, logo, extra limbs, distorted hands, gore, blood"
+  diagram_style: "painted-parchment plates carry all exact text as overlays; maps stay vector with a paper texture only; the nine-dot ring is nine acrylic daubs, one per day colour"
+  consistency_anchors:
+    - "Every deity portrait is painted strictly within that day's calendar colour family (dominant 80% of the frame); metallic gold is allowed only on jewellery, crown and weapon edges"
+    - "One shared brushwork vocabulary across all plates: same bristle width, same impasto ridges, same canvas weave"
+    - "Traditional iconography per form (mount, hands, attributes) stays fixed across every shot of that form"
+    - "Exact text (mantras, dates, numbers, names) is always an overlay, never baked into a painted plate"
+
+quality_rules:
+  - "Texture boil on crown, weapons and garments at 8-12 fps on every deity plate that holds longer than 2 s"
+  - "At least one ambient layer (diyas, petals or smoke) alive on every plate longer than 3 s, paused only on the grave beat"
+  - "Prabhavali stays active behind every deity portrait for its whole hold"
+  - "Each chapter opens with a paint bleed in that day's colour and shows the mantra on painted parchment"
+  - "Mantra and Devanagari text contrast at least 4.5:1 against its parchment plate"
+  - "Never depict the deity with distress, violence or gore; weapons are held, never shown in use on a victim"
+  - "No photographic stock in the same frame as acrylic plates"

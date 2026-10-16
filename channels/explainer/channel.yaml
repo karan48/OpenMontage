@@ -4,6 +4,8 @@
 # himalaya-glacier-timebomb-hindi, cockroach-janta-party-mumbai-hindi).
 # 2026-10-05: the long-form opening was replaced (evidence first, then a 3 s channel intro, then a
 # closing A/B question + pinned comment) after the Himalaya analytics; see script-guide.md.
+# 2026-10-14: the Hindi-only viewer-text rule (set 2026-10-06) was lifted by the owner: Hindi first,
+# English wherever it is needed (language.viewer_text).
 
 id: explainer
 display_name: "Curious India"
@@ -15,7 +17,8 @@ audience: "General Hindi-speaking Indian YouTube viewers — curious, not expert
 language:
   narration: hi
   script: "Devanagari. English terms Indians actually say in English stay in Latin script (this is what the owner calls 'Hinglish'; never Roman-script Hindi). No ALL-CAPS emphasis (Devanagari has no case) — use audio tags, em-dashes and short fragments."
-  on_screen_text: hi
+  on_screen_text: hinglish
+  viewer_text: "Hindi (Devanagari) first; English in Latin script wherever it is needed: terms Indians say in English, names and titles best known in English, source and document names. Covers overlays, graphics, subtitles, thumbnail, title, description, chapters and the pinned comment. English signage in stock media can stay (no blurring). Never Roman-script Hindi."
 
 formats:
   long_form:

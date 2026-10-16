@@ -1,0 +1,1 @@
+{ "extends": "./tsconfig.json", "compilerOptions": { "noEmit": true }, "include": ["projects/russia-pneumonic-plague-2026-hinglish/*.tsx", "projects/russia-pneumonic-plague-2026-hinglish/*.ts"] }
